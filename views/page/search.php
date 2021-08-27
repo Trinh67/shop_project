@@ -11,10 +11,12 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="pages-title-text text-center">
-							<h2>Search Results</h2>
+							<h2>Kết quả tìm kiếm</h2>
 							<ul class="text-left">
-								<li><a href="index.php">Home </a></li>
-								<li><span> // </span>Search Results</li>
+								<div class="product-breadcroumb">
+									<a href="?mod=page&act=home">Trang chủ</a>
+									<a>Kết quả tìm kiếm</a>
+								</div>
 							</ul>
 						</div>
 					</div>
@@ -27,7 +29,7 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="section-title text-center">
-							<h2>Products</h2>
+							<h2>Sản phẩm</h2>
 						</div>
 					</div>
 				</div>
@@ -41,25 +43,25 @@
 										<div class="single-product">
 											<div class="product-img">
 												<div class="pro-type">
-													<span>-<?= number_format($value['sales_percent']) ?>%</span>
+													<span>new</span>
 												</div>
 												<a href="#"><img src=<?= $value['image'] ?> alt="Product Title" width="270px" height="340px"/></a>
 												<div class="actions-btn">
 													<a href="?mod=cart&act=add&id=<?= $value['productCode'] ?>"><i class="mdi mdi-cart"></i></a>
-													<a href="?mod=product&act=detail&id=<?= $value['productCode'] ?>" data-toggle="modal" data-target="#quick-view"><i class="mdi mdi-eye"></i></a>
+													<a href="?mod=product&act=detail&id=<?= $value['productCode'] ?>&line=<?= $value['productLineNumber'] ?>"><i class="mdi mdi-eye"></i></a>
 													<a href="#"><i class="mdi mdi-heart"></i></a>
 												</div>
 											</div>
 											<div class="product-dsc">
-												<p><a href="?mod=product&act=detail&id=<?= $value['productCode'] ?>"><?= $value['productName'] ?></a></p>
-												<div class="ratting">
+												<p><a href="?mod=product&act=detail&id=<?= $value['productCode'] ?>&line=<?= $value['productLineNumber'] ?>"><?= $value['productName'] ?></a></p>
+												<div class="rating">
+													<i class="mdi mdi-star"></i>
 													<i class="mdi mdi-star"></i>
 													<i class="mdi mdi-star"></i>
 													<i class="mdi mdi-star"></i>
 													<i class="mdi mdi-star-half"></i>
-													<i class="mdi mdi-star-outline"></i>
 												</div>
-												<span><?= number_format($value['buyPrice']*(100 - $value['sales_percent'])/100)?> VND</span>
+												<span class="product-price"><?= number_format($value['price'])?> VND</span>
 											</div>
 										</div>
 									</div>
@@ -67,49 +69,22 @@
 									<!-- single product end -->
 							</div>
 						</li>
-						<li>
-							<div class="row text-center">
-								<div class="grid-content">
-								<?php foreach ($data_searchs as $value) { ?>
-									<div class="col-xs-12 col-sm-6 col-md-3">
-										<div class="single-product">
-											<div class="product-img">
-												<div class="pro-type">
-													<span>-<?= number_format($value['sales_percent']) ?>%</span>
-												</div>
-												<a href="#"><img src=<?= $value['image'] ?> alt="Product Title" width="270px" height="340px"/></a>
-												<div class="actions-btn">
-													<a href="?mod=cart&act=add&id=<?= $value['productCode'] ?>"><i class="mdi mdi-cart"></i></a>
-													<a href="?mod=product&act=detail&id=<?= $value['productCode'] ?>" data-toggle="modal" data-target="#quick-view"><i class="mdi mdi-eye"></i></a>
-													<a href="#"><i class="mdi mdi-heart"></i></a>
-												</div>
-											</div>
-											<div class="product-dsc">
-												<p><a href="?mod=product&act=detail&id=<?= $value['productCode'] ?>"><?= $value['productName'] ?></a></p>
-												<div class="ratting">
-													<i class="mdi mdi-star"></i>
-													<i class="mdi mdi-star"></i>
-													<i class="mdi mdi-star"></i>
-													<i class="mdi mdi-star-half"></i>
-													<i class="mdi mdi-star-outline"></i>
-												</div>
-												<span><?= number_format($value['buyPrice']*(100 - $value['sales_percent'])/100)?> VND</span>
-											</div>
-										</div>
-									</div>
-									<?php } ?>
-								</div>
-								<!-- single product end -->
-							</div>
-						</li>
 					</ul>
-					<button id="load-more-one">Load More</button>
+					<!-- Pagination -->
+					<nav aria-label="Page navigation example">
+						<ul class="pagination pagination-lg">
+							<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+							<li class="page-item"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item"><a class="page-link" href="#">Next</a></li>
+						</ul>
+					</nav>
+					<!-- End Pagination -->
 				</div>
 			</div>
 		</section>
 		<!-- featured-products section end -->
-        
-        <?php require_once('views/include/quick_view.php') ?> 
         <!-- footer section start -->
 		<?php require_once('views/include/footer.php') ?>
         <!-- footer section end -->

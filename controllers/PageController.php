@@ -1,5 +1,4 @@
 <?php 
-    
 	require_once('models/Model.php');
 	class PageController{
 		var $page_model;
@@ -10,24 +9,21 @@
 
 		public function home(){
 			$data_hot = array();
-			$data_hot = $this->page_model->Hot(8,0);
-			$data_hots = array();
-			$data_hots = $this->page_model->Hot(8,8);
+			$data_hot = $this->page_model->Hot(1, 8);
 			require_once('views/page/home.php');
 		}
 
 		public function search(){
-			$data = $_POST['data'];
+			$line = $_POST['line']?:0;
+			$min = $_POST['min']?:0;
+			$max = $_POST['max']?:9999999999;
+			$name = $_POST['name']?:"null";
+			$name = str_replace(' ', '%20', $name);
 			$data_search = array();
-			$data_search = $this->page_model->Search($data, 8, 0);
-			$data_searchs = array();
-			$data_searchs = $this->page_model->Search($data, 8, 8);
+			$data_search = $this->page_model->Search($line, $min, $max, $name, 1, 8);
 			require_once('views/page/search.php');
 		}
 
-		public function about(){
-			require_once('views/page/about.php');
-		}
 		public function account(){
 			require_once('views/page/my-account.php');
 		}

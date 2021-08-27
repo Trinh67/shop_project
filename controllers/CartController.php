@@ -1,5 +1,4 @@
 <?php 
-    
 	require_once('models/Cart.php');
 	class CartController{
 		var $cate_model;

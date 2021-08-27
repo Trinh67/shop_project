@@ -50,9 +50,6 @@
 				case 'home':
 					$controller_obj->home();
 					break;
-				case 'about':
-					$controller_obj->about();
-					break;
 				case 'search':
 					$controller_obj->search();
 					break;

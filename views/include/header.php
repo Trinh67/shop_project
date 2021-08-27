@@ -10,15 +10,15 @@
 						<div class="header-middel">
 							<div class="middel-top clearfix">
 								<form action="?mod=page&act=search" method="POST" class="filter">
-									<select name="category" class="form-control category-filter">
-										<option value="0" selected>Chọn danh mục</option>
+									<select name="line" class="form-control category-filter" >
+										<option value="0">Chọn danh mục</option>
 										<option value="1">Điện thoại</option>
 										<option value="2">Laptop</option>
 										<option value="3">Apple Watch</option>
 									</select>
-									<input type="number" min="1" max="999999999"placeholder="Giá min" name = "min" class ="form-control price-filter"/>
-									<input type="number" min="1" placeholder="Giá max" name = "max" class ="form-control price-filter"/>
-									<input type="text" placeholder="Tên sản phẩm..." name = "data" class ="form-control name-filter"/>
+									<input type="number" min="0" max="9999999999" placeholder="Giá min" name = "min" class ="form-control price-filter"/>
+									<input type="number" min="1" max="9999999999" placeholder="Giá max" name = "max" class ="form-control price-filter"/>
+									<input type="text" placeholder="Tên sản phẩm..." name = "name" class ="form-control name-filter"/>
 									<button type="submit" class="btn btn-success"><i class="mdi mdi-magnify">Tìm kiếm</i></button>
 								</form>
 							</div>
@@ -26,7 +26,7 @@
 								<nav>
 									<ul>
 										<li><a href="?mod=page&act=home">Trang chủ</a></li>
-										<li><a href="?mod=product&line=1&type=Phone">Phone</a></li>
+										<li><a href="?mod=product&line=1&type=Điện thoại">Điện thoại</a></li>
 										<li><a href="?mod=product&line=2&type=Laptop">Laptop</a></li>
 										<li><a href="?mod=product&line=3&type=Apple">Apple Watch</a></li>
 										<li><a href="?mod=page&act=home"><i class="mdi mdi-account"></i></a>

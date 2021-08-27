@@ -1,6 +1,6 @@
 <?php 
     require_once("Model.php");
-	class cart extends Model{
+	class Cart extends Model{
 		function insert($datas){
 			$query = "";
 			foreach ($datas as $data){

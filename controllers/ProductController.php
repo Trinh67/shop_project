@@ -1,17 +1,17 @@
 <?php 
-    
 	require_once('models/Product.php');
 	class ProductController{
 		var $cate_model;
 
 		function __construct(){
-			$this->cate_model = new product();
+			$this->cate_model = new Product();
 		}
 
 		public function list(){
 			$data = array();
 			$line = $_GET['line'];
 			$data = $this->cate_model->All($line, 1, 8);
+
 			require_once('views/product/product_list.php');
 		}
 

@@ -1,6 +1,6 @@
 <?php 
 	require_once('Connection.php');
-	class login{
+	class Login{
 		var $connection;
 
 		function __construct(){
