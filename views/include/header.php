@@ -1,3 +1,8 @@
+<?php
+	if (isset($_POST['records-limit'])) {
+		$_SESSION['records-limit'] = $_POST['records-limit'];
+	}
+?>
 <header class="header-one">
 			<div class="container-fluid text-center">
 				<div class="row">

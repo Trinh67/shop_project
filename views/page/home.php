@@ -92,15 +92,7 @@
 						</li>
 					</ul>
 					<!-- Pagination -->
-					<nav aria-label="Page navigation example">
-						<ul class="pagination pagination-lg">
-							<li class="page-item"><a class="page-link" href="#">Previous</a></li>
-							<li class="page-item"><a class="page-link" href="#">1</a></li>
-							<li class="page-item"><a class="page-link" href="#">2</a></li>
-							<li class="page-item"><a class="page-link" href="#">3</a></li>
-							<li class="page-item"><a class="page-link" href="#">Next</a></li>
-						</ul>
-					</nav>
+					<?php require_once('views/include/home_pagination.php') ?>
 					<!-- End Pagination -->
 				</div>
 			</div>
@@ -150,4 +142,11 @@
 		<!-- jquery latest version -->
         <?php require_once('views/include/jquery.php') ?>
     </body>
+	<script>
+		$(document).ready(function() {
+			$('#records-limit').change(function() {
+				$('form').submit();
+			});
+		});
+	</script>
 </html>

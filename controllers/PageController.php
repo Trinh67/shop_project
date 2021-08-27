@@ -8,8 +8,11 @@
 		}
 
 		public function home(){
+			$pageNum = isset($_GET['page'])? $_GET['page'] :1;
+			$pageSize = isset($_POST['records-limit']) ? $_POST['records-limit'] : (isset($_SESSION['records-limit']) ? $_SESSION['records-limit'] : 8);
 			$data_hot = array();
-			$data_hot = $this->page_model->Hot(1, 8);
+			$data_hot = $this->page_model->Hot($pageNum, $pageSize);
+			$_SESSION['total-records'] = $this->page_model->Count('null', 0, 0, 999999999);
 			require_once('views/page/home.php');
 		}
 

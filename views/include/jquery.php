@@ -1,6 +1,8 @@
 <script src="public/js/vendor/jquery-1.12.3.min.js"></script>
 <!-- bootstrap js -->
 <script src="public/js/bootstrap.min.js"></script>
+    <!-- jQuery + Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- owl.carousel js -->
 <script src="public/js/owl.carousel.min.js"></script>
 <!-- meanmenu js -->
