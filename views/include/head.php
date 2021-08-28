@@ -38,8 +38,11 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 	<style>
+		.grid-content{
+			width: 100%;
+		}
 		.single-product{
-			width: 255px;
+			min-width: 255px;
 		}
 		/* pagination */
 		.total{

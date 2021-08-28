@@ -17,7 +17,7 @@
 						<div class="pages-title-text text-center">
 							<h2>404</h2>
 							<ul class="text-left">
-								<li><a href="index.php">Home </a></li>
+								<li><a href="?mod=page&act=home">Trang chủ </a></li>
 								<li><span> // </span>404</li>
 							</ul>
 						</div>
@@ -33,12 +33,7 @@
 					<img src="public/img/error.png" alt="" />
 					<h4>Ooops.... Error 404</h4>
 					<p>Sorry, But the page you are looking for does't exist</p>
-					<form action="#" method="get">
-						<input type="text" placeholder="Search within these results..." />
-						<button type="submit"><i class="mdi mdi-magnify"></i></button>
-					</form>
-					<h5>or</h5>
-					<a href="index.php">go to home page</a>
+					<a href="?mod=page&act=home">go to home page</a>
 				</div>
 			</div>
 		</div>

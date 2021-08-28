@@ -65,8 +65,9 @@
 											</div>
 										</div>
 									</div>
-								    <?php } ?>
+									<?php } ?>
 									<!-- single product end -->
+								</div>
 							</div>
 						</li>
 					</ul>
