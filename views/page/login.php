@@ -27,6 +27,11 @@
 		<!-- login content section start -->
 		<section class="pages login-page section-padding"> 
 			<div class="container">
+				<?php if(isset($_COOKIE['msg'])){ ?>
+					<div class="alert alert-danger">
+						<strong>Thất bại! </strong><?= $_COOKIE['msg'] ?>
+					</div>
+				<?php }?>
 				<div class="row">
 					<div class="col-sm-6">
 						<div class="main-input padding60">
@@ -34,17 +39,11 @@
 								<h3><strong>Đăng nhập</strong></h3>
 							</div>
 							<div class="login-text">
-								<?php if(isset($_COOKIE['msg'])){ ?>
-					                <div class="alert alert-danger">
-					                    <strong>Thất bại! </strong><?= $_COOKIE['msg'] ?>
-					                </div>
-					            <?php }?>
 								<div class="custom-input">
-									<p>If you have an account with us, Please log in!</p>
 									<form action="?mod=login&act=login_action" method="POST">
 										<input type="email" required name="email" placeholder="Email" />
 										<input type="password" required name="password" placeholder="Password" />
-										<a class="forget" href="#">Forget your password?</a>
+										<a class="forget" href="#">Quên mật khẩu?</a>
 										<div>
 										    <button type="submit" class=" submit-text btn btn-primary">Đăng nhập</button>
 									    </div>
@@ -63,14 +62,13 @@
 							</div>
 							<div class="custom-input">
 								<form action="?mod=login&act=register" method="post">
-									<input type="text" name="firstName" placeholder="First name here.." />
-									<input type="text" name="lastName" placeholder="Last name here.." />
-									<input type="text" required name="email" placeholder="Email Address.." />
-									<input type="text" name="phone" placeholder="Phone Number.." />
-									<input type="password" required name="password" placeholder="Password" />
-									<input type="text" name="addressLine1" placeholder="Address" />
-									<input type="text" name="city" placeholder="City" />
-									<input type="text" name="country" placeholder="Country" />
+									<input type="text" required name="customerName" placeholder="User name.." />
+									<input type="text" required name="fullName" placeholder="Full name here.." />
+									<input type="text" required name="nationalId" placeholder="Id quốc gia.." />
+									<input type="text" required name="address" placeholder="Địa chỉ.." />
+									<input type="text" required name="phoneNumber" placeholder="Số điện thoại.." />
+									<input type="text" required name="email" placeholder="Email" />
+									<input type="password" required name="password" placeholder="Mật khẩu.." />
 									<div>
 										<button type="submit" class=" submit-text btn btn-primary">Đăng kí</button>
 									</div>

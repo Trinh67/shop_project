@@ -39,9 +39,9 @@
 											else if(isset($_SESSION['admin']['lastName'])) echo $_SESSION['admin']['lastName'];?></h5>
 											<ul> 
 												<?php if(isset($_SESSION['customer']) || isset($_SESSION['admin'])) { ?>												
-												<li><a href="?mod=login&act=logout">Đăng xuất</a></li>
-												<li><a href="?mod=page&act=account">Tài khoản</a></li>
-												<li><a href="?mod=cart&act=list">Giỏ hàng</a></li>
+												<li class="dropdown-item"><a href="?mod=login&act=logout">Đăng xuất</a></li>
+												<li class="dropdown-item"><a href="?mod=page&act=account">Tài khoản</a></li>
+												<li class="dropdown-item"><a href="?mod=cart&act=list">Giỏ hàng</a></li>
 											    <?php }else{ ?>
 												<li><a href="?mod=login&act=login">Đăng nhập</a></li>
 											    <?php } ?>	
@@ -55,7 +55,7 @@
 										<li><a href="#"><i class="mdi mdi-settings"></i></a>
 										<?php if(isset($_SESSION['customer']) || isset($_SESSION['admin'])) { ?>
 											<ul>
-												<li><a href="?mod=page&act=order">Đơn hàng</a></li>
+												<li class="dropdown-item"><a href="?mod=page&act=order">Đơn hàng</a></li>
 											</ul>
 										<?php } ?>	
 										</li>

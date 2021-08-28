@@ -39,7 +39,13 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 	<style>
 		.container-fluid .btn{
-			height: 40px;
+			height: 50px;
+		}
+		.dropdown-item{
+			padding-top: 5px;
+			height: 30px;
+			font-weight: bold;
+			border-bottom: 2px solid #000000;
 		}
 		.container-fluid .btn > a {
 			color: #fff;
