@@ -1,5 +1,6 @@
 <?php 
 	require_once('Connection.php');
+
 	class Login{
 		var $connection;
 
@@ -9,17 +10,32 @@
 		}
         
         function find($email, $password){
-        	// Cau lenh truy van co so du lieu
-		    $query = "SELECT
-				  *
-				FROM
-				  customers 
-				WHERE email = '".$email."' AND password = '".md5($password)."'";
-				
-		    // Thuc thi cau lenh truy van co so du lieu
+			$curl = curl_init();
+			$data_array = array(
+				'email' => $email,
+				'password' => md5($password)
+			);
 
-		    return $data = $this->connection->query($query)->fetch_assoc();
+			curl_setopt_array($curl, array(
+			CURLOPT_URL => 'https://trinh67uet.et.r.appspot.com/customer/login',
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_ENCODING => '',
+			CURLOPT_MAXREDIRS => 10,
+			CURLOPT_TIMEOUT => 0,
+			CURLOPT_FOLLOWLOCATION => true,
+			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			CURLOPT_CUSTOMREQUEST => 'POST',
+			CURLOPT_POSTFIELDS => json_encode($data_array),
+			CURLOPT_HTTPHEADER => array(
+				'Content-Type: application/json'
+			),
+			));
+
+			$response = curl_exec($curl);
+			curl_close($curl);
+			return $response;
 		}
+
 		
 		function register($data){
 			$f = "";

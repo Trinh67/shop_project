@@ -21,11 +21,12 @@
 						<div class="pages-title-text text-center">
 							<h2>Cart</h2>
 							<ul class="text-left">
-								<li><a href="?mod=page&act=home">Home </a></li>
-								<li><span> // </span>Cart</li>
+								<div class="product-breadcroumb">
+									<a href="?mod=page&act=home">Trang chủ </a></li>
+									<a>Giỏ hàng</a>
+								</div>
 							</ul>
-						</div>
-					</div>
+						</div> 
 				</div>
 			</div>
 		</div>
@@ -50,30 +51,29 @@
 								    <?php 
 										$sum_amount = 0;
 										if($products != null)
-									    foreach ($products as $product) { 
-											$sum_amount += (($product['buyPrice']*(100 - $product['sales_percent'])/100)*$product['SoLuong']);
+									    foreach ($_SESSION['cart'] as $products) { 
+											$product = $products[0];
+											$sum_amount += $product['price']*$products['SoLuong'];
 									?>
 									<tr>
 										<td class="td-img text-left">
 											<a href="?mod=product&act=detail&id=<?= $product['productCode'] ?>" ><img src=<?= $product['image'] ?> alt="Add Product" /></a>
 											<div class="items-dsc">
 												<h5><a href="?mod=product&act=detail&id=<?= $product['productCode'] ?>"><?= $product['productName'] ?></a></h5>
-												<p class="itemcolor">Color : <span>Blue</span></p>
-												<p class="itemcolor">Size   : <span>SL</span></p>
 											</div>
 										</td>
-										<td><?= number_format(($product['buyPrice']*(100 - $product['sales_percent'])/100)) ?> VND</td>
+										<td><?= number_format($product['price']) ?> VND</td>
 										<td>
 											<form action="#" method="POST">
 												<div class="plus-minus">
 													<a href="?mod=cart&act=add&id=<?= $product['productCode'] ?>" class="inc qtybutton">+</a>
-													<input type="text" value="<?= $product['SoLuong'] ?>"name="qtybutton" class="plus-minus-box">
+													<input type="text" value="<?= $products['SoLuong'] ?>"name="qtybutton" class="plus-minus-box">
 													<a href="?mod=cart&act=delete&id=<?= $product['productCode'] ?>" class="dec qtybutton">-</a>
 												</div>
 											</form>
 										</td>
 										<td>
-											<strong><?= number_format(($product['buyPrice']*(100 - $product['sales_percent'])/100)*$product['SoLuong']) ?> VND</strong>
+											<strong><?= number_format($product['price']*$products['SoLuong']) ?> VND</strong>
 										</td>
 										<td><a href="?mod=cart&act=delete&del=2&id=<?= $product['productCode'] ?>" onclick="return confirm('Bạn chắc chắn muốn xóa mặt hàng này?');"><i class="mdi mdi-close" title="Remove this product"></i></td>
 									</tr>
@@ -81,12 +81,13 @@
 									<?php if(isset($_SESSION['cart'])) { ?>
 									<thead>
 										<tr>
-											<td colspan="3" align="left"><h4>Sum Amount</h4></td>
-											<td align="center"><h4><?= number_format($sum_amount) ?></h4> VND</td>
-											<td align="center"><a href="?mod=cart&act=mail" class="btn btn-success">Order</a></td>
+											<td colspan="1" align="left"><h4>Tổng tiền</h4></td>
+											<td colspan="3" align="center"><h4><?= number_format($sum_amount) ?> VND</h4></td>
+											<td align="center"><a href="?mod=cart&act=mail" class="btn btn-success">Đặt hàng</a></td>
 										</tr>
 									</thead>
-								    <?php $_SESSION['sum'] = $sum_amount;}?>
+								    <?php $_SESSION['sum'] = $sum_amount;
+									}?>
 								</tbody>
 							</table>
 						</div>
@@ -96,14 +97,14 @@
 					<div class="col-sm-6">
 						<div class="single-cart-form padding60">
 							<div class="log-title">
-								<h3><strong>coupon discount</strong></h3>
+								<h3><strong>Mã giảm giá</strong></h3>
 							</div>
 							<div class="cart-form-text custom-input">
-								<p>Enter your coupon code if you have one!</p>
-								<form action="mail.php" method="post">
-									<input type="text" name="subject" placeholder="Enter your code hereviews." />
+								<p>Dùng mã giảm giá ngay nếu có!</p>
+								<form action="#" method="post">
+									<input type="text" name="subject" placeholder="Mã giảm giá" />
 									<div class="submit-text coupon">
-										<button type="submit">apply coupon </button>
+										<button type="submit">Áp dụng mã</button>
 									</div>
 								</form>
 							</div>
@@ -112,17 +113,17 @@
 					<div class="col-sm-6">
 						<div class="single-cart-form padding60">
 							<div class="log-title">
-								<h3><strong>payment details</strong></h3>
+								<h3><strong>Chi tiết đơn hàng</strong></h3>
 							</div>
 							<div class="cart-form-text pay-details table-responsive">
 								<table>
 									<tbody>
 										<tr>
-											<th>Cart Subtotal</th>
+											<th>Tổng giá trị sản phẩm</th>
 											<td><?= number_format($sum_amount) ?>VND</td>
 										</tr>
 										<tr>
-											<th>Shipping and Handing</th>
+											<th>Phí phục vụ</th>
 											<td>30,000 VND</td>
 										</tr>
 										<tr>
@@ -132,7 +133,7 @@
 									</tbody>
 									<tfoot>
 										<tr>
-											<th class="tfoot-padd">Order total</th>
+											<th class="tfoot-padd">Tổng đơn hàng</th>
 											<td class="tfoot-padd"><?= number_format($sum_amount*1.05 + 30000) ?>VND</td>
 										</tr>
 									</tfoot>

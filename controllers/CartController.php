@@ -4,7 +4,7 @@
 		var $cate_model;
 
 		function __construct(){
-			$this->cate_model = new cart();
+			$this->cate_model = new Cart();
 		}
 
 		public function list(){
@@ -27,9 +27,8 @@
 
 				// B3: Add vào giỏ hàng
 				$_SESSION['cart'][$id]  = $product;
-				
 			}
-
+			
 			header('Location: ?mod=cart&act=list');
 		}
 
