@@ -19,7 +19,7 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="pages-title-text text-center">
-							<h2>Cart</h2>
+							<h2>Giỏ hàng</h2>
 							<ul class="text-left">
 								<div class="product-breadcroumb">
 									<a href="?mod=page&act=home">Trang chủ </a></li>
@@ -27,6 +27,7 @@
 								</div>
 							</ul>
 						</div> 
+					</div>
 				</div>
 			</div>
 		</div>
@@ -40,11 +41,11 @@
 							<table class="wishlist-table text-center">
 								<thead>
 									<tr>
-										<th>Product</th>
-										<th>Price</th>
-										<th>Quantity</th>
-										<th>Total Price</th>
-										<th>Remove</th>
+										<th>Sản phẩm</th>
+										<th>Giá</th>
+										<th>Số lượng</th>
+										<th>Tổng tiền</th>
+										<th>Xóa</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -66,9 +67,9 @@
 										<td>
 											<form action="#" method="POST">
 												<div class="plus-minus">
-													<a href="?mod=cart&act=add&id=<?= $product['productCode'] ?>" class="inc qtybutton">+</a>
-													<input type="text" value="<?= $products['SoLuong'] ?>"name="qtybutton" class="plus-minus-box">
 													<a href="?mod=cart&act=delete&id=<?= $product['productCode'] ?>" class="dec qtybutton">-</a>
+													<input type="text" value="<?= $products['SoLuong'] ?>"name="qtybutton" class="plus-minus-box">
+													<a href="?mod=cart&act=add&id=<?= $product['productCode'] ?>" class="inc qtybutton">+</a>
 												</div>
 											</form>
 										</td>
@@ -78,7 +79,8 @@
 										<td><a href="?mod=cart&act=delete&del=2&id=<?= $product['productCode'] ?>" onclick="return confirm('Bạn chắc chắn muốn xóa mặt hàng này?');"><i class="mdi mdi-close" title="Remove this product"></i></td>
 									</tr>
 									<?php } ?>
-									<?php if(isset($_SESSION['cart'])) { ?>
+									<?php $_SESSION['sum'] = $sum_amount;
+										  if(isset($_SESSION['cart']) && $_SESSION['sum'] > 0) { ?>
 									<thead>
 										<tr>
 											<td colspan="1" align="left"><h4>Tổng tiền</h4></td>
@@ -86,8 +88,7 @@
 											<td align="center"><a href="?mod=cart&act=mail" class="btn btn-success">Đặt hàng</a></td>
 										</tr>
 									</thead>
-								    <?php $_SESSION['sum'] = $sum_amount;
-									}?>
+								    <?php }?>
 								</tbody>
 							</table>
 						</div>

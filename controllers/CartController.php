@@ -14,16 +14,17 @@
 
 		public function add(){
 			$id = isset($_GET['id'])?$_GET['id']:0;
+			$quantity = isset($_POST['quantity'])?$_POST['quantity']:1;
 			$products[$id] = $this->cate_model->find($id);
 
 			if (isset($_SESSION['cart'][$id])) {
 				// Tăng số lượng
-				$_SESSION['cart'][$id]['SoLuong']++;
+				$_SESSION['cart'][$id]['SoLuong'] += $quantity;
 			}else{
 				// Chưa có trong giỏ hàng
 				// B2: Lấy thông tin sản phẩm
 				$product = $products[$id];
-				$product['SoLuong'] = 1;
+				$product['SoLuong'] = $quantity;
 
 				// B3: Add vào giỏ hàng
 				$_SESSION['cart'][$id]  = $product;

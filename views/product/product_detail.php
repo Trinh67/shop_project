@@ -72,7 +72,7 @@
 										
 										<form action="?mod=cart&act=add&id=<?= $value['productCode'] ?>" class="cart" method="post">
 											<div class="quantity">
-												<input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+												<input type="number" size="5" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
 											</div>
 											<button class="add_to_cart_button" type="submit">Thêm vào giỏ hàng</button>
 										</form>   

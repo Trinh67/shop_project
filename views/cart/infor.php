@@ -38,21 +38,20 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Họ tên</label>
-                  <input type="text" class="form-control" required id="" placeholder="" name="name" value = "<?php if(isset($_SESSION['customer']['contactLastName'])) echo $_SESSION['customer']['contactLastName']; 
-											else if(isset($_SESSION['admin']['lastName'])) echo $_SESSION['admin']['lastName'];?>">
+                  <input type="text" class="form-control" required id="" placeholder="" name="name" value = "<?php if(isset($_SESSION['customer']['fullName'])) echo $_SESSION['customer']['fullName']; 
+											else if(isset($_SESSION['admin']['fullName'])) echo $_SESSION['admin']['fullName'];?>">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Phone Number</label>
-                  <input type="numberic" class="form-control" required id="" placeholder="" value = "<?php if(isset($_SESSION['customer']['phone'])) echo $_SESSION['customer']['phone'] ?>" name="phone">
+                  <label for="exampleInputPassword1">Số điện thoại</label>
+                  <input type="numberic" class="form-control" required id="" placeholder="" value = "<?php if(isset($_SESSION['customer']['phoneNumber'])) echo $_SESSION['customer']['phoneNumber'] ?>" name="phone">
                 </div>
                 <div class="form-group">
-                <label for="exampleInputPassword1">Address</label>
-                    <input type="text" class="form-control" required id="" placeholder="" value = "<?php if(isset($_SESSION['customer']['addressLine1'])) { ?> <?=$_SESSION['customer']['addressLine1'] ?>, <?= $_SESSION['customer']['city'] ?>, <?= $_SESSION['customer']['country'] ?> <?php } ?>" name="address">
+                <label for="exampleInputPassword1">Địa chỉ</label>
+                    <input type="text" class="form-control" required id="" placeholder="" value = "<?php if(isset($_SESSION['customer']['address'])) { ?> <?=$_SESSION['customer']['address'] ?> <?php } ?>" name="address">
                 </div>
-                <a type="button" class="btn btn-warning" href="?mod=cart&act=list">Cart</a>
-                <button type="submit" class="btn btn-success">Submit</button>
+                <button class="btn btn-info"><a href="?mod=cart&act=list"><- Giỏ hàng</a></button>
+                <button type="submit" class="btn btn-success">Gửi</button>
             </form>
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <!-- /.container-fluid -->
         <!-- footer section start -->

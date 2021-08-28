@@ -32,8 +32,9 @@
 			));
 
 			$response = curl_exec($curl);
+			$response = json_decode($response, true);
 			curl_close($curl);
-			return $response;
+			return $response[0];
 		}
 
 		

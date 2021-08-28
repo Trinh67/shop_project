@@ -38,6 +38,12 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 	<style>
+		.container-fluid .btn{
+			height: 40px;
+		}
+		.container-fluid .btn > a {
+			color: #fff;
+		}
 		.grid-content{
 			width: 100%;
 		}

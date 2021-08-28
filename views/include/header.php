@@ -38,10 +38,9 @@
 											<h5><?php if(isset($_SESSION['customer']['contactLastName'])) echo $_SESSION['customer']['contactLastName']; 
 											else if(isset($_SESSION['admin']['lastName'])) echo $_SESSION['admin']['lastName'];?></h5>
 											<ul> 
-												<?php if(isset($_SESSION['customer']) or isset($_SESSION['admin'])) { ?>												
+												<?php if(isset($_SESSION['customer']) || isset($_SESSION['admin'])) { ?>												
 												<li><a href="?mod=login&act=logout">Đăng xuất</a></li>
 												<li><a href="?mod=page&act=account">Tài khoản</a></li>
-												<li><a href="?mod=page&act=order">Đơn hàng</a></li>
 												<li><a href="?mod=cart&act=list">Giỏ hàng</a></li>
 											    <?php }else{ ?>
 												<li><a href="?mod=login&act=login">Đăng nhập</a></li>
@@ -54,11 +53,9 @@
 											</ul>
 										</li>
 										<li><a href="#"><i class="mdi mdi-settings"></i></a>
-										<?php if(isset($_SESSION['customer']) or isset($_SESSION['admin'])) { ?>
+										<?php if(isset($_SESSION['customer']) || isset($_SESSION['admin'])) { ?>
 											<ul>
-												<li><a href="?mod=page&act=account">Tài khoản</a></li>
 												<li><a href="?mod=page&act=order">Đơn hàng</a></li>
-												<li><a href="?mod=cart&act=list">Giỏ hàng</a></li>
 											</ul>
 										<?php } ?>	
 										</li>
@@ -71,9 +68,9 @@
 						<div class="cart-itmes">
 							<a class="cart-itme-a" href="?mod=cart&act=list">
 								<i class="mdi mdi-cart"></i>
-								<?php if(isset($_SESSION['cart'])) echo count($_SESSION['cart']); else echo '0';?> sản phẩm:  <strong><?php if(isset($_SESSION['sum'])) echo number_format($_SESSION['sum']); else echo '0';?> VND</strong>
+								<?php if(isset($_SESSION['cart'])) echo count($_SESSION['cart']); else echo '0';?> sản phẩm
 							</a>
-							<?php if(isset($_SESSION['customer']) or isset($_SESSION['admin'])) { ?>
+							<?php if(isset($_SESSION['customer']) || isset($_SESSION['admin'])) { ?>
 							<div class="cartdrop">
 								<a class="out-menu" href="?mod=cart&act=list">Giỏ hàng</a>
 							</div>
