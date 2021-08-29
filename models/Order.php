@@ -11,7 +11,7 @@
 
         function CancelOrder($ordNum){
             // Thuc thi cau lenh truy van co so du lieu
-			$response = file_get_contents('https://trinh67uet.et.r.appspot.com/order/filter/'.$ordNum);
+			$response = file_get_contents('https://trinh67uet.et.r.appspot.com/order/canceled/'.$ordNum);
 			$data = json_decode($response, true);
 		    return $data;
         }
