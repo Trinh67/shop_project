@@ -1,13 +1,5 @@
 <?php 
-	require_once('Connection.php');
-
 	class Login{
-		var $connection;
-
-		function __construct(){
-			$conn_obj = new Connection();
-			$this->connection = $conn_obj->conn;
-		}
         
         function find($email, $password){
 			$curl = curl_init();

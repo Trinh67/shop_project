@@ -1,6 +1,7 @@
 <?php 
     require_once("Model.php");
 	class Cart extends Model{
+		
 		function insert_order($data){
 			// Thuc thi cau lenh truy van co so du lieu
 			$curl = curl_init();

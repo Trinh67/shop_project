@@ -69,12 +69,6 @@
 								Back to shop
 							</a>
 					    </div>
-					    <div>
-							<a class="txt2" href="public/#">
-								Create your Account
-								<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-							</a>
-					    </div>
 					</div>
 				</form>
 			</div>

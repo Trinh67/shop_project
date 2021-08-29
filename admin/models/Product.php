@@ -1,16 +1,9 @@
 <?php 
     require_once("Model.php");
-	class product extends Model{
-		var $table = 'products';
+	class Product extends Model{
 
 		function All(){
 		    // Cau lenh truy van co so du lieu
-		    // $query = "SELECT
-			// 			p.*,
-			// 			pl.productLine
-			// 		FROM
-			// 			products p
-			// 			LEFT JOIN productlines pl ON p.productLineCode = pl.productLineCode";
 			$query = "SELECT * FROM product_view";
 		    $data = array();
 
@@ -26,12 +19,6 @@
 
 		function find($id){
         	// Cau lenh truy van co so du lieu
-		    // $query = "SELECT
-			// 			p.*,
-			// 			pl.productLine 
-			// 		FROM
-			// 			products p
-			// 			LEFT JOIN productlines pl ON p.productLineCode = pl.productLineCode WHERE p.productCode = '".$id."'";
 			$query = "SELECT * FROM product_view WHERE productCode = '".$id."'";
 		    // Thuc thi cau lenh truy van co so du lieu
 

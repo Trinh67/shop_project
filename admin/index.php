@@ -1,9 +1,9 @@
 <?php 
+	session_start();
 	$mod = (isset($_GET['mod'])?$_GET['mod']:'');
 	$act = (isset($_GET['act'])?$_GET['act']:'list');
 
 	function checkAuth(){
-		session_start();
     	if(empty($_SESSION['isLogin'])){
         	header('Location: ?mod=login&act=login');
     	}
@@ -40,36 +40,6 @@
 		    		require_once('views/page/404.php');
 		    		break;
 		    }
-		case 'employee':
-		    checkAuth();
-			require_once('controllers/EmployeeController.php');
-			$controller_obj = new EmployeeController();
-			switch ($act) {
-				case 'list':
-					$controller_obj->list();
-					break;
-				case 'add':
-					$controller_obj->add();
-					break;
-				case 'store':
-					$controller_obj->store();
-					break;
-				case 'detail':
-					$controller_obj->detail();
-					break;
-				case 'update':
-					$controller_obj->update();
-					break;
-				case 'edit':
-					$controller_obj->edit();
-					break;
-				case 'delete':
-					$controller_obj->delete();
-					break;		
-				default:
-					require_once('views/page/404.php');
-					break;
-			}
 			break;
 		case 'customer':
 		    checkAuth();

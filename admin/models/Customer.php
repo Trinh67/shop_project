@@ -1,7 +1,6 @@
 <?php 
     require_once("Model.php");
-	class customer extends Model{
-		var $table = 'customers';
+	class Customer extends Model{
 
 		function find($id){
         	// Cau lenh truy van co so du lieu

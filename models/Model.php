@@ -1,5 +1,4 @@
  <?php 
-	require_once('Connection.php');
 	class Model{
 
 		function All($line, $pageNum, $pageSize){
