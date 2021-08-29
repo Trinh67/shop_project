@@ -69,24 +69,29 @@
 		public function edit(){
 			$data = array();
 			$data['customerNumber'] = $_SESSION['customer']['customerNumber'];
-			$data['contactFirstName'] = $_POST['firstName'];
-			$data['contactLastName'] = $_POST['lastName'];
-			$data['email'] = $_POST['email'];
-			$data['phone'] = $_POST['phone'];
-			$data['addressLine1'] = $_POST['address'];
-			$data['city'] = $_POST['city'];
-			$data['country'] = $_POST['country'];
+			$data['customerName'] = $_POST['customerName'];
+			$data['fullName'] = $_POST['fullName'];
+			$data['nationalId'] = $_POST['nationalId'];
+		    $data['address'] = $_POST['address'];
+		    $data['phoneNumber'] = $_POST['phoneNumber'];
+		    $data['email'] = $_POST['email'];
+		    if($_POST['password'] != '' && $_POST['password'] != null) {
+				$data['password'] = md5($_POST['password']);
+			} 
+			else $data['password'] = $_SESSION['customer']['password'];
+		    $data['numOfSuccessOrder'] = $_SESSION['customer']['numOfSuccessOrder'];
 
 		    $status = $this->login_model->edit($data);
 
 		    if($status == true){
-				setcookie('msg','Cập nhật thành công',time()+1);
-				unset($_SESSION['customer']);
-		    	header('Location: ?mod=page&act=home');
+				setcookie('msg','Cập nhật thông tin thành công',time()+1);
+				$_SESSION['isLogin'] = true;
+	            $_SESSION['customer'] = $data;
+		    	header('Location: ?mod=page&act=account');
 		    }
 		    else {
-		    	setcookie('msg','Cập nhật không thành công',time()+1);
-		    	header('Location: ?mod=page&act=home');
+		    	setcookie('msg','Cập nhật thông tin không thành công',time()+1);
+		    	header('Location: ?mod=page&act=account');
 		    }
 		}
 	}

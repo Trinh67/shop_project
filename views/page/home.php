@@ -2,7 +2,7 @@
 <html class="no-js" lang="">
     <?php require_once('views/include/head.php') ?>
     <body onload="return <?php if(isset($_COOKIE['msg'])){ ?>
-			            alert('Thành công. Tiếp tục mua hàng nào!!!')
+			            alert('<?= $_COOKIE['msg'] ?>. Tiếp tục mua hàng nào!!!')
 			          <?php }?>">
 
         <!-- header section start -->

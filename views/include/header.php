@@ -34,9 +34,11 @@
 										<li><a href="?mod=product&line=1&type=Điện thoại">Điện thoại</a></li>
 										<li><a href="?mod=product&line=2&type=Laptop">Laptop</a></li>
 										<li><a href="?mod=product&line=3&type=Apple">Apple Watch</a></li>
-										<li><a href="?mod=page&act=home"><i class="mdi mdi-account"></i></a>
-											<h5><?php if(isset($_SESSION['customer']['contactLastName'])) echo $_SESSION['customer']['contactLastName']; 
-											else if(isset($_SESSION['admin']['lastName'])) echo $_SESSION['admin']['lastName'];?></h5>
+										<li>
+											<a href="?mod=page&act=home"><i class="mdi mdi-account">
+												<h5><?php if(isset($_SESSION['customer']['customerName'])) echo $_SESSION['customer']['customerName']; 
+												else if(isset($_SESSION['admin']['employeeName'])) echo $_SESSION['admin']['employeeName'];?></h5>
+											</i></a>
 											<ul> 
 												<?php if(isset($_SESSION['customer']) || isset($_SESSION['admin'])) { ?>												
 												<li class="dropdown-item"><a href="?mod=login&act=logout">Đăng xuất</a></li>

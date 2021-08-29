@@ -76,10 +76,8 @@
 		    	header('Location: ?mod=page&act=home');
 		    }
 		    else {
-		    	setcookie('msg','Đặt hàng thành công!!! Tiếp tục mua hàng nào!!!',time()+2);
-				unset($_SESSION['cart']);
-				unset($_SESSION['sum']);
-		    	header('Location: ?mod=page&act=home');
+		    	setcookie('msg','Đặt hàng thất bại!!!',time()+2);
+		    	header('Location: ?mod=cart&act=list');
 		    }
 		}
 

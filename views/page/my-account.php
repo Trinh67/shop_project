@@ -27,6 +27,11 @@
 		<!-- My account content section start -->
 		<section class="pages my-account-page section-padding">
 			<div class="container">
+				<?php if(isset($_COOKIE['msg'])){ ?>
+					<div class="alert alert-info">
+						<strong><?= $_COOKIE['msg'] ?></strong>
+					</div>
+				<?php }?>
 				<div class="row">
 				    <div class="col-xs-12 col-sm-2"></div>
 					<div class="col-xs-12 col-sm-8">
@@ -44,7 +49,7 @@
 														<div class="row">
 															<div class="col-md-6" >
 																<label>Tên hiển thị:</label>
-																<input style="color: black" type="text" required name="userName" value="<?php if(isset($_SESSION['customer']['customerName'])) echo $_SESSION['customer']['customerName'];?>" />
+																<input style="color: black" type="text" required name="customerName" value="<?php if(isset($_SESSION['customer']['customerName'])) echo $_SESSION['customer']['customerName'];?>" />
 															</div>
 															<div class="col-md-6">
 																<label>Họ tên:</label>

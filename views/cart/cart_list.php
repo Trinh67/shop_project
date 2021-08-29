@@ -95,7 +95,7 @@
 					</div>
 				</div>
 				<div class="row margin-top">
-					<div class="col-sm-6">
+					<div class="col-sm-8">
 						<div class="single-cart-form padding60">
 							<div class="log-title">
 								<h3><strong>Mã giảm giá</strong></h3>
@@ -111,35 +111,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-6">
-						<div class="single-cart-form padding60">
-							<div class="log-title">
-								<h3><strong>Chi tiết đơn hàng</strong></h3>
-							</div>
-							<div class="cart-form-text pay-details table-responsive">
-								<table>
-									<tbody>
-										<tr>
-											<th>Tổng giá trị sản phẩm</th>
-											<td><?= number_format($sum_amount) ?>VND</td>
-										</tr>
-										<tr>
-											<th>Phí phục vụ</th>
-											<td>30,000 VND</td>
-										</tr>
-										<tr>
-											<th>Vat (5%)</th>
-											<td><?= number_format($sum_amount*0.05) ?>VND</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<th class="tfoot-padd">Tổng đơn hàng</th>
-											<td class="tfoot-padd"><?= number_format($sum_amount*1.05 + 30000) ?>VND</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
+					<div class="col-sm-4">
+						<div class="logo" style="padding: 15%; text-align: center;">
+							<a href="?mod=page&act=home"><img src="public/img/dev67.png" width: 150%; alt="Shop" /></a>
 						</div>
 					</div>
 				</div>
