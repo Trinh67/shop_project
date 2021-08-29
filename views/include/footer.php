@@ -13,16 +13,15 @@
 								<ul>
 									<li>
 										<i class="mdi mdi-map-marker"></i>
-										<p>Thành phố Hồ Chi Minh</p>
+										<p style="padding-top: 10px">Thành phố Hồ Chi Minh</p>
 									</li>
 									<li>
 										<i class="mdi mdi-phone"></i>
-										<p>0389 252 913</p>
+										<p style="padding-top: 10px">0389 252 913</p>
 									</li>
 									<li>
 										<i class="mdi mdi-email"></i>
-										<p>trinhxuantrinh.yd267@gmail.com</p>
-										<p>trinhtx.uet@gmail.com</p>
+										<p style="padding-top: 10px">trinhxuantrinh.yd267@gmail.com</p>
 									</li>
 								</ul>
 							</div>
@@ -59,12 +58,6 @@
 					<div class="col-xs-12 col-sm-6 col-md-3 r-margin-top wide-mobile">
 						<br/><br/><br/><br>
 						<a href="#"><img src="public/img/footer/payment.png" alt="" /></a>
-					</div>
-				</div>
-				<br/><br/>
-				<div class="row">
-					<div class="col-xs-12 col-sm-12" align="center">
-						<p>&copy; Shop 2021.</p>
 					</div>
 				</div>
 			</div>

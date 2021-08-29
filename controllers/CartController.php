@@ -66,11 +66,22 @@
 			if(isset( $_SESSION['cart']))
 				$products = $_SESSION['cart'];
 			else $products = null;
+			
+			$data = array();
+			$data['orderNumber'] = $this->cate_model->maxId();
+			$data['email'] = isset($_POST['email']) ? $_POST['email'] : $_SESSION['customer']['email'];
+			$data['customerName'] = isset($_POST['fullName']) ? $_POST['fullName'] : $_SESSION['customer']['fullName'];
+			$data['address'] = isset($_POST['address']) ? $_POST['address'] : $_SESSION['customer']['address'];
+			$data['phoneNumber'] = isset($_POST['phoneNumber']) ? $_POST['phoneNumber'] : $_SESSION['customer']['phoneNumber'];
+			$data['status'] = 1;
+			$data['sumAmount'] = $_SESSION['sum'];
+			$data['customerNumber'] = $_SESSION['customer']['customerNumber'];
+			
+			$status_order = $this->cate_model->insert_order($data);
+			$status_orderDetail = $this->cate_model->insert_orderDetail($products, $data['orderNumber']);
 
-			$status = $this->cate_model->insert($products);
-
-			if($status == true){
-		    	setcookie('msg','Đặt hàng thành công!!! Tiếp tục mua hàng nào!!!',time()+2);
+			if($status_order == true && $status_orderDetail == true){
+		    	setcookie('msg','Đặt hàng thành công!!!',time()+2);
 				unset($_SESSION['cart']);
 				unset($_SESSION['sum']);
 		    	header('Location: ?mod=page&act=home');

@@ -60,7 +60,7 @@
 										<td class="td-img text-left">
 											<a href="?mod=product&act=detail&id=<?= $product['productCode'] ?>" ><img src=<?= $product['image'] ?> alt="Add Product" /></a>
 											<div class="items-dsc">
-												<h5><a href="?mod=product&act=detail&id=<?= $product['productCode'] ?>"><?= $product['productName'] ?></a></h5>
+												<h5><a href="?mod=product&act=detail&id=<?= $product['productCode'] ?>&line=<?= $product['productLineNumber'] ?>"><?= $product['productName'] ?></a></h5>
 											</div>
 										</td>
 										<td><?= number_format($product['price']) ?> VND</td>

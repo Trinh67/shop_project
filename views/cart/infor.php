@@ -33,17 +33,17 @@
             <form style="width: 60%; height: 60%; margin-left: 20%; font-size: 20px" action="?mod=cart&act=order" method="POST">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email</label>
-                  <input type="email" class="form-control" required id="" aria-describedby="emailHelp" placeholder="" value = "<?php if(isset($_SESSION['customer']['email'])) echo $_SESSION['customer']['email']; 
+                  <input type="email" class="form-control" required name="email" value = "<?php if(isset($_SESSION['customer']['email'])) echo $_SESSION['customer']['email']; 
 											else if(isset($_SESSION['admin']['email'])) echo $_SESSION['admin']['email'];?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Họ tên</label>
-                  <input type="text" class="form-control" required id="" placeholder="" name="name" value = "<?php if(isset($_SESSION['customer']['fullName'])) echo $_SESSION['customer']['fullName']; 
+                  <input type="text" class="form-control" required name="fullName" value = "<?php if(isset($_SESSION['customer']['fullName'])) echo $_SESSION['customer']['fullName']; 
 											else if(isset($_SESSION['admin']['fullName'])) echo $_SESSION['admin']['fullName'];?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Số điện thoại</label>
-                  <input type="numberic" class="form-control" required id="" placeholder="" value = "<?php if(isset($_SESSION['customer']['phoneNumber'])) echo $_SESSION['customer']['phoneNumber'] ?>" name="phone">
+                  <input type="text" class="form-control" required name="phoneNumber" value = "<?php if(isset($_SESSION['customer']['phoneNumber'])) echo $_SESSION['customer']['phoneNumber'] ?>" name="phone">
                 </div>
                 <div class="form-group">
                 <label for="exampleInputPassword1">Địa chỉ</label>
