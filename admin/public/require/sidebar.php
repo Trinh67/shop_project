@@ -4,7 +4,7 @@
     <div class="sidebar-brand-icon rotate-n-15">
       <i class="fas fa-laugh-wink"></i>
     </div>
-    <div class="sidebar-brand-text mx-3">Shop</div>
+    <div class="sidebar-brand-text mx-3">Cửa hàng</div>
   </a>
 
   <!-- Divider -->
@@ -14,14 +14,14 @@
   <li class="nav-item">
     <a class="nav-link" href="?mod=page&act=dashboard">
       <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span style="font-size: 17px">Trang chủ</span></a>
+      <span style="font-size: 17px">Tổng quan</span></a>
   </li>
 
   <!-- Divider -->
   <hr class="sidebar-divider">
 
   <!-- Heading -->
-  <div class="sidebar-heading">
+  <div class="sidebar-heading" style="font-size: 14px">
     Quản lí
   </div>
   <!-- Customer -->

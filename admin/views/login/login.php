@@ -19,12 +19,12 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="public/img/uet.png" alt="IMG" width="360px" height="260px">
+					<img src="public/img/dev67.png" alt="IMG" width="360px" height="260px">
 				</div>
 
 				<form class="login100-form validate-form" action="?mod=login&act=login_action" method="POST" role="form" enctype="multipart/form-data">
 					<span class="login100-form-title" style="font-size: 36px;">
-						Sign in
+						Đăng nhập
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
@@ -43,30 +43,27 @@
 						</span>
 					</div>
 					    <?php if(isset($_COOKIE['msg'])){ ?>
-                            <div class="alert alert-warning">
-                                <strong>Thất bại! </strong><?= $_COOKIE['msg'] ?>
-                            </div>
+                            <div class="alert alert-danger">
+								<strong>Thất bại! </strong><?= $_COOKIE['msg'] ?>
+							</div>
                         <?php }?>  
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							Login
+							Đăng nhập
 						</button>
 					</div>
 
 					<div class="text-center p-t-12">
 						<span class="txt1">
-							Forgot
+							Quên mật khẩu?
 						</span>
-						<a class="txt2" href="public/#">
-							Username / Password?
-						</a>
 					</div>
 
 					<div class="text-center p-t-136">
 						<div>
 							<a class="txt2" href="../?mod=page&act=home">
 								<i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>
-								Back to shop
+								Trang bán hàng
 							</a>
 					    </div>
 					</div>
