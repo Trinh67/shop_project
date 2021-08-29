@@ -11,9 +11,6 @@
 	<link rel="apple-touch-icon" href="public/apple-touch-icon.png">
 	<!-- Place favicon.ico in the root directory -->
 	<!-- all css here -->
-	<!-- bootstrap v3.3.6 css -->
-	<link rel="stylesheet" href="public/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 	<!-- animate css -->
 	<link rel="stylesheet" href="public/css/animate.css">
 	<!-- pe-icon-7-stroke -->
@@ -26,6 +23,9 @@
 	<link rel="stylesheet" href="public/css/meanmenu.min.css">
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- bootstrap v3.3.6 css -->
+	<link rel="stylesheet" href="public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 	<!-- owl.carousel css -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<!-- style css -->

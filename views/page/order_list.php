@@ -30,6 +30,11 @@
 		<!-- cart content section start -->
 		<section class="pages cart-page section-padding">
 			<div class="container">
+				<?php if(isset($_COOKIE['msg'])){ ?>
+					<div class="alert alert-info">
+						<strong><?= $_COOKIE['msg'] ?></strong>
+					</div>
+				<?php }?>
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="table-responsive padding60">
@@ -57,7 +62,8 @@
 										<td><?= $product['address'] ?></td>
 										<td><?= $product['phoneNumber'] ?></td>
 										<td><strong><?= number_format($product['sumAmount']) ?> VND</strong></td>
-										<td><?= $product['status'] ?></td>
+										<td><span class="badge badge-pill badge-success"><?php $status = array('-1' => 'Đã hủy', '0' => 'Bị từ chối', '1' => 'Chờ xác nhận', '2' => 'Đang giao hàng', '3' => 'Đã hoàn thành');
+										 echo $status[$product['status']] ?></span></td>
 										<td><a href="?mod=order&act=cancel&id=<?= $product['orderNumber'] ?>" onclick="return confirm('Bạn chắc chắn muốn hủy đơn hàng này?');"><i class="mdi mdi-close" title="Remove this Order"></i></td>
 									</tr>
 									<?php } ?>

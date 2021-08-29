@@ -1,3 +1,8 @@
+<?php 
+	if(isset( $_SESSION['cart']))
+		$products = $_SESSION['cart'];
+	else $products = null;
+?>
 <!doctype html>
 <html class="no-js" lang="">
     <?php require_once('views/include/head.php') ?>
@@ -46,6 +51,7 @@
 								<tbody>
 								    <?php 
 										$sum_amount = 0;
+										if($products != null)
 									    foreach ($_SESSION['cart'] as $products) { 
 											$product = $products[0];
 											$sum_amount += $product['price']*$products['SoLuong'];

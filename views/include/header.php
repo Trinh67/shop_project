@@ -43,6 +43,7 @@
 												<?php if(isset($_SESSION['customer']) || isset($_SESSION['admin'])) { ?>												
 												<li class="dropdown-item"><a href="?mod=login&act=logout">Đăng xuất</a></li>
 												<li class="dropdown-item"><a href="?mod=page&act=account">Tài khoản</a></li>
+												<li class="dropdown-item"><a href="?mod=order&act=list">Đơn hàng</a></li>
 												<li class="dropdown-item"><a href="?mod=cart&act=list">Giỏ hàng</a></li>
 											    <?php }else{ ?>
 												<li><a href="?mod=login&act=login">Đăng nhập</a></li>
@@ -57,7 +58,7 @@
 										<li><a href="#"><i class="mdi mdi-settings"></i></a>
 										<?php if(isset($_SESSION['customer']) || isset($_SESSION['admin'])) { ?>
 											<ul>
-												<li class="dropdown-item"><a href="?mod=order&act=list">Đơn hàng</a></li>
+												
 											</ul>
 										<?php } ?>	
 										</li>

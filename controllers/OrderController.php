@@ -16,8 +16,16 @@
 
 		public function cancel(){
 			$ordNum = isset($_GET['id'])? $_GET['id'] :0;
-			$data = $this->order_model->CancelOrder($ordNum);
-			require_once('views/page/order_list.php');
+			$status = $this->order_model->CancelOrder($ordNum);
+
+			if($status == true){
+		    	setcookie('msg','Hủy đơn hàng thành công!!!',time()+2);
+		    	header('Location: ?mod=order&act=list');
+		    }
+		    else {
+		    	setcookie('msg','Hủy đơn hàng thất bại!!!',time()+2);
+		    	header('Location: ?mod=order&act=list');
+		    }
 		}
 	}
  ?>
