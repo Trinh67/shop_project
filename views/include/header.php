@@ -57,7 +57,7 @@
 										<li><a href="#"><i class="mdi mdi-settings"></i></a>
 										<?php if(isset($_SESSION['customer']) || isset($_SESSION['admin'])) { ?>
 											<ul>
-												<li class="dropdown-item"><a href="?mod=page&act=order">Đơn hàng</a></li>
+												<li class="dropdown-item"><a href="?mod=order&act=list">Đơn hàng</a></li>
 											</ul>
 										<?php } ?>	
 										</li>

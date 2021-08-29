@@ -1,8 +1,3 @@
-<?php 
-	if(isset( $_SESSION['cart']))
-		$products = $_SESSION['cart'];
-	else $products = null;
-?>
 <!doctype html>
 <html class="no-js" lang="">
     <?php require_once('views/include/head.php') ?>
@@ -51,14 +46,13 @@
 								<tbody>
 								    <?php 
 										$sum_amount = 0;
-										if($products != null)
 									    foreach ($_SESSION['cart'] as $products) { 
 											$product = $products[0];
 											$sum_amount += $product['price']*$products['SoLuong'];
 									?>
 									<tr>
 										<td class="td-img text-left">
-											<a href="?mod=product&act=detail&id=<?= $product['productCode'] ?>" ><img src=<?= $product['image'] ?> alt="Add Product" /></a>
+											<a href="?mod=product&act=detail&id=<?= $product['productCode'] ?>&line=<?= $product['productLineNumber'] ?>" ><img src=<?= $product['image'] ?> alt="Add Product" /></a>
 											<div class="items-dsc">
 												<h5><a href="?mod=product&act=detail&id=<?= $product['productCode'] ?>&line=<?= $product['productLineNumber'] ?>"><?= $product['productName'] ?></a></h5>
 											</div>

@@ -60,6 +60,21 @@
 					require_once('views/page/error-404.php');
 					break;
 			}
+			break;
+		case 'order':
+			require_once('controllers/OrderController.php');
+			$controller_obj = new OrderController();
+			switch ($act) {
+				case 'list':
+					$controller_obj->list();
+					break;
+				case 'cancel':
+					$controller_obj->cancel();
+					break;
+				default:
+					require_once('views/page/error-404.php');
+					break;
+			}
 			break;	
 		case 'cart':
 		    checkAuth();
