@@ -26,16 +26,16 @@
           
       <!-- Page Heading -->
       <div class="container-fluid">
-        <h2 align="center">List Users</h2>
-        <!-- <a href="?mod=customer&act=add" class="btn btn-primary">Add</a> -->
+        <h2 align="center">Khách hàng</h2>
+        <a href="?mod=customer&act=add" class="btn btn-primary">Thêm mới</a>
           <?php if(isset($_COOKIE['msg'])){ ?>
-            <div class="alert alert-success">
+            <div class="alert alert-info">
               <strong><?= $_COOKIE['msg'] ?></strong>
             </div>
           <?php }?>
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">DataTables List Users</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Danh sách khách hàng</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -43,10 +43,11 @@
             <thead>
               <tr>
                     <th>ID</th>
-                    <th>Name</th>
+                    <th>Tên</th>
                     <th>Email</th>
-                    <th>Phone Number</th>
-                    <th>Address</th>
+                    <th>Số điện thoại</th>
+                    <th>Địa chỉ</th>
+                    <th>Đơn hàng</th>
                     <th>Action</th>
                   </tr>
             </thead>
@@ -56,28 +57,22 @@
                     <td><?= $cus['customerNumber'] ?></td>
                     <td><?= $cus['customerName'] ?></td>
                     <td><?= $cus['email'] ?></td>
-                    <td><?= $cus['phone'] ?></td>
-                    <td><?= $cus['addressLine1'] ?> <?= $cus['city'] ?> <?= $cus['country'] ?></td>
-                    <td><a href="?mod=customer&act=detail&id=<?= $cus['customerNumber'] ?>" class="btn btn-success">Detail</a> 
-                    <!-- <a href="?mod=customer&act=update&id=<?= $cus['id'] ?>" class="btn btn-warning">Update</a>   -->
-                    <a href="?mod=customer&act=delete&id=<?= $cus['customerNumber'] ?>" onclick="return confirm('Bạn chắc chắn muốn xóa?');" class="btn btn-danger">Delete</a></td>
+                    <td><?= $cus['phoneNumber'] ?></td>
+                    <td><?= $cus['address'] ?></td>
+                    <td align="center"><?= $cus['numOfSuccessOrder'] ?></td>
+                    <td><a href="?mod=customer&act=detail&id=<?= $cus['customerNumber'] ?>" class="btn btn-success">Chi tiết</a> 
+                    <a href="?mod=customer&act=update&id=<?= $cus['customerNumber'] ?>" class="btn btn-warning">Sửa</a>
+                    <a href="?mod=customer&act=delete&id=<?= $cus['customerNumber'] ?>" onclick="return confirm('Bạn chắc chắn muốn xóa?');" class="btn btn-danger">Xóa</a></td>
                   </tr>
             <?php } ?>
             </tbody>
           </table>
       </div>
         <!-- /.container-fluid -->
-
       </div>
       <!-- End of Main Content -->
-
-      <!-- Footer -->
-      <?php require_once('public/require/footer.php') ?>
-      <!-- End of Footer -->
-
     </div>
     <!-- End of Content Wrapper -->
-
   </div>
   <!-- End of Page Wrapper -->
 

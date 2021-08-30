@@ -1,4 +1,4 @@
-# BTL-DBMS-2020
+# Project Shop
 Shop
 
 Cách chạy ứng dụng trên localhost:

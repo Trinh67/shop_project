@@ -2,18 +2,11 @@
 	class Model{
 
 		function All(){
-		    // Cau lenh truy van co so du lieu
-		    $query = "SELECT * FROM ".$this->table;
-
 		    $data = array();
-
 		    // Thuc thi cau lenh truy van co so du lieu
-		    $result = $this->connection->query($query);
-
-		    while($row = $result->fetch_assoc()) { 
-		    	$data[] = $row;
-		    }
-
+			$response = file_get_contents('https://trinh67uet.et.r.appspot.com/'.$this->table.'/');
+			$data = json_decode($response, true);
+			
 		    return $data;
 		}
         
@@ -66,33 +59,13 @@
 		}
 		
 		function Count(){
-		    // Cau lenh truy van co so du lieu
-			$query1 = "SELECT count(*) FROM employees";
-			$query2 = "SELECT count(*) FROM customers";
-			$query3 = "SELECT count(*) FROM orderdetails";
-			$query4 = "SELECT count(*) FROM products";
-
-			$data = array(1, 2, 3, 4);
-
-		    // // Thuc thi cau lenh truy van co so du lieu
-		    // $result1 = $this->connection->query($query1);
-			// $result2 = $this->connection->query($query2);
-			// $result3 = $this->connection->query($query3);
-			// $result4 = $this->connection->query($query4);
-
-		    // while($row = $result1->fetch_assoc()) { 
-		    // 	$data[] = $row;
-			// }
-			// while($row = $result2->fetch_assoc()) { 
-		    // 	$data[] = $row;
-			// }
-			// while($row = $result3->fetch_assoc()) { 
-		    // 	$data[] = $row;
-			// }
-			// while($row = $result4->fetch_assoc()) { 
-		    // 	$data[] = $row;
-		    // }
-			// //print_r($data);die;
+			$data = array();
+		    // Thuc thi cau lenh truy van co so du lieu
+			$data[1] = file_get_contents('https://trinh67uet.et.r.appspot.com/customer/count');
+			$data[2] = file_get_contents('https://trinh67uet.et.r.appspot.com/productLine/count');
+			$data[3] = file_get_contents('https://trinh67uet.et.r.appspot.com/order/count');
+			$data[4] = file_get_contents('https://trinh67uet.et.r.appspot.com/product/count');
+			
 		    return $data;
 		}
 	}

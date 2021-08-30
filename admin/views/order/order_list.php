@@ -41,11 +41,13 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>
               <tr>
-                    <th>Order_Number</th>
-                    <th>Product_Name</th>
-                    <th>Quantity</th>
-                    <th>Total_Price (VND)</th>
-                    <th>Image</th>
+                    <th>ID</th>
+                    <th>Tên khách hàng</th>
+                    <th>Địa chỉ</th>
+                    <th>Email</th>
+                    <th>Số điện thoại</th>
+                    <th>Tổng đơn hàng</th>
+                    <th>Trạng thái</th>
                     <th>Action</th>
                   </tr>
             </thead>
@@ -53,27 +55,35 @@
             <?php foreach ($data as $order) { ?>              
               <tr>
                     <td><?= $order['orderNumber'] ?></td>
-                    <td><?= $order['productName'] ?></td>
-                    <td><?= $order['quantityOrdered'] ?></td>
-                    <td><?= number_format($order['quantityOrdered'] * $order['priceEach']) ?></td>
-                    <td><img src="<?= $order['image'] ?>" width="150px" hight="200px"></td>
-                    <td><a href="?mod=order&act=detail&id=<?= $order['orderNumber'] ?>" class="btn btn-success">Detail</a> 
-                    <!-- <a href="?mod=order&act=update&id=<?= $order['orderNumber'] ?>" class="btn btn-warning">Update</a>   -->
-                    <!-- <a href="?mod=order&act=delete&id=<?= $order['orderNumber'] ?>" onclick="return confirm('Bạn chắc chắn muốn xóa?');" class="btn btn-danger">Delete</a></td> -->
+                    <td><?= $order['customerName'] ?></td>
+                    <td><?= $order['address'] ?></td>
+                    <td><?= $order['email'] ?></td>
+                    <td><?= $order['phoneNumber'] ?></td>
+                    <td><?= number_format($order['sumAmount']) ?></td>
+                    <td><?php $status = array('-1' => '<span class="badge badge-pill badge-danger">Đã hủy</span>', '0' => '<span class="badge badge-pill badge-warning">Bị từ chối</span>', '1' => '<span class="badge badge-pill badge-info">Chờ xác nhận</span>',
+                        '2' => '<span class="badge badge-pill badge-primary">Đã xác nhận</span>', '3' => '<span class="badge badge-pill badge-info">Đang giao hàng</span>', '4' => '<span class="badge badge-pill badge-success">Đã hoàn thành</span>');
+										 echo $status[$order['status']] ?></td>
+                    <td><a href="?mod=order&act=detail&id=<?= $order['orderNumber'] ?>" class="btn btn-success">Chi tiết</a> 
+                    <div class="dropdown dropleft float-right">
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        Action
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item text-warning" href="#"><i class="fas fa-times-circle"></i> Từ chối</a>
+                        <a class="dropdown-item text-primary" href="#"><i class="fas fa-check-circle"></i> Xác nhận</a>
+                        <a class="dropdown-item text-info" href="#"><i class="fas fa-times"></i> Đang giao</a>
+                        <a class="dropdown-item text-success" href="#"><i class="fas fa-check-square"></i> Hoàn thành</a>
+                      </div>
+                    </div>
+                    </td>
                   </tr>
             <?php } ?>
             </tbody>
           </table>
       </div>
         <!-- /.container-fluid -->
-
       </div>
       <!-- End of Main Content -->
-
-      <!-- Footer -->
-      <?php require_once('public/require/footer.php') ?>
-      <!-- End of Footer -->
-
     </div>
     <!-- End of Content Wrapper -->
 

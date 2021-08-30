@@ -1,11 +1,11 @@
 <?php 
     
 	require_once('models/product.php');
-	class productController{
+	class ProductController{
 		var $prod_model;
 
 		function __construct(){
-			$this->prod_model = new product();
+			$this->prod_model = new Product();
 		}
 		
 		public function list(){

@@ -50,6 +50,9 @@
 				case 'home':
 					$controller_obj->home();
 					break;
+				case 'list':
+					$controller_obj->home();
+					break;
 				case 'search':
 					$controller_obj->search();
 					break;
@@ -62,6 +65,7 @@
 			}
 			break;
 		case 'order':
+			checkAuth();
 			require_once('controllers/OrderController.php');
 			$controller_obj = new OrderController();
 			switch ($act) {
