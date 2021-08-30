@@ -36,11 +36,10 @@
 										<li><a href="?mod=product&line=3&type=Apple">Apple Watch</a></li>
 										<li>
 											<a href="?mod=page&act=home"><i class="mdi mdi-account">
-												<h5><?php if(isset($_SESSION['customer']['customerName'])) echo $_SESSION['customer']['customerName']; 
-												else if(isset($_SESSION['admin']['employeeName'])) echo $_SESSION['admin']['employeeName'];?></h5>
+												<h5><?php if(isset($_SESSION['customer']['customerName'])) echo $_SESSION['customer']['customerName'];?></h5>
 											</i></a>
 											<ul> 
-												<?php if(isset($_SESSION['customer']) || isset($_SESSION['admin'])) { ?>												
+												<?php if(isset($_SESSION['customer'])) { ?>												
 												<li class="dropdown-item"><a href="?mod=login&act=logout">Đăng xuất</a></li>
 												<li class="dropdown-item"><a href="?mod=page&act=account">Tài khoản</a></li>
 												<li class="dropdown-item"><a href="?mod=order&act=list">Đơn hàng</a></li>
@@ -50,12 +49,8 @@
 											    <?php } ?>	
 											</ul>
 										</li>
-										<li><a href="#"><i class="mdi mdi-settings"></i></a>
-										<?php if(isset($_SESSION['admin'])) { ?>
-											<ul>
-												<li class="dropdown-item"><a href="admin/?mod=page&act=dashboard">Trang quản trị</a></li>
-											</ul>
-										<?php } ?>	
+										<li>
+											<a href="#"><i class="mdi mdi-settings"></i></a>
 										</li>
 									</ul>
 								</nav>

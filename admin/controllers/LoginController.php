@@ -20,7 +20,7 @@
 			$status = $this->login_model->find($email, $password);
 
 			if($status == true){
-				$_SESSION['isLogin'] = true;
+				$_SESSION['isLoginAdmin'] = true;
 	            $_SESSION['admin'] = $status;
 		    	setcookie('msg','Đăng nhập thành công',time()+1);
 		    	header('Location: ?mod=page&act=dashboard');
@@ -34,12 +34,8 @@
 
 		public function logout(){
 			session_start();
-			unset($_SESSION['cart']);
-            unset($_SESSION['sum']);
-			unset($_SESSION['isLogin']);
-			unset($_SESSION['customer']);
+			unset($_SESSION['isLoginAdmin']);
 			unset($_SESSION['admin']);
-		    session_destroy();
 		    header('Location: ?mod=login&act=login');	
 		}
 

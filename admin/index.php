@@ -4,7 +4,7 @@
 	$act = (isset($_GET['act'])?$_GET['act']:'list');
 
 	function checkAuth(){
-    	if(empty($_SESSION['isLogin'])){
+    	if(empty($_SESSION['isLoginAdmin'])){
         	header('Location: ?mod=login&act=login');
     	}
     }

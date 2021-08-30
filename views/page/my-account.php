@@ -68,7 +68,7 @@
 														<input style="color: black" type="text" name="password" placeholder="Mật khẩu mới.." />
 														<label>Số đơn hàng đã hoàn thành:</label>
 														<input style="color: black" type="text" disabled name="numOfSuccessOrder" value="<?php if(isset($_SESSION['customer']['numOfSuccessOrder'])) echo $_SESSION['customer']['numOfSuccessOrder'] ?> "/>
-														<button type="submit" class="btn btn-primary">Save</button>
+														<button type="submit" class="btn btn-primary">Lưu</button>
 													</form>
 												</div>
 											</div>

@@ -1,6 +1,6 @@
  <?php 
 	class Model{
-
+		
 		function All(){
 		    $data = array();
 		    // Thuc thi cau lenh truy van co so du lieu
@@ -28,43 +28,25 @@
 		    return $data[0];
         }
 
-        function create($data){
-        	$f = "";
-        	$v = "";
-        	foreach ($data as $key => $value) {
-        		$f .= $key.",";
-        		$v .= "'".$value."',";
-        	}
-
-        	$f = trim($f,",");
-        	$v = trim($v,",");
-        	
-        	// Cau lenh truy van co so du lieu
-        	$query = "INSERT INTO ".$this->table."(".$f.") VALUES (".$v.");";
-		    
-		    // Thuc thi cau lenh truy van co so du lieu
-		    return $this->connection->query($query);
-        }
-
-        function edit($data){
-        	$v = "";
-            foreach ($data as $key => $value) {
-            	$v .= $key."='".$value."',";
-            }
-            $v = trim($v,",");
-        	// Cau lenh truy van co so du lieu
-        	$query = "UPDATE ".$this->table." SET ".$v." WHERE id =".$data['id'];
-
-		    // Thuc thi cau lenh truy van co so du lieu
-		    return $this->connection->query($query);
-        }
-
         function delete($id){
-        	// Cau lenh truy van co so du lieu
-    		$query = "DELETE FROM ".$this->table." WHERE id = ".$id;
-
 		    // Thuc thi cau lenh truy van co so du lieu
-		    return $this->connection->query($query);
+			$curl = curl_init();
+
+			curl_setopt_array($curl, array(
+			CURLOPT_URL => 'https://trinh67uet.et.r.appspot.com/'.$this->table.'/'.$id,
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_ENCODING => '',
+			CURLOPT_MAXREDIRS => 10,
+			CURLOPT_TIMEOUT => 0,
+			CURLOPT_FOLLOWLOCATION => true,
+			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			CURLOPT_CUSTOMREQUEST => 'DELETE',
+			));
+
+			$response = curl_exec($curl);
+			curl_close($curl);
+
+			return $response;
 		}
 		
 		function Count(){

@@ -50,7 +50,7 @@
 									</form>
 								</div>
 								<div class="submit-text coupon">
-							<a href="admin/?mod=login&act=login">Trang quản trị Admin</a>
+							<a href="admin/?mod=page&act=dashboard">Trang quản trị Admin</a>
 						</div>
 							</div>
 						</div>

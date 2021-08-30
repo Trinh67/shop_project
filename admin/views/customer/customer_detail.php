@@ -28,12 +28,17 @@
             <h3 align="center">Customer Detail</h3>
             <hr>
             <table class="table">
-                <th>Profile</th>
-                <th>Information</th>
-                <tr><h2><td><em>Customer Name:</em></td><td><?php echo $cus["customerName"] ?></td></h2></tr>
-                <tr><h2><td><em>Email:</em> </td><td><?php echo $cus["email"] ?></td></h2></tr>
-                <tr><h2><td><em>Phone Number:</em></td><td><?php echo $cus["phone"] ?></td></h2></tr>
-                <tr><h2><td><em>Address:</em></td><td><?php echo $cus["addressLine1"] ?>, <?php echo $cus["city"] ?>, <?php echo $cus["country"] ?></td></h2></tr>
+                <th style="width: 400px">#</th>
+                <th>Thông tin</th>
+                <tbody>
+                  <tr><h2><td>Tên hiển thị:</td><td><?php echo $cus["customerName"] ?></td></h2></tr>
+                  <tr><h2><td>Họ tên:</td><td><?php echo $cus["fullName"] ?></td></h2></tr>
+                  <tr><h2><td>ID quốc gia:</td><td><?php echo $cus["nationalId"] ?></td></h2></tr>
+                  <tr><h2><td>Địa chỉ:</td><td><?php echo $cus["address"] ?></td></h2></tr>
+                  <tr><h2><td>Email:</td><td><?php echo $cus["email"] ?></td></h2></tr>
+                  <tr><h2><td>Số điện thoại:</td><td><?php echo $cus["phoneNumber"] ?></td></h2></tr>
+                  <tr><h2><td>Số đơn hàng hoàn thành:</td><td><?php echo $cus["numOfSuccessOrder"] ?></td></h2></tr>
+                </tbody>
             </table>
             <a href="?mod=customer&act=list" type="button" class="btn btn-primary">Back</a>
         </div>
