@@ -59,7 +59,7 @@
                     <td><?= $order['address'] ?></td>
                     <td><?= $order['email'] ?></td>
                     <td><?= $order['phoneNumber'] ?></td>
-                    <td><?= number_format($order['sumAmount']) ?></td>
+                    <td align="right"><?= number_format($order['sumAmount']) ?> VND</td>
                     <td><?php $status = array('-1' => '<span class="badge badge-pill badge-danger">Đã hủy</span>', '0' => '<span class="badge badge-pill badge-warning">Bị từ chối</span>', '1' => '<span class="badge badge-pill badge-info">Chờ xác nhận</span>',
                         '2' => '<span class="badge badge-pill badge-primary">Đã xác nhận</span>', '3' => '<span class="badge badge-pill badge-info">Đang giao hàng</span>', '4' => '<span class="badge badge-pill badge-success">Đã hoàn thành</span>');
 										 echo $status[$order['status']] ?></td>

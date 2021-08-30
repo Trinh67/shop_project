@@ -1,26 +1,3 @@
-<?php
-
-require_once ('models/Connection.php');
-// Load menu bài viết
-$conn_obj = new Connection();
-// Cau lenh truy van
-$query_prodlines = "SELECT
-  *
-FROM
-  productlines";
-
-// Thuc thi cau lenh
-$result_prodlines = $conn_obj -> conn -> query($query_prodlines);
-
-// Tao 1 mang de chua du lieu
-$prodlines = array();
-
-while ($row = $result_prodlines->fetch_assoc()) {
-  $prodlines[] = $row;
-}  
-
-?>
-
 <!DOCTYPE html>
 <html>
 <?php require_once('public/require/head.php') ?>
@@ -49,7 +26,7 @@ while ($row = $result_prodlines->fetch_assoc()) {
           
       <!-- Page Heading -->
       <div class="container-fluid">
-        <h2 align="center">Add Product</h2>
+        <h2 align="center">Thêm sản phẩm</h2>
         <hr>
         <?php if(isset($_COOKIE['msg'])){ ?>
         <div class="alert alert-warning">
@@ -58,43 +35,44 @@ while ($row = $result_prodlines->fetch_assoc()) {
     <?php }?>
         <form action="?mod=product&act=store" method="POST" role="form" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="">ID</label>
-                <input type="text" class="form-control" id="" placeholder="" name="id">
-            </div>
-            <div class="form-group">
-                <label for="">Product Name</label>
+                <label for="">Tên sản phẩm</label>
                 <input type="text" class="form-control" id="" placeholder="" name="productName">
             </div>
             <div class="form-group">
-                <label for="">Price Each (VND)</label>
-                <input type="text" class="form-control" id="" placeholder="" name="price">
-            </div>
-            <div class="form-group">
-                <label for="">Description</label>
-                <textarea rows = "8" class="form-control" id="contents" placeholder="" name="productDescription"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="">ProductLine</label>
-                <select name="productLineCode" class="form-control">
+                <label for="">Danh mục</label>
+                <select name="productLineNumber" class="form-control">
                 <?php foreach ($prodlines as $prls) {?>  
-                  <option value="<?= $prls['productLineCode'] ?>"><?= $prls['textDescription'] ?></option>
+                  <option value="<?= $prls['productLineNumber'] ?>"><?= $prls['textDescription'] ?></option>
                 <?php } ?>
                 </select>
             </div>
             <div class="form-group">
-                <label for="">Quantity In Stock</label>
-                <input type="number" class="form-control" id="" placeholder="" name="quantityInStock">
+                <label for="">Giá (VND)</label>
+                <input type="text" class="form-control" id="" placeholder="" name="price">
             </div>
             <div class="form-group">
-                <label for="">Sale Percent</label>
-                <input type="number" class="form-control" id="" placeholder="" name="sale">
+                <label for="">Mô tả</label>
+                <textarea rows = "8" class="form-control" id="contents" placeholder="" name="productDescription"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="">Kho</label>
+                <input type="number" class="form-control" id="" placeholder="" name="quantityOfStock">
             </div>
             <div class="form-group">
-                <label for="">Image</label>
-                <input type="text" class="form-control" id="" placeholder="" name="thumbnail">
+                <label for="">Đường dẫn ảnh</label>
+                <input type="text" class="form-control" id="" placeholder="" name="image">
             </div>
-            <button type="submit" class="btn btn-primary">Create</button>
-            <a href="?mod=product" type="button" class="btn btn-primary">Back</a>
+            <div class="form-group">
+                <label for="">Model</label>
+                <input type="text" class="form-control" id="" placeholder="" name="modelNumber">
+            </div>
+            <div class="form-group">
+                <label for="">Năm sản xuất</label>
+                <input type="number" class="form-control" id="" placeholder="" name="yearOfManufacture">
+            </div>
+            <a href="?mod=product" type="button" class="btn btn-danger">Hủy</a>
+            <button type="submit" class="btn btn-primary">Thêm mới</button>
         </form>
         <br/>
     </div>

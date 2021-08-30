@@ -14,14 +14,8 @@
 			require_once('views/product/product_list.php');
 		}
 
-		public function detail(){
-			$id = isset($_GET['id'])?$_GET['id']:0;
-
-			$prod = $this->prod_model->find($id);
-			require_once('views/product/product_detail.php');
-		}
-
 		public function add(){
+			$prodlines = $this->prod_model->lines();
 			require_once('views/product/product_add.php');		
 		}
 
@@ -34,16 +28,6 @@
 		    $data['quantityInStock'] = $_POST['quantityInStock'];
 			$data['productLineCode'] = $_POST['productLineCode'];
 
-		    // $target_dir = "public/img/";  // thư mục chứa file upload
-		    // $thumbnail="";
-
-		    // $target_file = $target_dir . basename($_FILES["thumbnail"]["name"]); // link sẽ upload file lên
-
-		    // $status_upload = move_uploaded_file($_FILES["thumbnail"]["tmp_name"], $target_file);
-
-		    // if ($status_upload) { // nếu upload file không có lỗi 
-		    //     $thumbnail = basename( $_FILES["thumbnail"]["name"]);
-		    // }
 		    $data['image'] = $_POST['thumbnail'];
 
 		    $status = $this->prod_model->create($data);
@@ -61,6 +45,7 @@
 		public function update(){
 			$id = isset($_GET['id'])?$_GET['id']:0;
 			$product = $this->prod_model->find($id);
+			$prodlines = $this->prod_model->lines();
 			require_once('views/product/product_update.php');		
 		}
 
@@ -73,19 +58,6 @@
 		    $data['quantityInStock'] = $_POST['quantityInStock'];
 		    $data['productLineCode'] = $_POST['productLine'];
              
-		    // $target_dir = "public/img/";  // thư mục chứa file upload
-		    // $thumbnail="";
-
-		    // $target_file = $target_dir . basename($_FILES["thumbnail"]["name"]); // link sẽ upload file lên
-
-		    // $status_upload = move_uploaded_file($_FILES["thumbnail"]["tmp_name"], $target_file);
-
-		    // if ($status_upload) { // nếu upload file không có lỗi 
-		    //     $thumbnail = basename( $_FILES["thumbnail"]["name"]);
-		    // }
-		    // else $thumbnail = $_POST["thumnail"];
-
-			//$data['image'] = $thumbnail;
             $data['image'] = $_POST['image'];
 
 		    $status = $this->prod_model->edit($data);

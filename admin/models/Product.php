@@ -3,14 +3,6 @@
 	class Product extends Model{
 		var $table = 'product';
 
-		function find($id){
-        	// Cau lenh truy van co so du lieu
-			$query = "SELECT * FROM product_view WHERE productCode = '".$id."'";
-		    // Thuc thi cau lenh truy van co so du lieu
-
-		    return $data = $this->connection->query($query)->fetch_assoc();
-		}
-		
 		function create($data){
 			$f = "";
 			$v = "";

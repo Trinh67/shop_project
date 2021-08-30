@@ -64,7 +64,9 @@
 										<td><strong><?= number_format($product['sumAmount']) ?> VND</strong></td>
 										<td><span class="badge badge-pill badge-success"><?php $status = array('-1' => 'Đã hủy', '0' => 'Bị từ chối', '1' => 'Chờ xác nhận', '2' => 'Đang giao hàng', '3' => 'Đã hoàn thành');
 										 echo $status[$product['status']] ?></span></td>
-										<td><a href="?mod=order&act=cancel&id=<?= $product['orderNumber'] ?>" onclick="return confirm('Bạn chắc chắn muốn hủy đơn hàng này?');"><i class="mdi mdi-close" title="Remove this Order"></i></td>
+										<?php if($product['status'] == 1) { ?>
+											<td><a href="?mod=order&act=cancel&id=<?= $product['orderNumber'] ?>" onclick="return confirm('Bạn chắc chắn muốn hủy đơn hàng này?');"><i class="mdi mdi-close" title="Remove this Order"></i></td>
+										<?php } else echo '<td></td>'?>
 									</tr>
 									<?php } ?>
 								</tbody>

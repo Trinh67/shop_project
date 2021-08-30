@@ -42,23 +42,25 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                          <th>ProductLine</th>
-                          <th>Name</th>
-                          <th>Price Each</th>
-                          <th>Quality</th>
-                          <th>Image</th>
+                          <th>ID</th>
+                          <th>Tên sản phẩm</th>
+                          <th>Danh mục</th>
+                          <th>Giá</th>
+                          <th>Kho</th>
+                          <th>Ảnh</th>
                           <th>Action</th>
                         </tr>
                   </thead>
                   <tbody>
                   <?php foreach ($products as $product) { ?>              
                     <tr>
+                          <td><?= $product['productCode'] ?></td>
+                          <td style="max-width: 240px"><?= $product['productName'] ?></td>
                           <td><?= $product['productLine'] ?></td>
-                          <td><?= $product['productName'] ?></td>
-                          <td><?= number_format($product['buyPrice']) ?> VND</td>
-                          <td><?= $product['quantityInStock'] ?></td>
+                          <td align="right"><?= number_format($product['price']) ?> VND</td>
+                          <td align="right"><?= $product['quantityOfStock'] ?></td>
                           <td><img src="<?= $product['image'] ?>" width="150px" hight="200px" alt="Image"></td>
-                          <td><a href="../?mod=product&act=detail&id=<?= $product['productCode'] ?>" class="btn btn-success">Detail</a> 
+                          <td><a href="../?mod=product&act=detail&id=<?= $product['productCode'] ?>" class="btn btn-success" target="_blank">Detail</a> 
                           <a href="?mod=product&act=update&id=<?= $product['productCode'] ?>" class="btn btn-warning">Update</a>  
                           <a href="?mod=product&act=delete&id=<?= $product['productCode'] ?>" onclick="return confirm('Bạn chắc chắn muốn xóa?');" class="btn btn-danger">Delete</a></td>
                         </tr>

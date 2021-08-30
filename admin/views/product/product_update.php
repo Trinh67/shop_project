@@ -1,25 +1,3 @@
-<?php
-
-require_once ('models/Connection.php');
-// Load menu bài viết
-$conn_obj = new Connection();
-// Cau lenh truy van
-$query_prodlines = "SELECT
-  *
-FROM
-  productlines";
-
-// Thuc thi cau lenh
-$result_prodlines = $conn_obj -> conn -> query($query_prodlines);
-
-// Tao 1 mang de chua du lieu
-$prodlines = array();
-
-while ($row = $result_prodlines->fetch_assoc()) {
-  $prodlines[] = $row;
-}  
-
-?>
 <!DOCTYPE html>
 <html>
 <?php require_once('public/require/head.php') ?>
@@ -58,40 +36,47 @@ while ($row = $result_prodlines->fetch_assoc()) {
         <form action="?mod=product&act=edit" method="POST" role="form" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="">ID</label>
-                <input type="text" class="form-control" id="" placeholder="" name="id" value="<?= $product['productCode'] ?>">
+                <input type="text" class="form-control" disabled id="" placeholder="" name="id" value="<?= $product['productCode'] ?>">
             </div>
             <div class="form-group">
-                <label for="">Product Name</label>
+                <label for="">Tên sản phẩm</label>
                 <input type="text" class="form-control" id="" placeholder="" name="productName" value="<?= $product['productName'] ?>">
             </div>
             <div class="form-group">
-                <label for="">Price Each (VND)</label>
-                <input type="number" class="form-control" id="" placeholder="" name="price" value="<?= $product['buyPrice'] ?>">
-            </div>
-            <div class="form-group">
-                <label for="">Description</label>
-                <textarea rows = "8" class="form-control" id="contents" placeholder="" name="productDescription"><?= $product['productDescription'] ?></textarea>
-            </div>
-            <div class="form-group">
-                <label for="">ProductLine</label>
+                <label for="">Danh mục</label>
                 <select name="productLine" class="form-control">
                 <?php foreach ($prodlines as $prls) {?>  
-                  <option <?= ($prls['productLineCode'] == $product['productLineCode'])?'selected':"" ?> value="<?= $prls['productLineCode'] ?>"><?= $prls['productLine'] ?></option>
+                  <option <?= ($prls['productLineNumber'] == $product['productLineNumber'])?'selected':"" ?> value="<?= $prls['productLineNumber'] ?>"><?= $prls['productLine'] ?></option>
                 <?php } ?>
                 </select>
             </div>
             <div class="form-group">
-                <label for="">Quantity In Stock</label>
-                <input type="number" class="form-control" id="" placeholder="" name="quantityInStock" value="<?= $product['quantityInStock'] ?>">
+                <label for="">Giá (VND)</label>
+                <input type="number" class="form-control" id="" placeholder="" name="price" value="<?= $product['price'] ?>">
             </div>
             <div class="form-group">
-                <h4>Current Thumbnail: </h4><img src="<?= $product['image'] ?>" weight = "300px" height = "200px"><br/><br/>
-                <label for="">New Image</label>
-                <!-- <input type="file" class="form-control" id="" placeholder="" name="thumbnail" value="<?= $product['image'] ?>"> -->
+                <label for="">Mô tả</label>
+                <textarea rows = "8" class="form-control" id="contents" placeholder="" name="productDescription"><?= $product['productDescription'] ?></textarea>
+            </div>
+            <div class="form-group">
+                <label for="">Kho</label>
+                <input type="number" class="form-control" id="" placeholder="" name="quantityOfStock" value="<?= $product['quantityOfStock'] ?>">
+            </div>
+            <div class="form-group">
+                <h4>Ảnh hiện tại: </h4><img src="<?= $product['image'] ?>" weight = "300px" height = "200px" alt ="IMG"><br/><br/>
+                <label for="">Đường dẫn ảnh mới:</label>
                 <input type="text" class="form-control" id="" placeholder="" name="image" value="<?= $product['image'] ?>">
             </div>
-            <button type="submit" class="btn btn-success">Update</button>
-            <a href="?mod=product" type="button" class="btn btn-primary">Back</a>
+            <div class="form-group">
+                <label for="">Model</label>
+                <input type="text" class="form-control" id="" placeholder="" name="modelNumber" value="<?= $product['modelNumber'] ?>">
+            </div>
+            <div class="form-group">
+                <label for="">Năm sản xuất</label>
+                <input type="number" class="form-control" id="" placeholder="" name="yearOfManufacture" value="<?= $product['yearOfManufacture'] ?>">
+            </div>
+            <a href="?mod=product" type="button" class="btn btn-danger">Hủy</a>
+            <button type="submit" class="btn btn-success">Cập nhật</button>
         </form>
         <br/><br/>
     </div>

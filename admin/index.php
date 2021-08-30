@@ -132,6 +132,4 @@
 			require_once('views/page/404.php');
 			break;
 	}
-
-	
- ?>
+?>

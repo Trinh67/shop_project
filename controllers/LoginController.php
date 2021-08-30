@@ -36,6 +36,9 @@
 			session_start();
 			unset($_SESSION['cart']);
             unset($_SESSION['sum']);
+			unset($_SESSION['isLogin']);
+			unset($_SESSION['customer']);
+			unset($_SESSION['admin']);
 		    session_destroy();
 		    header('Location: ?mod=page&act=home');	
 		}

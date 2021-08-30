@@ -56,7 +56,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><h5><b>Khách hàng</b></h5></div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"><? $data[1] ?></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $data[1] ?></div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -72,7 +72,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-success text-uppercase mb-1"><h5><b>Danh mục</b></h5></div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $data[2] ?></div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -90,7 +90,7 @@
                       <div class="text-xs font-weight-bold text-info text-uppercase mb-1"><h5><b>Đơn hàng</b></h5></div>
                       <div class="row no-gutters align-items-center">
                         <div class="col-auto">
-                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">4</div>
+                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= $data[3] ?></div>
                         </div>
                       </div>
                     </div>
@@ -109,7 +109,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-warning text-uppercase mb-1"><h5><b>Mặt hàng</b></h5></div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">16</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $data[4] ?></div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-calendar fa-2x text-gray-300"></i>

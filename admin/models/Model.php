@@ -9,14 +9,23 @@
 			
 		    return $data;
 		}
+
+		function lines(){
+		    $data = array();
+		    // Thuc thi cau lenh truy van co so du lieu
+			$response = file_get_contents('https://trinh67uet.et.r.appspot.com/productLine/');
+			$data = json_decode($response, true);
+			
+		    return $data;
+		}
         
         function find($id){
-        	// Cau lenh truy van co so du lieu
-		    $query = "SELECT * FROM ".$this->table." WHERE id=".$id;
-
+        	$data = array();
 		    // Thuc thi cau lenh truy van co so du lieu
-
-		    return $data = $this->connection->query($query)->fetch_assoc();
+			$response = file_get_contents('https://trinh67uet.et.r.appspot.com/'.$this->table.'/'.$id);
+			$data = json_decode($response, true);
+			
+		    return $data[0];
         }
 
         function create($data){
