@@ -13,14 +13,6 @@
 			require_once('views/order/order_list.php');
 		}
 
-		public function detail(){
-			$id = isset($_GET['id'])?$_GET['id']:0;
-			$orders = array();
-			$orders = $this->order_model->find($id);
-			require_once('views/order/order_detail.php');
-		}
-
-
 		public function update(){
 			$data = array();
 			$data['ordNum'] = isset($_GET['id'])?$_GET['id']:0;

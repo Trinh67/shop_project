@@ -64,17 +64,21 @@
                         '2' => '<span class="badge badge-pill badge-primary">Đã xác nhận</span>', '3' => '<span class="badge badge-pill badge-info">Đang giao hàng</span>', '4' => '<span class="badge badge-pill badge-success">Đã hoàn thành</span>');
 										 echo $status[$order['status']] ?></td>
                     <td>
-                      <a href="?mod=order&act=detail&id=<?= $order['orderNumber'] ?>" class="btn btn-success">Chi tiết</a> 
-                      <?php if($order['status'] != -1) { ?>
+                      <a href="../?mod=page&act=orderDetail&id=<?= $order['orderNumber'] ?>" class="btn btn-success">Chi tiết</a> 
+                      <?php if($order['status'] > 0 && $order['status'] < 4) { ?>
 											  <div class="dropdown dropleft float-right">
                           <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                             Action
                           </button>
                           <div class="dropdown-menu">
-                            <a class="dropdown-item text-warning" href="?mod=order&act=update&val=0&id=<?= $order['orderNumber'] ?>"><i class="fas fa-times-circle"></i> Từ chối</a>
-                            <a class="dropdown-item text-primary" href="?mod=order&act=update&val=2&id=<?= $order['orderNumber'] ?>"><i class="fas fa-check-circle"></i> Xác nhận</a>
-                            <a class="dropdown-item text-info" href="?mod=order&act=update&val=3&id=<?= $order['orderNumber'] ?>"><i class="fas fa-times"></i> Đang giao</a>
-                            <a class="dropdown-item text-success" href="?mod=order&act=update&val=4&id=<?= $order['orderNumber'] ?>"><i class="fas fa-check-square"></i> Hoàn thành</a>
+                            <?php if($order['status'] == 1) { ?>
+                              <a class="dropdown-item text-warning" href="?mod=order&act=update&val=0&id=<?= $order['orderNumber'] ?>"><i class="fas fa-times-circle"></i> Từ chối</a>
+                              <a class="dropdown-item text-primary" href="?mod=order&act=update&val=2&id=<?= $order['orderNumber'] ?>"><i class="fas fa-check-circle"></i> Xác nhận</a>
+                            <?php } else if($order['status'] == 2) { ?>
+                              <a class="dropdown-item text-info" href="?mod=order&act=update&val=3&id=<?= $order['orderNumber'] ?>"><i class="fas fa-check"></i> Đang giao</a>
+                            <?php } else if($order['status'] == 3) { ?>
+                              <a class="dropdown-item text-success" href="?mod=order&act=update&val=4&id=<?= $order['orderNumber'] ?>"><i class="fas fa-check-square"></i> Hoàn thành</a>
+                            <?php } ?>
                           </div>
                         </div>
 										  <?php } ?>

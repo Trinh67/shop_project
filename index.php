@@ -59,6 +59,9 @@
 				case 'account':
 					$controller_obj->account();
 					break;
+				case 'orderDetail':
+					$controller_obj->orderDetail();
+					break;
 				default:
 					require_once('views/page/error-404.php');
 					break;
@@ -116,6 +119,11 @@
 
 	function checkAuth(){
     	if(empty($_SESSION['isLogin'])){
+        	header('Location: ?mod=login&act=login');
+    	}
+    }
+	function checkAuthAdmin(){
+    	if(empty($_SESSION['isLoginAdmin'])){
         	header('Location: ?mod=login&act=login');
     	}
     }

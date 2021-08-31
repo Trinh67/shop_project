@@ -27,6 +27,13 @@
 			require_once('views/page/search.php');
 		}
 
+		public function orderDetail(){
+			$id = isset($_GET['id'])?$_GET['id']:0;
+			$orders = array();
+			$orders = $this->page_model->GetOrderDetail($id);
+			require_once('views/page/order_detail.php');
+		}
+
 		public function account(){
 			require_once('views/page/my-account.php');
 		}

@@ -80,9 +80,6 @@
 				case 'list':
 					$controller_obj->list();
 					break;
-				case 'detail':
-					$controller_obj->detail();
-					break;
 				case 'update':
 					$controller_obj->update();
 					break;		

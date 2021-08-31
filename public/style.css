@@ -13,7 +13,7 @@ img {max-width:100%;}
 p {margin:0px;}
 h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 10px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Bree Serif', sans-serif;
 	text-transform:uppercase;
 	font-weight:600;
 }
@@ -91,7 +91,7 @@ hr.line {
 #scrollUp:hover i{color:#fff;}
 .clear{clear:both}
 body {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Bree Serif', serif;
 	color:#666666;
 	font-size:13px;
 	font-weight:400;
