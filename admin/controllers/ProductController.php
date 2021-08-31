@@ -16,21 +16,23 @@
 
 		public function add(){
 			$prodlines = $this->prod_model->lines();
-			require_once('views/product/product_add.php');		
+			$product = $this->prod_model->maxIdPro();
+			require_once('views/product/product_add.php');
 		}
 
 		public function store(){
 			$data = array();
-			$data['productCode'] = $_POST['id'];
+			$data['productCode'] = (int)$_POST['productCode'];
 			$data['productName'] = $_POST['productName'];
-		    $data['buyPrice'] = $_POST['price'];
+		    $data['productLineNumber'] = (int)$_POST['productLineNumber'];
 		    $data['productDescription'] = $_POST['productDescription'];
-		    $data['quantityInStock'] = $_POST['quantityInStock'];
-			$data['productLineCode'] = $_POST['productLineCode'];
+		    $data['quantityOfStock'] = (int)$_POST['quantityOfStock'];
+			$data['price'] = (int)$_POST['price'];
+			$data['image'] = $_POST['image'];
+			$data['modelNumber'] = $_POST['modelNumber'];
+			$data['yearOfManufacture'] = (int)$_POST['yearOfManufacture'];
 
-		    $data['image'] = $_POST['thumbnail'];
-
-		    $status = $this->prod_model->create($data);
+		    $status = $this->prod_model->store($data);
 
 		    if($status == true){
 		    	setcookie('msg','Thêm mới thành công',time()+1);
@@ -51,14 +53,15 @@
 
 		public function edit(){
 			$data = array();
-			$data['productCode'] = $_POST['id'];
+			$data['productCode'] = (int)$_POST['productCode'];
 			$data['productName'] = $_POST['productName'];
-		    $data['buyPrice'] = (int)$_POST['price'];
+		    $data['productLineNumber'] = (int)$_POST['productLineNumber'];
 		    $data['productDescription'] = $_POST['productDescription'];
-		    $data['quantityInStock'] = $_POST['quantityInStock'];
-		    $data['productLineCode'] = $_POST['productLine'];
-             
-            $data['image'] = $_POST['image'];
+		    $data['quantityOfStock'] = (int)$_POST['quantityOfStock'];
+			$data['price'] = (int)$_POST['price'];
+			$data['image'] = $_POST['image'];
+			$data['modelNumber'] = $_POST['modelNumber'];
+			$data['yearOfManufacture'] = (int)$_POST['yearOfManufacture'];
 
 		    $status = $this->prod_model->edit($data);
 

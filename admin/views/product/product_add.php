@@ -34,42 +34,46 @@
         </div>
     <?php }?>
         <form action="?mod=product&act=store" method="POST" role="form" enctype="multipart/form-data">
+        <div class="form-group">
+                <label for="">ID</label>
+                <input type="text" class="form-control" disabled id="" placeholder="" name="id" value="<?= $product['productCode'] ?>">
+                <input type="text" required class="form-control" hidden id="" placeholder="" name="productCode" value="<?= $product['productCode'] ?>">
+            </div>
             <div class="form-group">
                 <label for="">Tên sản phẩm</label>
-                <input type="text" class="form-control" id="" placeholder="" name="productName">
+                <input type="text" required class="form-control" id="" placeholder="" name="productName" value="<?= $product['productName'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Danh mục</label>
                 <select name="productLineNumber" class="form-control">
                 <?php foreach ($prodlines as $prls) {?>  
-                  <option value="<?= $prls['productLineNumber'] ?>"><?= $prls['textDescription'] ?></option>
+                  <option <?= ($prls['productLineNumber'] == $product['productLineNumber'])?'selected':"" ?> value="<?= $prls['productLineNumber'] ?>"><?= $prls['productLine'] ?></option>
                 <?php } ?>
                 </select>
             </div>
             <div class="form-group">
                 <label for="">Giá (VND)</label>
-                <input type="text" class="form-control" id="" placeholder="" name="price">
+                <input type="number" required class="form-control" id="" placeholder="" name="price" value="<?= $product['price'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Mô tả</label>
-                <textarea rows = "8" class="form-control" id="contents" placeholder="" name="productDescription"></textarea>
+                <textarea rows = "8" required class="form-control" id="contents" placeholder="" name="productDescription"><?= $product['productDescription'] ?></textarea>
             </div>
-            
             <div class="form-group">
                 <label for="">Kho</label>
-                <input type="number" class="form-control" id="" placeholder="" name="quantityOfStock">
+                <input type="number" required class="form-control" id="" placeholder="" name="quantityOfStock" value="<?= $product['quantityOfStock'] ?>">
             </div>
             <div class="form-group">
-                <label for="">Đường dẫn ảnh</label>
-                <input type="text" class="form-control" id="" placeholder="" name="image">
+                <label for="">Đường dẫn ảnh:</label>
+                <input type="text" required class="form-control" id="" placeholder="" name="image" value="<?= $product['image'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Model</label>
-                <input type="text" class="form-control" id="" placeholder="" name="modelNumber">
+                <input type="text" required class="form-control" id="" placeholder="" name="modelNumber" value="<?= $product['modelNumber'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Năm sản xuất</label>
-                <input type="number" class="form-control" id="" placeholder="" name="yearOfManufacture">
+                <input type="number" required class="form-control" id="" placeholder="" name="yearOfManufacture" value="<?= $product['yearOfManufacture'] ?>">
             </div>
             <a href="?mod=product" type="button" class="btn btn-danger">Hủy</a>
             <button type="submit" class="btn btn-primary">Thêm mới</button>

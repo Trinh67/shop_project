@@ -33,6 +33,7 @@
               <strong><?= $_COOKIE['msg'] ?></strong>
             </div>
           <?php }?>
+          <br/>
         <div class="card shadow mb-4">
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm</h6>
@@ -55,7 +56,7 @@
                   <?php foreach ($products as $product) { ?>              
                     <tr>
                           <td><?= $product['productCode'] ?></td>
-                          <td style="max-width: 240px"><?= $product['productName'] ?></td>
+                          <td style="max-width: 270px"><?= $product['productName'] ?></td>
                           <td><?= $product['productLine'] ?></td>
                           <td align="right"><?= number_format($product['price']) ?> VND</td>
                           <td align="right"><?= $product['quantityOfStock'] ?></td>

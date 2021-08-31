@@ -27,12 +27,13 @@
       <!-- Page Heading -->
       <div class="container-fluid">
         <h2 align="center">Khách hàng</h2>
-        <a href="?mod=customer&act=add" class="btn btn-primary">Thêm mới</a>
+        <a href="?mod=customer&act=add" class="btn btn-primary">Thêm mới</a><br/>
           <?php if(isset($_COOKIE['msg'])){ ?>
             <div class="alert alert-info">
               <strong><?= $_COOKIE['msg'] ?></strong>
             </div>
           <?php }?>
+          <br/>
         <div class="card shadow mb-4">
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">Danh sách khách hàng</h6>

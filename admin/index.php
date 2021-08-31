@@ -85,12 +85,6 @@
 					break;
 				case 'update':
 					$controller_obj->update();
-					break;
-				case 'edit':
-					$controller_obj->edit();
-					break;
-				case 'delete':
-					$controller_obj->delete();
 					break;		
 				default:
 					require_once('views/page/404.php');

@@ -22,39 +22,20 @@
 
 
 		public function update(){
-			$id = isset($_GET['id'])?$_GET['id']:0;
-			$order = $this->order_model->find($id);
-			require_once('views/order/order_update.php');		
-		}
-
-		public function edit(){
 			$data = array();
-			$data['id'] = $_POST['id'];
-			$data['priceEach'] = $_POST['priceEach']; 
-		    $data['quantityOrdered'] = $_POST['quantityOrdered'];
+			$data['ordNum'] = isset($_GET['id'])?$_GET['id']:0;
+			$data['status'] = isset($_GET['val'])?$_GET['val']:null;
 
-		    $status = $this->order_model->edit($data);
-		    
-		    if($status == true){
+			$status = $this->order_model->update($data);
+
+			if($status == true){
 		    	setcookie('msg','Cập nhật thành công',time()+1);
 		    	header('Location: ?mod=order');
 		    }
 		    else {
 		    	setcookie('msg','Cập nhật không thành công',time()+1);
-		    	header('Location: ?mod=order&act=update');
+		    	header('Location: ?mod=order');
 		    }
-		}
-
-		public function delete(){
-			$id = isset($_GET['id'])?$_GET['id']:0;
-
-		    $status = $this->order_model->delete($id);
-		    if($status == true){
-		    	setcookie('msg','Xóa thành công',time()+1);
-		    }
-		    else 
-		    	setcookie('msg','Xóa không thành công',time()+1);
-		    header('Location: ?mod=order');
 		}
 	}
  ?>

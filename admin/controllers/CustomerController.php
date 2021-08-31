@@ -29,10 +29,10 @@
 
 		public function store(){
 			$data = array();
-			$data['customerNumber'] = $_POST['customerNumber'];
+			$data['customerNumber'] = (int)$_POST['customerNumber'];
 			$data['customerName'] = $_POST['customerName'];
 			$data['fullName'] = $_POST['fullName'];
-			$data['nationalId'] = $_POST['nationalId'];
+			$data['nationalId'] = (int)$_POST['nationalId'];
 		    $data['address'] = $_POST['address'];
 		    $data['phoneNumber'] = $_POST['phoneNumber'];
 		    $data['email'] = $_POST['email'];
@@ -60,17 +60,17 @@
 
 		public function edit(){
 			$data = array();
-			$data['customerNumber'] = $_POST['customerNumber'];
+			$data['customerNumber'] = (int)$_POST['customerNumber'];
 			$data['customerName'] = $_POST['customerName'];
 			$data['fullName'] = $_POST['fullName'];
-			$data['nationalId'] = $_POST['nationalId'];
+			$data['nationalId'] = (int)$_POST['nationalId'];
 		    $data['address'] = $_POST['address'];
 		    $data['phoneNumber'] = $_POST['phoneNumber'];
 		    $data['email'] = $_POST['email'];
 			if($_POST['password'] != '' && $_POST['password'] != null) 
 				$data['password'] =  md5($_POST['password']);
 			else $data['password'] = $_POST['password_old'];
-		    $data['numOfSuccessOrder'] = $_POST['numOfSuccessOrder'];
+		    $data['numOfSuccessOrder'] = (int)$_POST['numOfSuccessOrder'];
 
 		    $status = $this->cus_model->edit($data);
 
