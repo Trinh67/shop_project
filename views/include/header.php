@@ -21,8 +21,8 @@
 										<option value="2">Laptop</option>
 										<option value="3">Apple Watch</option>
 									</select>
-									<input type="number" min="0" max="9999999999" placeholder="Price min" name = "min" class ="form-control price-filter"/>
-									<input type="number" min="1" max="9999999999" placeholder="Price max" name = "max" class ="form-control price-filter"/>
+									<input type="number" min="1000000" max="9999999999" placeholder="Price min" name = "min" class ="form-control price-filter"/>
+									<input type="number" min="2000000" max="9999999999" placeholder="Price max" name = "max" class ="form-control price-filter"/>
 									<input type="text" placeholder="Product Name..." name = "name" class ="form-control name-filter"/>
 									<button type="submit" class="btn btn-success"><i class="mdi mdi-magnify">Search</i></button>
 								</form>
