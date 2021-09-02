@@ -32,7 +32,7 @@
 			$data['customerNumber'] = (int)$_POST['customerNumber'];
 			$data['customerName'] = $_POST['customerName'];
 			$data['fullName'] = $_POST['fullName'];
-			$data['nationalId'] = (int)$_POST['nationalId'];
+			$data['nationalId'] = $_POST['nationalId'];
 		    $data['address'] = $_POST['address'];
 		    $data['phoneNumber'] = $_POST['phoneNumber'];
 		    $data['email'] = $_POST['email'];
@@ -63,7 +63,7 @@
 			$data['customerNumber'] = (int)$_POST['customerNumber'];
 			$data['customerName'] = $_POST['customerName'];
 			$data['fullName'] = $_POST['fullName'];
-			$data['nationalId'] = (int)$_POST['nationalId'];
+			$data['nationalId'] = $_POST['nationalId'];
 		    $data['address'] = $_POST['address'];
 		    $data['phoneNumber'] = $_POST['phoneNumber'];
 		    $data['email'] = $_POST['email'];

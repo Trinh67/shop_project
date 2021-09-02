@@ -40,7 +40,7 @@
                 <input type="text" class="form-control" required hidden id="" placeholder="" name="customerNumber" value="<?= $customer['customerNumber'] ?>">
             </div>
             <div class="form-group">
-                <label for="">Tên hiển thị *</label>
+                <label for="">Tên đăng nhập *</label>
                 <input type="text" class="form-control" required id="" placeholder="" name="customerName" value="<?= $customer['customerName'] ?>">
             </div>
             <div class="form-group">
@@ -49,7 +49,7 @@
             </div>
             <div class="form-group">
                 <label for="">ID quốc gia *</label>
-                <input type="number" class="form-control" required id="" placeholder="" name="nationalId" value="<?= $customer['nationalId'] ?>">
+                <input type="text" class="form-control" required id="" placeholder="" name="nationalId" value="<?= $customer['nationalId'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Địa chỉ *</label>

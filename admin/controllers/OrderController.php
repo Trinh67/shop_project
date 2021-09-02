@@ -20,14 +20,8 @@
 
 			$status = $this->order_model->update($data);
 
-			if($status == true){
-		    	setcookie('msg','Cập nhật thành công',time()+1);
-		    	header('Location: ?mod=order');
-		    }
-		    else {
-		    	setcookie('msg','Cập nhật không thành công',time()+1);
-		    	header('Location: ?mod=order');
-		    }
+			setcookie('msg', $status,time()+1);
+			header('Location: ?mod=order');
 		}
 	}
- ?>
+?>

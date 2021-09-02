@@ -76,7 +76,7 @@
 			$data['status'] = 1;
 			$data['sumAmount'] = $_SESSION['sum'];
 			$data['customerNumber'] = $_SESSION['customer']['customerNumber'];
-			
+
 			$status_order = $this->cate_model->insert_order($data);
 			$status_orderDetail = $this->cate_model->insert_orderDetail($products, $data['orderNumber']);
 

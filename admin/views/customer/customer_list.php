@@ -44,7 +44,7 @@
             <thead>
               <tr>
                     <th>ID</th>
-                    <th>Tên</th>
+                    <th>Tên đăng nhập</th>
                     <th>Email</th>
                     <th>Số điện thoại</th>
                     <th>Địa chỉ</th>
