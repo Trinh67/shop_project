@@ -22,11 +22,11 @@
 			if($status == true){
 				$_SESSION['isLoginAdmin'] = true;
 	            $_SESSION['admin'] = $status;
-		    	setcookie('msg','Đăng nhập thành công',time()+1);
+		    	setcookie('msg','Login successful',time()+1);
 		    	header('Location: ?mod=page&act=dashboard');
 		    }
 		    else {
-		    	setcookie('msg','Đăng nhập không thành công',time()+1);
+		    	setcookie('msg','Login failed',time()+1);
 		    	header('Location: ?mod=login&act=login');
 		    }
 		}

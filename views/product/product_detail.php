@@ -12,7 +12,7 @@
 							<h2><?= $data['productName'] ?></h2>
 							<ul class="text-left">
 								<div class="product-breadcroumb">
-									<a href="?mod=page&act=home">Trang chủ</a>
+									<a href="?mod=page&act=home">Home</a>
 									<a href="?mod=product&line=<?= $data['productLineNumber'] ?>&type=<?= $data['textDescription'] ?>"><?= $data['textDescription'] ?></a>
 									<a><?= $data['productName'] ?></a>
 								</div>
@@ -29,7 +29,7 @@
 				<div class="row">
 					<div class="col-md-4">
 						<div class="single-sidebar">
-							<h2 class="sidebar-title">Sản phẩm tương tự</h2>
+							<h2 class="sidebar-title">Related Products</h2>
 							<!-- related products -->
 							<?php foreach ($related_products as $value) { ?>
 							<div class="thubmnail-recent">
@@ -74,15 +74,15 @@
 											<div class="quantity">
 												<input type="number" size="5" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
 											</div>
-											<button class="add_to_cart_button" type="submit">Thêm vào giỏ hàng</button>
+											<button class="add_to_cart_button" type="submit">Add to Cart</button>
 										</form>   
 										<div class="product-information">
 											<ul class="list-group">
-												<li class="list-group-item disable"><b>THÔNG TIN CƠ BẢN</b></li>
-												<li class="list-group-item">Danh mục: <b><?= $data['textDescription'] ?></b></li>
-												<li class="list-group-item">Kho: <b><?= number_format($data['quantityOfStock']) ?></b></li>
+												<li class="list-group-item disable"><b>Information</b></li>
+												<li class="list-group-item">Category: <b><?= $data['textDescription'] ?></b></li>
+												<li class="list-group-item">Stock: <b><?= number_format($data['quantityOfStock']) ?></b></li>
 												<li class="list-group-item">Model Number: <b><?= $data['modelNumber'] ?></b></li>
-												<li class="list-group-item">Sản xuất: <b><?= $data['yearOfManufacture'] ?></b></li>
+												<li class="list-group-item">Year of manufacture: <b><?= $data['yearOfManufacture'] ?></b></li>
 											</ul>
 										</div> 																			
 									</div>
@@ -91,21 +91,21 @@
 						</div>                    
 						<div role="tabpanel">
 							<ul class="product-tab" role="tablist">
-								<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Mô tả</a></li>
-								<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Đánh giá</a></li>
+								<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Description</a></li>
+								<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Đánh Price</a></li>
 							</ul>
 							<div class="tab-content">
 								<div role="tabpanel" class="tab-pane fade in active" id="home">
-									<h2>Mô tả sản phẩm:</h2>  
+									<h2>Description sản phẩm:</h2>  
 									<p><?= $data['productDescription'] ?></p>
 								</div>
 								<div role="tabpanel" class="tab-pane fade" id="profile">
-									<h2>Đánh giá, phản hồi:</h2>
+									<h2>Đánh Price, phản hồi:</h2>
 									<div class="submit-review">
 										<p><label for="name">Tên:</label> <input name="name" type="text"></p>
 										<p><label for="email">Email:</label> <input name="email" type="email"></p>
 										<div class="rating-chooser">
-											<p>Đánh giá:</p>
+											<p>Đánh Price:</p>
 											<span class="rating-wrap-post">
 												<i class="mdi mdi-star"></i>
 												<i class="mdi mdi-star"></i>
@@ -115,7 +115,7 @@
 											</span>
 										</div>
 										<p><label for="review">Phản hồi:</label> <textarea name="review" id="" cols="30" rows="10"></textarea></p>
-										<p><input type="submit" value="Gửi"></p>
+										<p><input type="submit" value="Submit"></p>
 									</div>
 								</div>
 							</div>

@@ -17,7 +17,7 @@
 						<div class="pages-title-text text-center">
 							<h2>404</h2>
 							<ul class="text-left">
-								<li><a href="?mod=page&act=home">Trang chủ </a></li>
+								<li><a href="?mod=page&act=home">Home </a></li>
 								<li><span> // </span>404</li>
 							</ul>
 						</div>

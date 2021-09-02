@@ -14,7 +14,7 @@
 							<h2><?php if(isset($_GET['type'])) echo $_GET['type']; ?></h2>
 							<ul class="text-left">
 								<div class="product-breadcroumb">
-									<a href="?mod=page&act=home">Trang chủ</a>
+									<a href="?mod=page&act=home">Home</a>
 									<a><?php if(isset($_GET['type'])) echo $_GET['type']; ?></a>
 								</div>
 							</ul>

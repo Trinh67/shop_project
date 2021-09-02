@@ -19,11 +19,11 @@
 			$status = $this->order_model->CancelOrder($ordNum);
 
 			if($status == true){
-		    	setcookie('msg','Hủy đơn hàng thành công!!!',time()+2);
+		    	setcookie('msg','Cancelled successful!!!',time()+2);
 		    	header('Location: ?mod=order&act=list');
 		    }
 		    else {
-		    	setcookie('msg','Hủy đơn hàng thất bại!!!',time()+2);
+		    	setcookie('msg','Cancelled failed!!!',time()+2);
 		    	header('Location: ?mod=order&act=list');
 		    }
 		}

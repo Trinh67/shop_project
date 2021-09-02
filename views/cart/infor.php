@@ -18,7 +18,7 @@
 							<h2>Thông tin đặt hàng</h2>
 							<ul class="text-left">
                                 <div class="product-breadcroumb">
-									<a href="?mod=page&act=home">Trang chủ </a></li>
+									<a href="?mod=page&act=home">Home </a></li>
 									<a>Thông tin đặt hàng</a>
 								</div>
 							</ul>
@@ -37,20 +37,20 @@
 											else if(isset($_SESSION['admin']['email'])) echo $_SESSION['admin']['email'];?>">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Họ tên</label>
+                  <label for="exampleInputPassword1">Full Name</label>
                   <input type="text" class="form-control" required name="fullName" value = "<?php if(isset($_SESSION['customer']['fullName'])) echo $_SESSION['customer']['fullName']; 
 											else if(isset($_SESSION['admin']['fullName'])) echo $_SESSION['admin']['fullName'];?>">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Số điện thoại</label>
+                  <label for="exampleInputPassword1">Phone Number</label>
                   <input type="text" class="form-control" required name="phoneNumber" value = "<?php if(isset($_SESSION['customer']['phoneNumber'])) echo $_SESSION['customer']['phoneNumber'] ?>" name="phone">
                 </div>
                 <div class="form-group">
-                <label for="exampleInputPassword1">Địa chỉ</label>
+                <label for="exampleInputPassword1">Address</label>
                     <input type="text" class="form-control" required id="" placeholder="" value = "<?php if(isset($_SESSION['customer']['address'])) { ?> <?=$_SESSION['customer']['address'] ?> <?php } ?>" name="address">
                 </div>
-                <button class="btn btn-info"><a href="?mod=cart&act=list"><- Giỏ hàng</a></button>
-                <button type="submit" class="btn btn-success">Gửi</button>
+                <button class="btn btn-info"><a href="?mod=cart&act=list"><- Cart</a></button>
+                <button type="submit" class="btn btn-success">Submit</button>
             </form>
         </div>
         <!-- /.container-fluid -->

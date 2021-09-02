@@ -18,15 +18,15 @@
 			$products[$id] = $this->cate_model->find($id);
 
 			if (isset($_SESSION['cart'][$id])) {
-				// Tăng số lượng
+				// Tăng Quantity
 				$_SESSION['cart'][$id]['SoLuong'] += $quantity;
 			}else{
-				// Chưa có trong giỏ hàng
+				// Chưa có trong Cart
 				// B2: Lấy thông tin sản phẩm
 				$product = $products[$id];
 				$product['SoLuong'] = $quantity;
 
-				// B3: Add vào giỏ hàng
+				// B3: Add vào Cart
 				$_SESSION['cart'][$id]  = $product;
 			}
 			
@@ -39,7 +39,7 @@
 			$id = isset($_GET['id'])?$_GET['id']:0;
 			$del = $_GET['del'];
 
-			// Bước 2: Kiểm tra id và Xóa sản phẩm khỏi giỏ hàng
+			// Bước 2: Kiểm tra id và Delete sản phẩm khỏi Cart
 			if($del==1){
 				unset($_SESSION['cart']);
 				header("Location: ?mod=page&act=home");
@@ -49,14 +49,14 @@
 				    unset($_SESSION['cart'][$id]);
 				    header("Location: ?mod=cart&act=list");
 			    }
-				// Kiểm tra số lượng
+				// Kiểm tra Quantity
 				else
 					if($_SESSION['cart'][$id]['SoLuong'] > 1){
-						// Giảm số lượng
+						// Giảm Quantity
 						$_SESSION['cart'][$id]['SoLuong']--;
 						header("Location: ?mod=cart&act=list");
 					}else{
-						// Bước 2: Xóa sản phẩm khỏi giỏ hàng
+						// Bước 2: Delete sản phẩm khỏi Cart
 						unset($_SESSION['cart'][$id]);
 						header("Location: ?mod=cart&act=list");
 					}
@@ -81,13 +81,13 @@
 			$status_orderDetail = $this->cate_model->insert_orderDetail($products, $data['orderNumber']);
 
 			if($status_order == true && $status_orderDetail == true){
-		    	setcookie('msg','Đặt hàng thành công!!!',time()+2);
+		    	setcookie('msg','Order successful!!!',time()+2);
 				unset($_SESSION['cart']);
 				unset($_SESSION['sum']);
 		    	header('Location: ?mod=page&act=home');
 		    }
 		    else {
-		    	setcookie('msg','Đặt hàng thất bại!!!',time()+2);
+		    	setcookie('msg','Order failed!!!',time()+2);
 		    	header('Location: ?mod=cart&act=list');
 		    }
 		}

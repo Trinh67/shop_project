@@ -22,7 +22,7 @@
 		}
 
 		public function add(){
-			$title = "Thêm mới Khách hàng";
+			$title = "Add Customer";
 			$customer = $this->cus_model->maxIdCus();
 			require_once('views/customer/customer_insert.php');		
 		}
@@ -42,18 +42,18 @@
 		    $status = $this->cus_model->store($data);
 
 		    if($status == true){
-				setcookie('msg','Thêm mới khách hàng thành công',time()+1);
+				setcookie('msg','Add Customer successful',time()+1);
 		    	header('Location: ?mod=customer&act=list');
 		    }
 		    else {
-		    	setcookie('msg','Cập nhật thông tin không thành công',time()+1);
+		    	setcookie('msg','Update failed',time()+1);
 		    	header('Location: ?mod=customer&act=add');
 		    }
 		}
 
 		public function update(){
 			$id = isset($_GET['id'])?$_GET['id']:0;
-			$title = "Cập nhập Khách hàng";
+			$title = "Update Customer";
 			$customer = $this->cus_model->find($id);
 			require_once('views/customer/customer_update.php');		
 		}
@@ -75,11 +75,11 @@
 		    $status = $this->cus_model->edit($data);
 
 		    if($status == true){
-				setcookie('msg','Cập nhật thông tin thành công',time()+1);
+				setcookie('msg','Update successful',time()+1);
 		    	header('Location: ?mod=customer&act=list');
 		    }
 		    else {
-		    	setcookie('msg','Cập nhật thông tin không thành công',time()+1);
+		    	setcookie('msg','Update failed',time()+1);
 		    	header('Location: ?mod=customer&act=update&id='.$_POST['customerNumber']);
 		    }
 		}
@@ -89,10 +89,10 @@
 
 		    $status = $this->cus_model->delete($id);
 		    if($status == true){
-		    	setcookie('msg','Xóa khách hàng thành công',time()+1);
+		    	setcookie('msg','Delete Customer successful',time()+1);
 		    }
 		    else 
-		    	setcookie('msg','Xóa khách hàng không thành công',time()+1);
+		    	setcookie('msg','Delete Customer failed',time()+1);
 		    header('Location: ?mod=customer');
 		}
 	}

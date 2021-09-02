@@ -14,11 +14,11 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="pages-title-text text-center">
-							<h2>Đơn hàng</h2>
+							<h2>Orders</h2>
 							<ul class="text-left">
 								<div class="product-breadcroumb">
-									<a href="?mod=page&act=home">Trang chủ </a></li>
-									<a>Đơn hàng</a>
+									<a href="?mod=page&act=home">Home </a></li>
+									<a>Orders</a>
 								</div>
 							</ul>
 						</div> 
@@ -44,12 +44,12 @@
 										<th>#</th>
 										<th>ID</th>
 										<th>Email</th>
-										<th>Họ tên</th>
-										<th>Địa chỉ</th>
-										<th>Số điện thoại</th>
-										<th>Tổng tiền</th>
-										<th>Trạng thái</th>
-										<th>Hủy đơn</th>
+										<th>Full Name</th>
+										<th>Address</th>
+										<th>Phone Number</th>
+										<th>Total</th>
+										<th>Status</th>
+										<th>Cancelled</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -58,7 +58,7 @@
 									?>
 									<tr>
 										<td>
-											<a href="?mod=page&act=orderDetail&id=<?= $product['orderNumber'] ?>" class="btn btn-success">Chi tiết</a> 	
+											<a href="?mod=page&act=orderDetail&id=<?= $product['orderNumber'] ?>" class="btn btn-success">Detail</a> 	
 										</td>
 										<td><?= $product['orderNumber'] ?></td>
 										<td><?= $product['email'] ?></td>
@@ -67,13 +67,13 @@
 										<td><?= $product['phoneNumber'] ?></td>
 										<td><strong><?= number_format($product['sumAmount']) ?> VND</strong></td>
 										<td>
-											<?php $status = array('-1' => '<span class="badge-pill badge-danger">Đã hủy</span>', '0' => '<span class="badge-pill badge-warning">Bị từ chối</span>', '1' => '<span class="badge-pill badge-info">Chờ xác nhận</span>',
-											'2' => '<span class="badge-pill badge-primary">Đã xác nhận</span>', '3' => '<span class="badge-pill badge-info">Đang giao hàng</span>', '4' => '<span class="badge-pill badge-success">Đã hoàn thành</span>');
+											<?php $status = array('-1' => '<span class="badge-pill badge-danger">Cancelled</span>', '0' => '<span class="badge-pill badge-warning">Refusion</span>', '1' => '<span class="badge-pill badge-info">Pending</span>',
+											'2' => '<span class="badge-pill badge-primary">Confirmed</span>', '3' => '<span class="badge-pill badge-info">Delivery</span>', '4' => '<span class="badge-pill badge-success">Complete</span>');
 											echo $status[$product['status']] ?>
 										</td>
 										<?php if($product['status'] == 1) { ?>
 											<td>
-												<a href="?mod=order&act=cancel&id=<?= $product['orderNumber'] ?>" onclick="return confirm('Bạn chắc chắn muốn hủy đơn hàng này?');"><i class="mdi mdi-close" title="Remove this Order"></i>
+												<a href="?mod=order&act=cancel&id=<?= $product['orderNumber'] ?>" onclick="return confirm('You definitely want to cancel this order ?');"><i class="mdi mdi-close" title="Remove this Order"></i>
 											</td>
 										<?php } else echo '<td></td>'?>
 									</tr>

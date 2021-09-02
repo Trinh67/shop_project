@@ -22,11 +22,11 @@
 			if($status == true){
 				$_SESSION['isLogin'] = true;
 	            $_SESSION['customer'] = $status;
-		    	setcookie('msg','Đăng nhập thành công',time()+1);
+		    	setcookie('msg','Login successful',time()+1);
 		    	header('Location: ?mod=page&act=home');
 		    }
 		    else {
-		    	setcookie('msg','Đăng nhập không thành công',time()+1);
+		    	setcookie('msg','Login failed',time()+1);
 		    	header('Location: ?mod=login&act=login');
 		    }
 		}
@@ -58,7 +58,7 @@
 		    if($status == 200){
 				$_SESSION['isLogin'] = true;
 	            $_SESSION['customer'] = $data;
-		    	setcookie('msg', 'Đăng kí thành công', time()+1);
+		    	setcookie('msg', 'Register successful', time()+1);
 		    	header('Location: ?mod=page&act=home');
 		    }
 		    else {
@@ -85,7 +85,7 @@
 		    $status = $this->login_model->edit($data);
 
 		    if($status == 200){
-				setcookie('msg','Cập nhật thông tin thành công',time()+1);
+				setcookie('msg','Update Successful',time()+1);
 				$_SESSION['isLogin'] = true;
 	            $_SESSION['customer'] = $data;
 		    	header('Location: ?mod=page&act=account');

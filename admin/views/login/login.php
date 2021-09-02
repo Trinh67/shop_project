@@ -24,11 +24,11 @@
 
 				<form class="login100-form validate-form" action="?mod=login&act=login_action" method="POST" role="form" enctype="multipart/form-data">
 					<span class="login100-form-title" style="font-size: 36px;">
-						Đăng nhập
+						Login
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid username is required: ex@abc.xyz">
-						<input class="input100" type="text" name="username" placeholder="Tên đăng nhập">
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="text" name="username" placeholder="User Name">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -36,7 +36,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="password" placeholder="Mật khẩu">
+						<input class="input100" type="password" name="password" placeholder="Password">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -44,18 +44,18 @@
 					</div>
 					    <?php if(isset($_COOKIE['msg'])){ ?>
                             <div class="alert alert-danger">
-								<strong>Thất bại! </strong><?= $_COOKIE['msg'] ?>
+								<strong>Failed! </strong><?= $_COOKIE['msg'] ?>
 							</div>
                         <?php }?>  
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							Đăng nhập
+							Login
 						</button>
 					</div>
 
 					<div class="text-center p-t-12">
 						<span class="txt1">
-							Quên mật khẩu?
+							Forget Password?
 						</span>
 					</div>
 
@@ -63,7 +63,7 @@
 						<div>
 							<a class="txt2" href="../?mod=page&act=home">
 								<i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>
-								Trang bán hàng
+								Page shop
 							</a>
 					    </div>
 					</div>

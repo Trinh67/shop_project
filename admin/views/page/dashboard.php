@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Trang quản trị</title>
+  <title>Admin Dashboard</title>
 
   <!-- Custom fonts for this template-->
   <link href="public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -44,7 +44,7 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Tổng quan</h1>
+            <h1 class="h3 mb-0 text-gray-800">Home</h1>
           </div>
 
           <!-- Content Row -->
@@ -55,7 +55,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><h5><b>Khách hàng</b></h5></div>
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><h5><b>Customer</b></h5></div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $data[1] ?></div>
                     </div>
                     <div class="col-auto">
@@ -71,7 +71,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1"><h5><b>Danh mục</b></h5></div>
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1"><h5><b>Category</b></h5></div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $data[2] ?></div>
                     </div>
                     <div class="col-auto">
@@ -87,7 +87,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1"><h5><b>Đơn hàng</b></h5></div>
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1"><h5><b>Orders</b></h5></div>
                       <div class="row no-gutters align-items-center">
                         <div class="col-auto">
                           <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= $data[3] ?></div>
@@ -108,7 +108,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1"><h5><b>Mặt hàng</b></h5></div>
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1"><h5><b>Product</b></h5></div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $data[4] ?></div>
                     </div>
                     <div class="col-auto">

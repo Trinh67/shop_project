@@ -29,15 +29,15 @@
             <hr>
             <table class="table">
                 <th style="width: 400px">#</th>
-                <th>Thông tin</th>
+                <th>Information</th>
                 <tbody>
-                  <tr><h2><td>Tên hiển thị:</td><td><?php echo $cus["customerName"] ?></td></h2></tr>
-                  <tr><h2><td>Họ tên:</td><td><?php echo $cus["fullName"] ?></td></h2></tr>
-                  <tr><h2><td>ID quốc gia:</td><td><?php echo $cus["nationalId"] ?></td></h2></tr>
-                  <tr><h2><td>Địa chỉ:</td><td><?php echo $cus["address"] ?></td></h2></tr>
+                  <tr><h2><td>User name:</td><td><?php echo $cus["customerName"] ?></td></h2></tr>
+                  <tr><h2><td>Full Name:</td><td><?php echo $cus["fullName"] ?></td></h2></tr>
+                  <tr><h2><td>National Id:</td><td><?php echo $cus["nationalId"] ?></td></h2></tr>
+                  <tr><h2><td>Address:</td><td><?php echo $cus["address"] ?></td></h2></tr>
                   <tr><h2><td>Email:</td><td><?php echo $cus["email"] ?></td></h2></tr>
-                  <tr><h2><td>Số điện thoại:</td><td><?php echo $cus["phoneNumber"] ?></td></h2></tr>
-                  <tr><h2><td>Số đơn hàng hoàn thành:</td><td><?php echo $cus["numOfSuccessOrder"] ?></td></h2></tr>
+                  <tr><h2><td>Phone Number:</td><td><?php echo $cus["phoneNumber"] ?></td></h2></tr>
+                  <tr><h2><td>Num of success Order:</td><td><?php echo $cus["numOfSuccessOrder"] ?></td></h2></tr>
                 </tbody>
             </table>
             <a href="?mod=customer&act=list" type="button" class="btn btn-primary">Back</a>

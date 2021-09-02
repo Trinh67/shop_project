@@ -26,8 +26,8 @@
           
       <!-- Page Heading -->
       <div class="container-fluid">
-        <h2 align="center">Khách hàng</h2>
-        <a href="?mod=customer&act=add" class="btn btn-primary">Thêm mới</a><br/>
+        <h2 align="center">Customer</h2>
+        <a href="?mod=customer&act=add" class="btn btn-primary">Add</a><br/>
           <?php if(isset($_COOKIE['msg'])){ ?>
             <div class="alert alert-info">
               <strong><?= $_COOKIE['msg'] ?></strong>
@@ -36,7 +36,7 @@
           <br/>
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Danh sách khách hàng</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Customer List</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -44,11 +44,11 @@
             <thead>
               <tr>
                     <th>ID</th>
-                    <th>Tên đăng nhập</th>
+                    <th>User Name</th>
                     <th>Email</th>
-                    <th>Số điện thoại</th>
-                    <th>Địa chỉ</th>
-                    <th>Đơn hàng</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
+                    <th>Orders</th>
                     <th>Action</th>
                   </tr>
             </thead>
@@ -61,9 +61,9 @@
                     <td><?= $cus['phoneNumber'] ?></td>
                     <td><?= $cus['address'] ?></td>
                     <td align="center"><?= $cus['numOfSuccessOrder'] ?></td>
-                    <td><a href="?mod=customer&act=detail&id=<?= $cus['customerNumber'] ?>" class="btn btn-success">Chi tiết</a> 
-                    <a href="?mod=customer&act=update&id=<?= $cus['customerNumber'] ?>" class="btn btn-warning">Sửa</a>
-                    <a href="?mod=customer&act=delete&id=<?= $cus['customerNumber'] ?>" onclick="return confirm('Bạn chắc chắn muốn xóa?');" class="btn btn-danger">Xóa</a></td>
+                    <td><a href="?mod=customer&act=detail&id=<?= $cus['customerNumber'] ?>" class="btn btn-success">Detail</a> 
+                    <a href="?mod=customer&act=update&id=<?= $cus['customerNumber'] ?>" class="btn btn-warning">Update</a>
+                    <a href="?mod=customer&act=delete&id=<?= $cus['customerNumber'] ?>" onclick="return confirm('You definitely want to delete?');" class="btn btn-danger">Delete</a></td>
                   </tr>
             <?php } ?>
             </tbody>

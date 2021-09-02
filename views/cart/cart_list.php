@@ -19,11 +19,11 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="pages-title-text text-center">
-							<h2>Giỏ hàng</h2>
+							<h2>Cart</h2>
 							<ul class="text-left">
 								<div class="product-breadcroumb">
-									<a href="?mod=page&act=home">Trang chủ </a></li>
-									<a>Giỏ hàng</a>
+									<a href="?mod=page&act=home">Home </a></li>
+									<a>Cart</a>
 								</div>
 							</ul>
 						</div> 
@@ -41,11 +41,11 @@
 							<table class="wishlist-table text-center">
 								<thead>
 									<tr>
-										<th>Sản phẩm</th>
-										<th>Giá</th>
-										<th>Số lượng</th>
-										<th>Tổng tiền</th>
-										<th>Xóa</th>
+										<th>Product</th>
+										<th>Price</th>
+										<th>Quantity</th>
+										<th>Total</th>
+										<th>Remove</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -76,16 +76,16 @@
 										<td>
 											<strong><?= number_format($product['price']*$products['SoLuong']) ?> VND</strong>
 										</td>
-										<td><a href="?mod=cart&act=delete&del=2&id=<?= $product['productCode'] ?>" onclick="return confirm('Bạn chắc chắn muốn xóa mặt hàng này?');"><i class="mdi mdi-close" title="Remove this product"></i></td>
+										<td><a href="?mod=cart&act=delete&del=2&id=<?= $product['productCode'] ?>" onclick="return confirm('You definitely want to delete this item?');"><i class="mdi mdi-close" title="Remove this product"></i></td>
 									</tr>
 									<?php } ?>
 									<?php $_SESSION['sum'] = $sum_amount;
 										  if(isset($_SESSION['cart']) && $_SESSION['sum'] > 0) { ?>
 									<thead>
 										<tr>
-											<td colspan="1" align="left"><h4>Tổng tiền</h4></td>
+											<td colspan="1" align="left"><h4>Total</h4></td>
 											<td colspan="3" align="center"><h4><?= number_format($sum_amount) ?> VND</h4></td>
-											<td align="center"><a href="?mod=cart&act=mail" class="btn btn-success">Đặt hàng</a></td>
+											<td align="center"><a href="?mod=cart&act=mail" class="btn btn-success">Order</a></td>
 										</tr>
 									</thead>
 								    <?php }?>
@@ -98,14 +98,14 @@
 					<div class="col-sm-8">
 						<div class="single-cart-form padding60">
 							<div class="log-title">
-								<h3><strong>Mã giảm giá</strong></h3>
+								<h3><strong>Discount code</strong></h3>
 							</div>
 							<div class="cart-form-text custom-input">
-								<p>Dùng mã giảm giá ngay nếu có!</p>
+								<p>Use discount code now if available!</p>
 								<form action="#" method="post">
-									<input type="text" name="subject" placeholder="Mã giảm giá" />
+									<input type="text" name="subject" placeholder="Mã giảm Price" />
 									<div class="submit-text coupon">
-										<button type="submit">Áp dụng mã</button>
+										<button type="submit">Apply</button>
 									</div>
 								</form>
 							</div>

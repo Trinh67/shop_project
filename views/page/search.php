@@ -11,11 +11,11 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="pages-title-text text-center">
-							<h2>Kết quả tìm kiếm</h2>
+							<h2>Search Results</h2>
 							<ul class="text-left">
 								<div class="product-breadcroumb">
-									<a href="?mod=page&act=home">Trang chủ</a>
-									<a>Kết quả tìm kiếm</a>
+									<a href="?mod=page&act=home">Home</a>
+									<a>Search Results</a>
 								</div>
 							</ul>
 						</div>
@@ -29,7 +29,7 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="section-title text-center">
-							<h2>Sản phẩm</h2>
+							<h2>Products</h2>
 						</div>
 					</div>
 				</div>

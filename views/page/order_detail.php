@@ -19,11 +19,11 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="pages-title-text text-center">
-							<h2>Chi tiết đơn hàng</h2>
+							<h2>Detail Orders</h2>
 							<ul class="text-left">
 								<div class="product-breadcroumb">
-									<a href="?mod=page&act=home">Trang chủ </a></li>
-									<a>Chi tiết đơn hàng</a>
+									<a href="?mod=page&act=home">Home </a></li>
+									<a>Detail Orders</a>
 								</div>
 							</ul>
 						</div> 
@@ -41,10 +41,10 @@
 							<table class="wishlist-table text-center">
 								<thead>
 									<tr>
-										<th>Sản phẩm</th>
-										<th>Giá</th>
-										<th>Số lượng</th>
-										<th>Tổng tiền</th>
+										<th>Product</th>
+										<th>Price</th>
+										<th>Quantity</th>
+										<th>Total</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -74,7 +74,7 @@
 								</tbody>
 								<thead>
 									<tr>
-										<td colspan="3" align="left"><h3 style="color:green">Tổng tiền</h3></td>
+										<td colspan="3" align="left"><h3 style="color:green">Total</h3></td>
 										<td colspan="1" align="right"><h3><?= number_format($sum_amount) ?> VND</h3></td>
 									</tr>
 								</thead>

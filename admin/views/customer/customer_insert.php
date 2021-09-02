@@ -26,11 +26,11 @@
           
       <!-- Page Heading -->
       <div class="container-fluid">
-        <h2 align="center">Thêm mới Khách hàng</h2>
+        <h2 align="center">Add Customer</h2>
         <hr>
         <?php if(isset($_COOKIE['msg'])){ ?>
         <div class="alert alert-info">
-          <strong>Thất bại! </strong> <?= $_COOKIE['msg'] ?>
+          <strong>Failed! </strong> <?= $_COOKIE['msg'] ?>
         </div>
         <?php }?>
         <form action="?mod=customer&act=store" method="POST">
@@ -40,19 +40,19 @@
                 <input type="text" class="form-control" required hidden id="" placeholder="" name="customerNumber" value="<?= $customer['customerNumber'] ?>">
             </div>
             <div class="form-group">
-                <label for="">Tên đăng nhập *</label>
+                <label for="">User Name *</label>
                 <input type="text" class="form-control" required id="" placeholder="" name="customerName" value="<?= $customer['customerName'] ?>">
             </div>
             <div class="form-group">
-                <label for="">Họ tên *</label>
+                <label for="">Full Name *</label>
                 <input type="text" class="form-control" required id="" placeholder="" name="fullName" value="<?= $customer['fullName'] ?>">
             </div>
             <div class="form-group">
-                <label for="">ID quốc gia *</label>
+                <label for="">National Id *</label>
                 <input type="text" class="form-control" required id="" placeholder="" name="nationalId" value="<?= $customer['nationalId'] ?>">
             </div>
             <div class="form-group">
-                <label for="">Địa chỉ *</label>
+                <label for="">Address *</label>
                 <input type="text" class="form-control" required id="" placeholder="" name="address" value="<?= $customer['address'] ?>">
             </div>
             <div class="form-group">
@@ -60,15 +60,15 @@
                 <input type="email" class="form-control" required id="" placeholder="" name="email" value="<?= $customer['email'] ?>">
             </div>
             <div class="form-group">
-                <label for="">Số điện thoại *</label>
+                <label for="">Phone Number *</label>
                 <input type="text" class="form-control" required id="" placeholder="" name="phoneNumber" value="<?= $customer['phoneNumber'] ?>">
             </div>
             <div class="form-group">
-                <label for="">Mật khẩu *</label>
+                <label for="">Password *</label>
                 <input type="text" class="form-control" required id="" placeholder="" name="password" value="">
             </div>
-            <a href="?mod=customer" type="button" class="btn btn-danger">Hủy</a>
-            <button type="submit" class="btn btn-success">Cập nhật</button>
+            <a href="?mod=customer" type="button" class="btn btn-danger">Cancel</a>
+            <button type="submit" class="btn btn-success">Update</button>
         </form>
         <br/><br/>
     </div>

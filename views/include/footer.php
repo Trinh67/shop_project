@@ -7,13 +7,13 @@
 					<div class="col-xs-12 col-sm-6 col-md-3">
 						<div class="single-text">
 							<div class="footer-title">
-								<h4>Liên hệ</h4>
+								<h4>Contact</h4>
 							</div>
 							<div class="footer-text">
 								<ul>
 									<li>
 										<i class="mdi mdi-map-marker"></i>
-										<p style="padding-top: 10px">Thành phố Hồ Chi Minh</p>
+										<p style="padding-top: 10px">Hồ Chi Minh City</p>
 									</li>
 									<li>
 										<i class="mdi mdi-phone"></i>
@@ -21,7 +21,7 @@
 									</li>
 									<li>
 										<i class="mdi mdi-email"></i>
-										<p style="padding-top: 10px">trinhxuantrinh.yd267@gmail.com</p>
+										<p style="padding-top: 10px">admin@gmail.com</p>
 									</li>
 								</ul>
 							</div>
@@ -30,13 +30,13 @@
 					<div class="col-xs-12 col-sm-3 col-md-3 wide-mobile">
 						<div class="single-text">
 							<div class="footer-title">
-								<h4>Tài khoản</h4>
+								<h4>My account</h4>
 							</div>
 							<div class="footer-menu">
 								<ul>
-									<li><a href="#"><i class="mdi mdi-menu-right"></i>Tài Khoản</a></li>
-									<li><a href="#"><i class="mdi mdi-menu-right"></i>Giỏ hàng</a></li>
-									<li><a href="#"><i class="mdi mdi-menu-right"></i>Đơn hàng</a></li>
+									<li><a href="#"><i class="mdi mdi-menu-right"></i>My account</a></li>
+									<li><a href="#"><i class="mdi mdi-menu-right"></i>Cart</a></li>
+									<li><a href="#"><i class="mdi mdi-menu-right"></i>Orders</a></li>
 								</ul>
 							</div>
 						</div>
@@ -44,13 +44,13 @@
 					<div class="col-xs-12 col-sm-3 col-md-3 wide-mobile">
 						<div class="single-text">
 							<div class="footer-title">
-								<h4>Dịch vụ</h4>
+								<h4>Outstanding Service</h4>
 							</div>
 							<div class="footer-menu">
 								<ul>
-									<li><a href="#"><i class="mdi mdi-menu-right"></i>Miễn phí giao hàng</a></li>
-									<li><a href="#"><i class="mdi mdi-menu-right"></i>Bảo mật thanh toán</a></li>
-									<li><a href="#"><i class="mdi mdi-menu-right"></i>15 ngày hoàn trả</a></li>
+									<li><a href="#"><i class="mdi mdi-menu-right"></i>Free ship</a></li>
+									<li><a href="#"><i class="mdi mdi-menu-right"></i>Payment security</a></li>
+									<li><a href="#"><i class="mdi mdi-menu-right"></i>15 days refund</a></li>
 								</ul>
 							</div>
 						</div>

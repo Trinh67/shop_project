@@ -14,7 +14,7 @@
   <li class="nav-item">
     <a class="nav-link" href="?mod=page&act=dashboard">
       <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span style="font-size: 17px">Tổng quan</span></a>
+      <span style="font-size: 17px">Home</span></a>
   </li>
 
   <!-- Divider -->
@@ -28,7 +28,7 @@
   <li class="nav-item">
     <a class="nav-link collapsed" href="?mod=customer">
       <i class="fas fa-fw fa-cog"></i>
-      <span style="font-size: 17px">Khách hàng</span>
+      <span style="font-size: 17px">Customer</span>
     </a>
   </li>
 
@@ -36,7 +36,7 @@
   <li class="nav-item">
     <a class="nav-link collapsed" href="?mod=order">
       <i class="fas fa-fw fa-cog"></i>
-      <span style="font-size: 17px">Đơn hàng</span>
+      <span style="font-size: 17px">Orders</span>
     </a>
   </li>
 

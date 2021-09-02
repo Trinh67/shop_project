@@ -2,7 +2,7 @@
 <html class="no-js" lang="">
     <?php require_once('views/include/head.php') ?>
     <body onload="return <?php if(isset($_COOKIE['msg'])){ ?>
-			            alert('<?= $_COOKIE['msg'] ?>. Tiếp tục mua hàng nào!!!')
+			            alert('<?= $_COOKIE['msg'] ?>. Continue to buy!!!')
 			          <?php }?>">
 
         <!-- header section start -->
@@ -50,7 +50,7 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="section-title text-center">
-							<h2>Sản phẩm mới nhất!</h2>
+							<h2>Latest products!</h2>
 						</div>
 					</div>
 				</div>
@@ -104,7 +104,7 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="section-title text-center">
-							<h2>Dịch vụ nổi bật</h2>
+							<h2>Outstanding Service</h2>
 						</div>
 					</div>
 				</div>
@@ -113,21 +113,21 @@
 						<div class="service-text">
 							<i class="mdi mdi-truck"></i>
 							<h4>Free ship</h4>
-							<p>Miễn phí giao hàng tận nhà(Thời gian giao có thể phụ thuộc vào khoảng cách địa lí)</p>
+							<p>Free home delivery (Delivery time may depend on geographical distance)</p>
 						</div>
 					</div>
 					<div class="col-sm-4">
 						<div class="service-text">
 							<i class="mdi mdi-lock"></i>
-							<h4>Bảo mật Thanh Toán</h4>
-							<p>Mọi thông tin thanh toán đều được đảm bảo bảo mật. Vì vậy bạn hãy an tâm sử dụng!</p>
+							<h4>Payment Security</h4>
+							<p>All payment information is kept confidential. So feel free to use it!</p>
 						</div>
 					</div>
 					<div class="col-sm-4">
 						<div class="service-text">
 							<i class="mdi mdi-rotate-left"></i>
-							<h4>15 ngày hoàn trả</h4>
-							<p>Bạn có thể trả lại sản phẩm sau khi mua 15 ngày nếu thấy sản phẩm không phù hợp</p>
+							<h4>15 days refund</h4>
+							<p>You can return the product 15 days after purchase if the product is not suitable</p>
 						</div>
 					</div>
 				</div>

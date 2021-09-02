@@ -11,11 +11,11 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="pages-title-text text-center">
-							<h2>Đăng nhập - Đăng kí</h2>
+							<h2>Login - Register</h2>
 							<ul class="text-left">
 								<div class="product-breadcroumb">
-									<a href="?mod=page&act=home">Trang chủ </a>
-									<a>Đăng nhập - Đăng kí</a>
+									<a href="?mod=page&act=home">Home </a>
+									<a>Login - Register</a>
 								</div>
 							</ul>
 						</div>
@@ -29,28 +29,28 @@
 			<div class="container">
 				<?php if(isset($_COOKIE['msg'])){ ?>
 					<div class="alert alert-danger">
-						<strong>Thất bại! </strong><?= $_COOKIE['msg'] ?>
+						<strong>Failed! </strong><?= $_COOKIE['msg'] ?>
 					</div>
 				<?php }?>
 				<div class="row">
 					<div class="col-sm-6">
 						<div class="main-input padding60">
 							<div class="log-title">
-								<h3><strong>Đăng nhập</strong></h3>
+								<h3><strong>Login</strong></h3>
 							</div>
 							<div class="login-text">
 								<div class="custom-input">
 									<form action="?mod=login&act=login_action" method="POST">
-										<input type="text" required name="username" placeholder="Tên đăng nhập" />
-										<input type="password" required name="password" placeholder="Mật khẩu" />
-										<a class="forget" href="#">Quên mật khẩu?</a>
+										<input type="text" required name="username" placeholder="User Name" />
+										<input type="password" required name="password" placeholder="Password" />
+										<a class="forget" href="#">Forget Password?</a>
 										<div>
-										    <button type="submit" class=" submit-text btn btn-primary">Đăng nhập</button>
+										    <button type="submit" class=" submit-text btn btn-primary">Login</button>
 									    </div>
 									</form>
 								</div>
 								<div class="submit-text coupon">
-							<a href="admin/?mod=page&act=dashboard">Trang quản trị Admin</a>
+							<a href="admin/?mod=page&act=dashboard">Admin Page</a>
 						</div>
 							</div>
 						</div>
@@ -58,19 +58,19 @@
 					<div class="col-sm-6">
 						<div class="main-input padding60 new-customer">
 							<div class="log-title">
-								<h3><strong>Đăng kí</strong></h3>
+								<h3><strong>Register</strong></h3>
 							</div>
 							<div class="custom-input">
 								<form action="?mod=login&act=register" method="post">
-									<input type="text" required name="customerName" placeholder="Tên đăng nhập.." />
-									<input type="text" required name="fullName" placeholder="Tên đầy đủ.." />
-									<input type="text" required name="nationalId" placeholder="Id quốc gia.." />
-									<input type="text" required name="address" placeholder="Địa chỉ.." />
-									<input type="text" required name="phoneNumber" placeholder="Số điện thoại.." />
+									<input type="text" required name="customerName" placeholder="User Name.." />
+									<input type="text" required name="fullName" placeholder="Full Name.." />
+									<input type="text" required name="nationalId" placeholder="National Id.." />
+									<input type="text" required name="address" placeholder="Address.." />
+									<input type="text" required name="phoneNumber" placeholder="Phone Number.." />
 									<input type="text" required name="email" placeholder="Email" />
-									<input type="password" required name="password" placeholder="Mật khẩu.." />
+									<input type="password" required name="password" placeholder="Password.." />
 									<div>
-										<button type="submit" class=" submit-text btn btn-primary">Đăng kí</button>
+										<button type="submit" class=" submit-text btn btn-primary">Register</button>
 									</div>
 								</form>
 							</div>

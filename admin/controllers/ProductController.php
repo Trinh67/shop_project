@@ -35,11 +35,11 @@
 		    $status = $this->prod_model->store($data);
 
 		    if($status == true){
-		    	setcookie('msg','Thêm mới thành công',time()+1);
+		    	setcookie('msg','Add successful',time()+1);
 		    	header('Location: ?mod=product');
 		    }
 		    else {
-		    	setcookie('msg','Thêm mới không thành công',time()+1);
+		    	setcookie('msg','Add failed',time()+1);
 		    	header('Location: ?mod=product&act=add');
 		    }
 		}
@@ -66,11 +66,11 @@
 		    $status = $this->prod_model->edit($data);
 
 		    if($status == true){
-		    	setcookie('msg','Cập nhật thành công',time()+1);
+		    	setcookie('msg','Update successful',time()+1);
 		    	header('Location: ?mod=product');
 		    }
 		    else {
-		    	setcookie('msg','Cập nhật không thành công',time()+1);
+		    	setcookie('msg','Update failed',time()+1);
 		    	header('Location: ?mod=product&act=update&id='.$data['productCode']);
 		    }
 		}
@@ -80,10 +80,10 @@
 
 		    $status = $this->prod_model->delete($id);
 		    if($status == true){
-		    	setcookie('msg','Xóa thành công',time()+1);
+		    	setcookie('msg','Delete successful',time()+1);
 		    }
 		    else 
-		    	setcookie('msg','Xóa không thành công',time()+1);
+		    	setcookie('msg','Delete failed',time()+1);
 		    header('Location: ?mod=product');
 		}
 	}

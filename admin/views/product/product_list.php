@@ -26,8 +26,8 @@
           
       <!-- Page Heading -->
       <div class="container-fluid">
-        <h2 align="center">Sản phẩm</h2>
-        <a href="?mod=product&act=add" class="btn btn-primary">Thêm mới</a><br/>
+        <h2 align="center">Product</h2>
+        <a href="?mod=product&act=add" class="btn btn-primary">Add</a><br/>
           <?php if(isset($_COOKIE['msg'])){ ?>
             <div class="alert alert-success">
               <strong><?= $_COOKIE['msg'] ?></strong>
@@ -36,7 +36,7 @@
           <br/>
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Product List</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -44,11 +44,11 @@
                   <thead>
                     <tr>
                           <th>ID</th>
-                          <th>Tên sản phẩm</th>
-                          <th>Danh mục</th>
-                          <th>Giá</th>
-                          <th>Kho</th>
-                          <th>Ảnh</th>
+                          <th>Product Name</th>
+                          <th>Category</th>
+                          <th>Price</th>
+                          <th>Stock</th>
+                          <th>Image</th>
                           <th>Action</th>
                         </tr>
                   </thead>
@@ -63,7 +63,7 @@
                           <td><img src="<?= $product['image'] ?>" width="150px" hight="200px" alt="Image"></td>
                           <td><a href="../?mod=product&act=detail&id=<?= $product['productCode'] ?>" class="btn btn-success" target="_blank">Detail</a> 
                           <a href="?mod=product&act=update&id=<?= $product['productCode'] ?>" class="btn btn-warning">Update</a>  
-                          <a href="?mod=product&act=delete&id=<?= $product['productCode'] ?>" onclick="return confirm('Bạn chắc chắn muốn xóa?');" class="btn btn-danger">Delete</a></td>
+                          <a href="?mod=product&act=delete&id=<?= $product['productCode'] ?>" onclick="return confirm('Bạn chắc chắn muốn Delete?');" class="btn btn-danger">Delete</a></td>
                         </tr>
                   <?php } ?>
                   </tbody>

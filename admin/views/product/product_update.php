@@ -30,7 +30,7 @@
         <hr>
         <?php if(isset($_COOKIE['msg'])){ ?>
         <div class="alert alert-warning">
-          <strong>Thất bại! </strong> <?= $_COOKIE['msg'] ?>
+          <strong>Failed! </strong> <?= $_COOKIE['msg'] ?>
         </div>
         <?php }?>
         <form action="?mod=product&act=edit" method="POST" role="form" enctype="multipart/form-data">
@@ -40,11 +40,11 @@
                 <input type="text" required class="form-control" hidden id="" placeholder="" name="productCode" value="<?= $product['productCode'] ?>">
             </div>
             <div class="form-group">
-                <label for="">Tên sản phẩm</label>
+                <label for="">Product Name</label>
                 <input type="text" required class="form-control" id="" placeholder="" name="productName" value="<?= $product['productName'] ?>">
             </div>
             <div class="form-group">
-                <label for="">Danh mục</label>
+                <label for="">Category</label>
                 <select name="productLineNumber" class="form-control">
                 <?php foreach ($prodlines as $prls) {?>  
                   <option <?= ($prls['productLineNumber'] == $product['productLineNumber'])?'selected':"" ?> value="<?= $prls['productLineNumber'] ?>"><?= $prls['productLine'] ?></option>
@@ -52,32 +52,32 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="">Giá (VND)</label>
+                <label for="">Price (VND)</label>
                 <input type="number" required class="form-control" id="" placeholder="" name="price" value="<?= $product['price'] ?>">
             </div>
             <div class="form-group">
-                <label for="">Mô tả</label>
+                <label for="">Description</label>
                 <textarea rows = "8" required class="form-control" id="contents" placeholder="" name="productDescription"><?= $product['productDescription'] ?></textarea>
             </div>
             <div class="form-group">
-                <label for="">Kho</label>
+                <label for="">Stock</label>
                 <input type="number" required class="form-control" id="" placeholder="" name="quantityOfStock" value="<?= $product['quantityOfStock'] ?>">
             </div>
             <div class="form-group">
-                <h4>Ảnh hiện tại: </h4><img src="<?= $product['image'] ?>" weight = "300px" height = "200px" alt ="IMG"><br/><br/>
-                <label for="">Đường dẫn ảnh mới:</label>
+                <h4>Current image: </h4><img src="<?= $product['image'] ?>" weight = "300px" height = "200px" alt ="IMG"><br/><br/>
+                <label for="">New link image:</label>
                 <input type="text" required class="form-control" id="" placeholder="" name="image" value="<?= $product['image'] ?>">
             </div>
             <div class="form-group">
-                <label for="">Model</label>
+                <label for="">Model Number</label>
                 <input type="text" required class="form-control" id="" placeholder="" name="modelNumber" value="<?= $product['modelNumber'] ?>">
             </div>
             <div class="form-group">
-                <label for="">Năm sản xuất</label>
+                <label for="">Year of manufacture</label>
                 <input type="number" required class="form-control" id="" placeholder="" name="yearOfManufacture" value="<?= $product['yearOfManufacture'] ?>">
             </div>
-            <a href="?mod=product" type="button" class="btn btn-danger">Hủy</a>
-            <button type="submit" class="btn btn-success">Cập nhật</button>
+            <a href="?mod=product" type="button" class="btn btn-danger">Cancel</a>
+            <button type="submit" class="btn btn-success">Update</button>
         </form>
         <br/><br/>
     </div>

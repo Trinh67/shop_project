@@ -11,11 +11,11 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="pages-title-text text-center">
-							<h2>Tài khoản</h2>
+							<h2>My account</h2>
 							<ul class="text-left">
 								<div class="product-breadcroumb">
-									<a href="?mod=page&act=home">Trang chủ </a>
-									<a>Tài khoản</a>
+									<a href="?mod=page&act=home">Home </a>
+									<a>My account</a>
 								</div>
 							</ul>
 						</div>
@@ -37,7 +37,7 @@
 					<div class="col-xs-12 col-sm-8">
 						<div class="padding60">
 							<div class="log-title" align="center">
-								<h3><strong>Thông tin tài khoản</strong></h3>
+								<h3><strong>Thông tin My account</strong></h3>
 							</div>
 							<div class="prament-area main-input">
 								<ul class="panel-group" id="accordion">
@@ -48,27 +48,27 @@
 													<form action="?mod=login&act=edit" method="post" style="color: black">
 														<div class="row">
 															<div class="col-md-6" >
-																<label>Tên đăng nhập *:</label>
+																<label>User Name *:</label>
 																<input style="color: black" type="text" required name="customerName" value="<?php if(isset($_SESSION['customer']['customerName'])) echo $_SESSION['customer']['customerName'];?>" />
 															</div>
 															<div class="col-md-6">
-																<label>Họ tên *:</label>
+																<label>Full Name *:</label>
 																<input style="color: black" type="text" required name="fullName" value="<?php if(isset($_SESSION['customer']['fullName'])) echo $_SESSION['customer']['fullName']; ?>"/>
 															</div>
 														</div>
-														<label>Id quốc gia *:</label>
+														<label>National Id *:</label>
 														<input style="color: black" type="text" required name="nationalId" value="<?php if(isset($_SESSION['customer']['nationalId'])) echo $_SESSION['customer']['nationalId'] ?> "/>
-														<label>Địa chỉ *:</label>
+														<label>Address *:</label>
 														<input style="color: black" type="text" required name="address" value="<?php if(isset($_SESSION['customer']['address'])) echo $_SESSION['customer']['address'] ?> "/>
-														<label>Số điện thoại *:</label>
+														<label>Phone Number *:</label>
 														<input style="color: black" type="text" required name="phoneNumber" value="<?php if(isset($_SESSION['customer']['phoneNumber'])) echo $_SESSION['customer']['phoneNumber']; ?>"/>
 														<label>Email *:</label>
 														<input style="color: black" type="email" required name="email" value="<?php if(isset($_SESSION['customer']['email'])) echo $_SESSION['customer']['email']; ?>"/>
-														<label>Mật khẩu:</label>
-														<input style="color: black" type="text" name="password" placeholder="Mật khẩu mới.." />
-														<label>Số đơn hàng đã hoàn thành:</label>
+														<label>Password:</label>
+														<input style="color: black" type="text" name="password" placeholder="Password mới.." />
+														<label>Num of success Order:</label>
 														<input style="color: black" type="text" disabled name="numOfSuccessOrder" value="<?php if(isset($_SESSION['customer']['numOfSuccessOrder'])) echo $_SESSION['customer']['numOfSuccessOrder'] ?> "/>
-														<button type="submit" class="btn btn-primary">Lưu</button>
+														<button type="submit" class="btn btn-primary">Save</button>
 													</form>
 												</div>
 											</div>
