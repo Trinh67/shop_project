@@ -113,21 +113,21 @@
 						<div class="service-text">
 							<i class="mdi mdi-truck"></i>
 							<h4>Free ship</h4>
-							<p>Free home delivery (Delivery time may depend on geographical distance)</p>
+							<p style="font-size:15px; padding: 5px">Free home delivery (Delivery time may depend on geographical distance)</p>
 						</div>
 					</div>
 					<div class="col-sm-4">
 						<div class="service-text">
 							<i class="mdi mdi-lock"></i>
 							<h4>Payment Security</h4>
-							<p>All payment information is kept confidential. So feel free to use it!</p>
+							<p style="font-size:15px; padding: 5px">All payment information is kept confidential. So feel free to use it!</p>
 						</div>
 					</div>
 					<div class="col-sm-4">
 						<div class="service-text">
 							<i class="mdi mdi-rotate-left"></i>
 							<h4>15 days refund</h4>
-							<p>You can return the product 15 days after purchase if the product is not suitable</p>
+							<p style="font-size:15px; padding: 5px">You can return the product 15 days after purchase if the product is not suitable</p>
 						</div>
 					</div>
 				</div>
