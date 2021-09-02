@@ -4,7 +4,7 @@
     <div class="sidebar-brand-icon rotate-n-15">
       <i class="fas fa-laugh-wink"></i>
     </div>
-    <div class="sidebar-brand-text mx-3">Dev67</div>
+    <div class="sidebar-brand-text mx-3">Shop</div>
   </a>
 
   <!-- Divider -->
@@ -44,7 +44,7 @@
   <li class="nav-item">
     <a class="nav-link collapsed" href="?mod=product">
       <i class="fas fa-fw fa-cog"></i>
-      <span style="font-size: 17px">Sản phẩm</span>
+      <span style="font-size: 17px">Product</span>
     </a>
   </li>
 

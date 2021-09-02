@@ -26,7 +26,7 @@
           
       <!-- Page Heading -->
       <div class="container-fluid">
-        <h2 align="center">Thêm sản phẩm</h2>
+        <h2 align="center">Thêm Product</h2>
         <hr>
         <?php if(isset($_COOKIE['msg'])){ ?>
         <div class="alert alert-warning">

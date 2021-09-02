@@ -22,7 +22,7 @@
 				$_SESSION['cart'][$id]['SoLuong'] += $quantity;
 			}else{
 				// Chưa có trong Cart
-				// B2: Lấy thông tin sản phẩm
+				// B2: Lấy thông tin Product
 				$product = $products[$id];
 				$product['SoLuong'] = $quantity;
 
@@ -35,11 +35,11 @@
 
 		public function delete(){
 			
-			// B1: Lấy mã sản phẩm được chọn
+			// B1: Lấy mã Product được chọn
 			$id = isset($_GET['id'])?$_GET['id']:0;
 			$del = $_GET['del'];
 
-			// Bước 2: Kiểm tra id và Delete sản phẩm khỏi Cart
+			// Bước 2: Kiểm tra id và Delete Product khỏi Cart
 			if($del==1){
 				unset($_SESSION['cart']);
 				header("Location: ?mod=page&act=home");
@@ -56,7 +56,7 @@
 						$_SESSION['cart'][$id]['SoLuong']--;
 						header("Location: ?mod=cart&act=list");
 					}else{
-						// Bước 2: Delete sản phẩm khỏi Cart
+						// Bước 2: Delete Product khỏi Cart
 						unset($_SESSION['cart'][$id]);
 						header("Location: ?mod=cart&act=list");
 					}

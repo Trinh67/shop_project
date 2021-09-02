@@ -92,20 +92,20 @@
 						<div role="tabpanel">
 							<ul class="product-tab" role="tablist">
 								<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Description</a></li>
-								<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Đánh Price</a></li>
+								<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Evaluate</a></li>
 							</ul>
 							<div class="tab-content">
 								<div role="tabpanel" class="tab-pane fade in active" id="home">
-									<h2>Description sản phẩm:</h2>  
+									<h2>Description:</h2>
 									<p><?= $data['productDescription'] ?></p>
 								</div>
 								<div role="tabpanel" class="tab-pane fade" id="profile">
-									<h2>Đánh Price, phản hồi:</h2>
+									<h2>Evaluate, review:</h2>
 									<div class="submit-review">
-										<p><label for="name">Tên:</label> <input name="name" type="text"></p>
+										<p><label for="name">Name:</label> <input name="name" type="text"></p>
 										<p><label for="email">Email:</label> <input name="email" type="email"></p>
 										<div class="rating-chooser">
-											<p>Đánh Price:</p>
+											<p>Evaluate:</p>
 											<span class="rating-wrap-post">
 												<i class="mdi mdi-star"></i>
 												<i class="mdi mdi-star"></i>
@@ -114,7 +114,7 @@
 												<i class="mdi mdi-star-half"></i>
 											</span>
 										</div>
-										<p><label for="review">Phản hồi:</label> <textarea name="review" id="" cols="30" rows="10"></textarea></p>
+										<p><label for="review">Review:</label> <textarea name="review" id="" cols="30" rows="10"></textarea></p>
 										<p><input type="submit" value="Submit"></p>
 									</div>
 								</div>

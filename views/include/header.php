@@ -61,7 +61,7 @@
 						<div class="cart-itmes">
 							<a class="cart-itme-a" href="?mod=cart&act=list">
 								<i class="mdi mdi-cart"></i>
-								<?php if(isset($_SESSION['cart'])) echo count($_SESSION['cart']); else echo '0';?> sản phẩm
+								<?php if(isset($_SESSION['cart'])) echo count($_SESSION['cart']); else echo '0';?> Product
 							</a>
 							<?php if(isset($_SESSION['customer']) || isset($_SESSION['admin'])) { ?>
 							<div class="cartdrop">
