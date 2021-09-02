@@ -4,7 +4,7 @@
 
         function GetOrderList($cusNum){
 			// Thuc thi cau lenh truy van co so du lieu
-			$response = file_get_contents('https://trinh67uet.et.r.appspot.com/order/filter/'.$cusNum);
+			$response = file_get_contents('https://project-shop-324808.as.r.appspot.com/order/filter/'.$cusNum);
 			$data = json_decode($response, true);
 		    return $data;
 		}
@@ -18,7 +18,7 @@
 			);
 			
 			curl_setopt_array($curl, array(
-			CURLOPT_URL => 'https://trinh67uet.et.r.appspot.com/order/update-status',
+			CURLOPT_URL => 'https://project-shop-324808.as.r.appspot.com/order/update-status',
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => '',
 			CURLOPT_MAXREDIRS => 10,

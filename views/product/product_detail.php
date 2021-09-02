@@ -52,13 +52,13 @@
 								<div class="col-sm-6">
 									<div class="product-images">
 										<div class="product-main-img">
-											<img src=<?= $data['image'] ?> alt="">
+											<img src=<?= $data['image'] ?> alt="IMG">
 										</div>
 										
 										<div class="product-gallery">
-											<img src="public/img/gallery/1.jpg" alt="">
-											<img src="public/img/gallery/2.jpg" alt="">
-											<img src="public/img/gallery/3.jpg" alt="">
+											<img src="public/img/gallery/1.jpg" alt="img1">
+											<img src="public/img/gallery/2.jpg" alt="img2">
+											<img src="public/img/gallery/3.jpg" alt="img3">
 										</div>
 									</div>
 								</div>

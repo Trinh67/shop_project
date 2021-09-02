@@ -6,7 +6,7 @@
 		function maxIdCus(){
         	$data = array();
 		    // Thuc thi cau lenh truy van co so du lieu
-			$data["customerNumber"] = file_get_contents('https://trinh67uet.et.r.appspot.com/customer/maxId') + 1;
+			$data["customerNumber"] = file_get_contents('https://project-shop-324808.as.r.appspot.com/customer/maxId') + 1;
 			$data["customerName"] = null;
 			$data["fullName"] = null;
 			$data["nationalId"] = null;
@@ -34,7 +34,7 @@
 			);
 			
 			curl_setopt_array($curl, array(
-			CURLOPT_URL => 'https://trinh67uet.et.r.appspot.com/customer/',
+			CURLOPT_URL => 'https://project-shop-324808.as.r.appspot.com/customer/',
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => '',
 			CURLOPT_MAXREDIRS => 10,
@@ -68,7 +68,7 @@
 			);
 			
 			curl_setopt_array($curl, array(
-			CURLOPT_URL => 'https://trinh67uet.et.r.appspot.com/customer/',
+			CURLOPT_URL => 'https://project-shop-324808.as.r.appspot.com/customer/',
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => '',
 			CURLOPT_MAXREDIRS => 10,

@@ -6,7 +6,7 @@
 		function maxIdPro(){
         	$data = array();
 		    // Thuc thi cau lenh truy van co so du lieu
-			$data["productCode"] = file_get_contents('https://trinh67uet.et.r.appspot.com/product/maxId') + 1;
+			$data["productCode"] = file_get_contents('https://project-shop-324808.as.r.appspot.com/product/maxId') + 1;
 			$data["productName"] = null;
 			$data["productLineNumber"] = null;
 			$data["productDescription"] = null;
@@ -34,7 +34,7 @@
 			);
 			
 			curl_setopt_array($curl, array(
-			CURLOPT_URL => 'https://trinh67uet.et.r.appspot.com/product/',
+			CURLOPT_URL => 'https://project-shop-324808.as.r.appspot.com/product/',
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => '',
 			CURLOPT_MAXREDIRS => 10,
@@ -68,7 +68,7 @@
 			);
 			
 			curl_setopt_array($curl, array(
-			CURLOPT_URL => 'https://trinh67uet.et.r.appspot.com/product/',
+			CURLOPT_URL => 'https://project-shop-324808.as.r.appspot.com/product/',
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => '',
 			CURLOPT_MAXREDIRS => 10,

@@ -9,7 +9,7 @@
 			);
 
 			curl_setopt_array($curl, array(
-			CURLOPT_URL => 'https://trinh67uet.et.r.appspot.com/customer/login',
+			CURLOPT_URL => 'https://project-shop-324808.as.r.appspot.com/customer/login',
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => '',
 			CURLOPT_MAXREDIRS => 10,
@@ -31,7 +31,7 @@
 
 		function maxId() {
 		    // Thuc thi cau lenh truy van co so du lieu
-			$response = file_get_contents('https://trinh67uet.et.r.appspot.com/customer/maxId');
+			$response = file_get_contents('https://project-shop-324808.as.r.appspot.com/customer/maxId');
 			
 		    return $response + 1;
 		}
@@ -51,7 +51,7 @@
 			);
 			
 			curl_setopt_array($curl, array(
-			CURLOPT_URL => 'https://trinh67uet.et.r.appspot.com/customer/',
+			CURLOPT_URL => 'https://project-shop-324808.as.r.appspot.com/customer/',
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => '',
 			CURLOPT_MAXREDIRS => 10,
@@ -85,7 +85,7 @@
 			);
 			
 			curl_setopt_array($curl, array(
-			CURLOPT_URL => 'https://trinh67uet.et.r.appspot.com/customer/',
+			CURLOPT_URL => 'https://project-shop-324808.as.r.appspot.com/customer/',
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => '',
 			CURLOPT_MAXREDIRS => 10,

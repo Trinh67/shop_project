@@ -4,7 +4,7 @@
 		function All(){
 		    $data = array();
 		    // Thuc thi cau lenh truy van co so du lieu
-			$response = file_get_contents('https://trinh67uet.et.r.appspot.com/'.$this->table.'/');
+			$response = file_get_contents('https://project-shop-324808.as.r.appspot.com/'.$this->table.'/');
 			$data = json_decode($response, true);
 			
 		    return $data;
@@ -13,7 +13,7 @@
 		function lines(){
 		    $data = array();
 		    // Thuc thi cau lenh truy van co so du lieu
-			$response = file_get_contents('https://trinh67uet.et.r.appspot.com/productLine/');
+			$response = file_get_contents('https://project-shop-324808.as.r.appspot.com/productLine/');
 			$data = json_decode($response, true);
 			
 		    return $data;
@@ -22,7 +22,7 @@
         function find($id){
         	$data = array();
 		    // Thuc thi cau lenh truy van co so du lieu
-			$response = file_get_contents('https://trinh67uet.et.r.appspot.com/'.$this->table.'/'.$id);
+			$response = file_get_contents('https://project-shop-324808.as.r.appspot.com/'.$this->table.'/'.$id);
 			$data = json_decode($response, true);
 			
 		    return $data[0];
@@ -33,7 +33,7 @@
 			$curl = curl_init();
 
 			curl_setopt_array($curl, array(
-			CURLOPT_URL => 'https://trinh67uet.et.r.appspot.com/'.$this->table.'/'.$id,
+			CURLOPT_URL => 'https://project-shop-324808.as.r.appspot.com/'.$this->table.'/'.$id,
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => '',
 			CURLOPT_MAXREDIRS => 10,
@@ -52,10 +52,10 @@
 		function Count(){
 			$data = array();
 		    // Thuc thi cau lenh truy van co so du lieu
-			$data[1] = file_get_contents('https://trinh67uet.et.r.appspot.com/customer/count');
-			$data[2] = file_get_contents('https://trinh67uet.et.r.appspot.com/productLine/count');
-			$data[3] = file_get_contents('https://trinh67uet.et.r.appspot.com/order/count');
-			$data[4] = file_get_contents('https://trinh67uet.et.r.appspot.com/product/count');
+			$data[1] = file_get_contents('https://project-shop-324808.as.r.appspot.com/customer/count');
+			$data[2] = file_get_contents('https://project-shop-324808.as.r.appspot.com/productLine/count');
+			$data[3] = file_get_contents('https://project-shop-324808.as.r.appspot.com/order/count');
+			$data[4] = file_get_contents('https://project-shop-324808.as.r.appspot.com/product/count');
 			
 		    return $data;
 		}
