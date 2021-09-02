@@ -14,10 +14,10 @@
 		}
 
 		public function login_action(){
-			$email = $_POST['email'];
+			$username = $_POST['username'];
             $password = $_POST['password'];
 
-			$status = $this->login_model->find($email, $password);
+			$status = $this->login_model->find($username, $password);
 
 			if($status == true){
 				$_SESSION['isLoginAdmin'] = true;

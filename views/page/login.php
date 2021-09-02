@@ -41,8 +41,8 @@
 							<div class="login-text">
 								<div class="custom-input">
 									<form action="?mod=login&act=login_action" method="POST">
-										<input type="email" required name="email" placeholder="Email" />
-										<input type="password" required name="password" placeholder="Password" />
+										<input type="text" required name="username" placeholder="Tên đăng nhập" />
+										<input type="password" required name="password" placeholder="Mật khẩu" />
 										<a class="forget" href="#">Quên mật khẩu?</a>
 										<div>
 										    <button type="submit" class=" submit-text btn btn-primary">Đăng nhập</button>
@@ -62,8 +62,8 @@
 							</div>
 							<div class="custom-input">
 								<form action="?mod=login&act=register" method="post">
-									<input type="text" required name="customerName" placeholder="User name.." />
-									<input type="text" required name="fullName" placeholder="Full name here.." />
+									<input type="text" required name="customerName" placeholder="Tên đăng nhập.." />
+									<input type="text" required name="fullName" placeholder="Tên đầy đủ.." />
 									<input type="text" required name="nationalId" placeholder="Id quốc gia.." />
 									<input type="text" required name="address" placeholder="Địa chỉ.." />
 									<input type="text" required name="phoneNumber" placeholder="Số điện thoại.." />

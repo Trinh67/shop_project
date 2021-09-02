@@ -1,10 +1,10 @@
 <?php 
 	class Login{
 
-        function find($email, $password){
+        function find($username, $password){
 			$curl = curl_init();
 			$data_array = array(
-				'email' => $email,
+				'username' => $username,
 				'password' => md5($password)
 			);
 

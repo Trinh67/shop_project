@@ -14,10 +14,10 @@
 		}
 
 		public function login_action(){
-			$email = $_POST['email'];
+			$username = $_POST['username'];
             $password = $_POST['password'];
 
-			$status = $this->login_model->find($email, $password);
+			$status = $this->login_model->find($username, $password);
 
 			if($status == true){
 				$_SESSION['isLogin'] = true;
@@ -55,14 +55,14 @@
 
 		    $status = $this->login_model->register($data);
 
-		    if($status == true){
+		    if($status == 200){
 				$_SESSION['isLogin'] = true;
 	            $_SESSION['customer'] = $data;
-		    	setcookie('msg','Đăng kí thành công',time()+1);
+		    	setcookie('msg', 'Đăng kí thành công', time()+1);
 		    	header('Location: ?mod=page&act=home');
 		    }
 		    else {
-				setcookie('msg','Đăng kí không thành công',time()+1);
+				setcookie('msg', $status,time()+1);
 		    	header('Location: ?mod=login&act=login');
 		    }
 		}
@@ -84,14 +84,14 @@
 
 		    $status = $this->login_model->edit($data);
 
-		    if($status == true){
+		    if($status == 200){
 				setcookie('msg','Cập nhật thông tin thành công',time()+1);
 				$_SESSION['isLogin'] = true;
 	            $_SESSION['customer'] = $data;
 		    	header('Location: ?mod=page&act=account');
 		    }
 		    else {
-		    	setcookie('msg','Cập nhật thông tin không thành công',time()+1);
+		    	setcookie('msg', $status, time()+1);
 		    	header('Location: ?mod=page&act=account');
 		    }
 		}
