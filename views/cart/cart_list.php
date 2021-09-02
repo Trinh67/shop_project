@@ -103,7 +103,7 @@
 							<div class="cart-form-text custom-input">
 								<p>Use discount code now if available!</p>
 								<form action="#" method="post">
-									<input type="text" name="subject" placeholder="Mã giảm Price" />
+									<input type="text" name="subject" placeholder="Discount code" />
 									<div class="submit-text coupon">
 										<button type="submit">Apply</button>
 									</div>

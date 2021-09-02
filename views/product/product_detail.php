@@ -13,7 +13,7 @@
 							<ul class="text-left">
 								<div class="product-breadcroumb">
 									<a href="?mod=page&act=home">Home</a>
-									<a href="?mod=product&line=<?= $data['productLineNumber'] ?>&type=<?= $data['textDescription'] ?>"><?= $data['textDescription'] ?></a>
+									<a href="?mod=product&line=<?= $data['productLineNumber'] ?>&type=<?= $data['productLine'] ?>"><?= $data['productLine'] ?></a>
 									<a><?= $data['productName'] ?></a>
 								</div>
 							</ul>
@@ -79,7 +79,7 @@
 										<div class="product-information">
 											<ul class="list-group">
 												<li class="list-group-item disable"><b>Information</b></li>
-												<li class="list-group-item">Category: <b><?= $data['textDescription'] ?></b></li>
+												<li class="list-group-item">Category: <b><?= $data['productLine'] ?></b></li>
 												<li class="list-group-item">Stock: <b><?= number_format($data['quantityOfStock']) ?></b></li>
 												<li class="list-group-item">Model Number: <b><?= $data['modelNumber'] ?></b></li>
 												<li class="list-group-item">Year of manufacture: <b><?= $data['yearOfManufacture'] ?></b></li>

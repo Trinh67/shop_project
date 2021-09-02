@@ -15,11 +15,11 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="pages-title-text text-center">
-							<h2>Thông tin đặt hàng</h2>
+							<h2>Order's information</h2>
 							<ul class="text-left">
                                 <div class="product-breadcroumb">
 									<a href="?mod=page&act=home">Home </a></li>
-									<a>Thông tin đặt hàng</a>
+									<a>Order's information</a>
 								</div>
 							</ul>
 						</div>

@@ -22,13 +22,13 @@
 
   <!-- Heading -->
   <div class="sidebar-heading" style="font-size: 14px">
-    Quản lí
+    Management
   </div>
   <!-- Customer -->
   <li class="nav-item">
     <a class="nav-link collapsed" href="?mod=customer">
       <i class="fas fa-fw fa-cog"></i>
-      <span style="font-size: 17px">Customer</span>
+      <span style="font-size: 17px">Customers</span>
     </a>
   </li>
 
@@ -44,7 +44,7 @@
   <li class="nav-item">
     <a class="nav-link collapsed" href="?mod=product">
       <i class="fas fa-fw fa-cog"></i>
-      <span style="font-size: 17px">Product</span>
+      <span style="font-size: 17px">Products</span>
     </a>
   </li>
 

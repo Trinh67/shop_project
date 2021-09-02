@@ -26,7 +26,7 @@
           
       <!-- Page Heading -->
       <div class="container-fluid">
-        <h2 align="center">Customer</h2>
+        <h2 align="center">Customers</h2>
         <a href="?mod=customer&act=add" class="btn btn-primary">Add</a><br/>
           <?php if(isset($_COOKIE['msg'])){ ?>
             <div class="alert alert-info">

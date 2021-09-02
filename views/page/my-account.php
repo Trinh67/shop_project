@@ -37,7 +37,7 @@
 					<div class="col-xs-12 col-sm-8">
 						<div class="padding60">
 							<div class="log-title" align="center">
-								<h3><strong>Thông tin My account</strong></h3>
+								<h3><strong>Information</strong></h3>
 							</div>
 							<div class="prament-area main-input">
 								<ul class="panel-group" id="accordion">
