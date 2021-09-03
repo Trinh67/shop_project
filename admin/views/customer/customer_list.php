@@ -63,7 +63,7 @@
                     <td align="center"><?= $cus['numOfSuccessOrder'] ?></td>
                     <td><a href="?mod=customer&act=detail&id=<?= $cus['customerNumber'] ?>" class="btn btn-success">Detail</a> 
                     <a href="?mod=customer&act=update&id=<?= $cus['customerNumber'] ?>" class="btn btn-warning">Update</a>
-                    <a href="?mod=customer&act=delete&id=<?= $cus['customerNumber'] ?>" onclick="return confirm('You definitely want to delete?');" class="btn btn-danger">Delete</a></td>
+                    <a href="?mod=customer&act=delete&id=<?= $cus['customerNumber'] ?>" onclick="return confirm('Are you sure want to delete?');" class="btn btn-danger">Delete</a></td>
                   </tr>
             <?php } ?>
             </tbody>

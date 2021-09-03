@@ -26,6 +26,11 @@
 		<div class="single-product-area">
 			<div class="zigzag-bottom"></div>
 			<div class="container">
+				<?php if (isset($_SESSION['isLoginAdmin'])) { ?>
+					<div>
+						<a href="admin/?mod=product" type="button" class="btn btn-primary">Back to Admin page</a>
+					</div><br/>
+				<?php } ?>
 				<div class="row">
 					<div class="col-md-4">
 						<div class="single-sidebar">
@@ -72,7 +77,8 @@
 										
 										<form action="?mod=cart&act=add&id=<?= $data['productCode'] ?>" class="cart" method="post">
 											<div class="quantity">
-												<input type="number" size="5" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+												<input type="number" size="5" max="<?= $data['quantityOfStock'] - (isset($_SESSION['cart'][$data['productCode']]['SoLuong'])?$_SESSION['cart'][$data['productCode']]['SoLuong']:0) ?>" class="input-text qty text"
+													title="Quantity" value="1" name="quantity" min="0" step="1">
 											</div>
 											<button class="add_to_cart_button" type="submit">Add to Cart</button>
 										</form>   

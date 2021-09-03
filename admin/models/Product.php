@@ -11,10 +11,11 @@
 			$data["productLineNumber"] = null;
 			$data["productDescription"] = null;
 			$data["quantityOfStock"] = 0;
-			$data["price"] = 0;
+			$data["price"] = 1000000;
 			$data["image"] = null;
 			$data["modelNumber"] = null;
 			$data["yearOfManufacture"] = 0;
+			$data['status'] = 0;
 
 		    return $data;
         }
@@ -30,7 +31,8 @@
 				"price" => $data['price'],
 				"image" => $data['image'],
 				"modelNumber" => $data['modelNumber'],
-				"yearOfManufacture" => $data['yearOfManufacture']
+				"yearOfManufacture" => $data['yearOfManufacture'],
+				"status" => $data['status']
 			);
 			
 			curl_setopt_array($curl, array(
@@ -64,7 +66,8 @@
 				"price" => $data['price'],
 				"image" => $data['image'],
 				"modelNumber" => $data['modelNumber'],
-				"yearOfManufacture" => $data['yearOfManufacture']
+				"yearOfManufacture" => $data['yearOfManufacture'],
+				"status" => $data['status']
 			);
 			
 			curl_setopt_array($curl, array(

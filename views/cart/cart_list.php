@@ -67,9 +67,9 @@
 										<td>
 											<form action="#" method="POST">
 												<div class="plus-minus">
-													<a href="?mod=cart&act=delete&id=<?= $product['productCode'] ?>" class="dec qtybutton">-</a>
-													<input type="text" value="<?= $products['SoLuong'] ?>"name="qtybutton" class="plus-minus-box">
-													<a href="?mod=cart&act=add&id=<?= $product['productCode'] ?>" class="inc qtybutton">+</a>
+													<?php if ($products['SoLuong'] > 1) { ?><a href="?mod=cart&act=delete&id=<?= $product['productCode'] ?>" class="dec qtybutton">-</a><?php } ?>
+													<input type="text" value="<?= $products['SoLuong'] ?>" name="qtybutton" class="plus-minus-box">
+													<?php if ($products['SoLuong'] < $product['quantityOfStock']) { ?><a href="?mod=cart&act=add&id=<?= $product['productCode'] ?>" class="inc qtybutton">+</a><?php } ?>
 												</div>
 											</form>
 										</td>

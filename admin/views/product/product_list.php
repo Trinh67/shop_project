@@ -63,7 +63,7 @@
                           <td><img src="<?= $product['image'] ?>" width="150px" hight="200px" alt="Image"></td>
                           <td><a href="../?mod=product&act=detail&id=<?= $product['productCode'] ?>" class="btn btn-success" target="_blank">Detail</a> 
                           <a href="?mod=product&act=update&id=<?= $product['productCode'] ?>" class="btn btn-warning">Update</a>  
-                          <a href="?mod=product&act=delete&id=<?= $product['productCode'] ?>" onclick="return confirm('Bạn chắc chắn muốn Delete?');" class="btn btn-danger">Delete</a></td>
+                          <a href="?mod=product&act=delete&id=<?= $product['productCode'] ?>" onclick="return confirm('Are you sure you want to Delete?');" class="btn btn-danger">Delete</a></td>
                         </tr>
                   <?php } ?>
                   </tbody>

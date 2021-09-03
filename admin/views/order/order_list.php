@@ -68,7 +68,7 @@
                       <?php if($order['status'] > 0 && $order['status'] < 4) { ?>
 											  <div class="dropdown dropleft float-right">
                           <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            Action
+                            Update
                           </button>
                           <div class="dropdown-menu">
                             <?php if($order['status'] == 1) { ?>
@@ -82,6 +82,7 @@
                           </div>
                         </div>
 										  <?php } ?>
+                      <a href="?mod=order&act=delete&id=<?= $order['orderNumber'] ?>" onclick="return confirm('Are you sure you want to Delete?');" class="btn btn-danger">Delete</a></td>
                     </td>
                   </tr>
             <?php } ?>

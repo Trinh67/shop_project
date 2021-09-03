@@ -6,7 +6,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Trang quản trị</title>
+  <title>Admin Page</title>
   <!-- favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="public/img/favicon.ico">
   <!-- Custom fonts for this template -->

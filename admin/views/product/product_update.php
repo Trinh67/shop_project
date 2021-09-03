@@ -26,7 +26,7 @@
           
       <!-- Page Heading -->
       <div class="container-fluid">
-        <h2 align="center">Update Products</h2>
+        <h2 align="center">Update Product</h2>
         <hr>
         <?php if(isset($_COOKIE['msg'])){ ?>
         <div class="alert alert-warning">
@@ -53,7 +53,7 @@
             </div>
             <div class="form-group">
                 <label for="">Price (VND)</label>
-                <input type="number" required class="form-control" id="" placeholder="" name="price" value="<?= $product['price'] ?>">
+                <input type="number" min="1000000" required class="form-control" id="" placeholder="" name="price" value="<?= $product['price'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Description</label>
@@ -61,7 +61,7 @@
             </div>
             <div class="form-group">
                 <label for="">Stock</label>
-                <input type="number" required class="form-control" id="" placeholder="" name="quantityOfStock" value="<?= $product['quantityOfStock'] ?>">
+                <input type="number" min="0" required class="form-control" id="" placeholder="" name="quantityOfStock" value="<?= $product['quantityOfStock'] ?>">
             </div>
             <div class="form-group">
                 <h4>Current image: </h4><img src="<?= $product['image'] ?>" weight = "300px" height = "200px" alt ="IMG"><br/><br/>
@@ -75,6 +75,17 @@
             <div class="form-group">
                 <label for="">Year of manufacture</label>
                 <input type="number" required class="form-control" id="" placeholder="" name="yearOfManufacture" value="<?= $product['yearOfManufacture'] ?>">
+            </div>
+            <div class="form-group">
+                <label for="">Status</label>
+                <select name="status" class="form-control">
+                  <?php 
+                    $status = array("1" => "Available", "0" => "Out of stock");
+                    foreach ($status as $k => $v) {
+                      echo '<option ' . ($k == $product['status'] ? 'selected' : '') . ' value="' . $k . '">' . $v . '</option>';
+                    }
+                  ?>
+                </select>
             </div>
             <a href="?mod=product" type="button" class="btn btn-danger">Cancel</a>
             <button type="submit" class="btn btn-success">Update</button>

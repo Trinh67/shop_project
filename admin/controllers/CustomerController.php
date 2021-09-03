@@ -5,7 +5,7 @@
 		var $cus_model;
 
 		function __construct(){
-			$this->cus_model = new customer();
+			$this->cus_model = new Customer();
 		}
 
 		public function list(){
@@ -22,7 +22,6 @@
 		}
 
 		public function add(){
-			$title = "Add Customer";
 			$customer = $this->cus_model->maxIdCus();
 			require_once('views/customer/customer_insert.php');		
 		}
@@ -53,7 +52,6 @@
 
 		public function update(){
 			$id = isset($_GET['id'])?$_GET['id']:0;
-			$title = "Update Customer";
 			$customer = $this->cus_model->find($id);
 			require_once('views/customer/customer_update.php');		
 		}

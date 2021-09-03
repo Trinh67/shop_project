@@ -35,6 +35,11 @@
 		<!-- cart content section start -->
 		<section class="pages cart-page section-padding">
 			<div class="container">
+				<?php if (isset($_SESSION['isLoginAdmin'])) { ?>
+					<div>
+						<a href="admin/?mod=order" type="button" class="btn btn-primary">Back to Admin page</a>
+					</div><br/>
+				<?php } ?>
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="table-responsive padding60">

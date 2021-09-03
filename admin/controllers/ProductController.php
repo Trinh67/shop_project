@@ -31,6 +31,9 @@
 			$data['image'] = $_POST['image'];
 			$data['modelNumber'] = $_POST['modelNumber'];
 			$data['yearOfManufacture'] = (int)$_POST['yearOfManufacture'];
+			$data['status'] = (int)$_POST['status'];
+
+			if($data['quantityOfStock'] == 0) $data['status'] = 0;
 
 		    $status = $this->prod_model->store($data);
 
@@ -62,6 +65,9 @@
 			$data['image'] = $_POST['image'];
 			$data['modelNumber'] = $_POST['modelNumber'];
 			$data['yearOfManufacture'] = (int)$_POST['yearOfManufacture'];
+			$data['status'] = (int)$_POST['status'];
+
+			if($data['quantityOfStock'] == 0) $data['status'] = 0;
 
 		    $status = $this->prod_model->edit($data);
 
