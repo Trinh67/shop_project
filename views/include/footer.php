@@ -13,7 +13,7 @@
 								<ul>
 									<li>
 										<i class="mdi mdi-map-marker"></i>
-										<p style="padding-top: 10px">Hồ Chi Minh City</p>
+										<p style="padding-top: 10px">Ho Chi Minh City</p>
 									</li>
 									<li>
 										<i class="mdi mdi-phone"></i>
@@ -34,7 +34,7 @@
 							</div>
 							<div class="footer-menu">
 								<ul>
-									<li><a href="#"><i class="mdi mdi-menu-right"></i>My account</a></li>
+									<li><a href="#"><i class="mdi mdi-menu-right"></i>Account</a></li>
 									<li><a href="#"><i class="mdi mdi-menu-right"></i>Cart</a></li>
 									<li><a href="#"><i class="mdi mdi-menu-right"></i>Orders</a></li>
 								</ul>

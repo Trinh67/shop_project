@@ -49,7 +49,7 @@
                 <label for="exampleInputPassword1">Address</label>
                     <input type="text" class="form-control" required id="" placeholder="" value = "<?php if(isset($_SESSION['customer']['address'])) { ?> <?=$_SESSION['customer']['address'] ?> <?php } ?>" name="address">
                 </div>
-                <button class="btn btn-info"><a href="?mod=cart&act=list"><- Cart</a></button>
+                <button class="btn btn-info"><a href="?mod=cart&act=list">Back to Cart</a></button>
                 <button type="submit" class="btn btn-success">Submit</button>
             </form>
         </div>

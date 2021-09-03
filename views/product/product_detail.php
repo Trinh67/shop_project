@@ -89,6 +89,9 @@
 												<li class="list-group-item">Stock: <b><?= number_format($data['quantityOfStock']) ?></b></li>
 												<li class="list-group-item">Model Number: <b><?= $data['modelNumber'] ?></b></li>
 												<li class="list-group-item">Year of manufacture: <b><?= $data['yearOfManufacture'] ?></b></li>
+												<li class="list-group-item">Status: <b><?php $status = array("0" => "Out of stock", "1" => "Available");
+														echo $status[$data['status']]
+												?></b></li>
 											</ul>
 										</div> 																			
 									</div>

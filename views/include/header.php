@@ -41,7 +41,7 @@
 											<ul> 
 												<?php if(isset($_SESSION['customer'])) { ?>												
 												<li class="dropdown-item"><a href="?mod=login&act=logout">Logout</a></li>
-												<li class="dropdown-item"><a href="?mod=page&act=account">My account</a></li>
+												<li class="dropdown-item"><a href="?mod=page&act=account">Account</a></li>
 												<li class="dropdown-item"><a href="?mod=order&act=list">Orders</a></li>
 												<li class="dropdown-item"><a href="?mod=cart&act=list">Cart</a></li>
 											    <?php }else{ ?>

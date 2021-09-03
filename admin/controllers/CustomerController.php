@@ -86,11 +86,9 @@
 			$id = isset($_GET['id'])?$_GET['id']:0;
 
 		    $status = $this->cus_model->delete($id);
-		    if($status == true){
-		    	setcookie('msg','Delete Customer successful',time()+1);
-		    }
-		    else 
-		    	setcookie('msg','Delete Customer failed',time()+1);
+		   
+		    setcookie('msg',$status ,time()+1);
+
 		    header('Location: ?mod=customer');
 		}
 	}

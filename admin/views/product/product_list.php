@@ -48,6 +48,7 @@
                           <th>Category</th>
                           <th>Price</th>
                           <th>Stock</th>
+                          <th>Status</th>
                           <th>Image</th>
                           <th>Action</th>
                         </tr>
@@ -60,8 +61,11 @@
                           <td><?= $product['productLine'] ?></td>
                           <td align="right"><?= number_format($product['price']) ?> VND</td>
                           <td align="right"><?= $product['quantityOfStock'] ?></td>
+                          <td><?php $status = array("0" => "Out of stock", "1" => "Available");
+                                echo $status[$product['status']]
+                          ?></td>
                           <td><img src="<?= $product['image'] ?>" width="150px" hight="200px" alt="Image"></td>
-                          <td><a href="../?mod=product&act=detail&id=<?= $product['productCode'] ?>" class="btn btn-success" target="_blank">Detail</a> 
+                          <td><a href="../?mod=product&act=detail&id=<?= $product['productCode'] ?>" class="btn btn-success">Detail</a> 
                           <a href="?mod=product&act=update&id=<?= $product['productCode'] ?>" class="btn btn-warning">Update</a>  
                           <a href="?mod=product&act=delete&id=<?= $product['productCode'] ?>" onclick="return confirm('Are you sure you want to Delete?');" class="btn btn-danger">Delete</a></td>
                         </tr>
