@@ -31,14 +31,14 @@
 			$data['image'] = $_POST['image'];
 			$data['modelNumber'] = $_POST['modelNumber'];
 			$data['yearOfManufacture'] = (int)$_POST['yearOfManufacture'];
-			$data['status'] = (int)$_POST['status'];
 
 			if($data['quantityOfStock'] == 0) $data['status'] = 0;
+			else $data['status'] = 1;
 
 		    $status = $this->prod_model->store($data);
 
 		    if($status == true){
-		    	setcookie('msg','Add successful',time()+1);
+		    	setcookie('msg', $status, time()+1);
 		    	header('Location: ?mod=product');
 		    }
 		    else {
@@ -65,9 +65,9 @@
 			$data['image'] = $_POST['image'];
 			$data['modelNumber'] = $_POST['modelNumber'];
 			$data['yearOfManufacture'] = (int)$_POST['yearOfManufacture'];
-			$data['status'] = (int)$_POST['status'];
 
 			if($data['quantityOfStock'] == 0) $data['status'] = 0;
+			else $data['status'] = 1;
 
 		    $status = $this->prod_model->edit($data);
 

@@ -63,12 +63,16 @@
 									<div class="col-xs-12 col-sm-6 col-md-3">
 										<div class="single-product">
 											<div class="product-img">
-												<div class="pro-type">
-													<span>new</span>
-												</div>
+												<?php $status = array("0" => '<div class="pro-type"><span>Out of stock</span></div>', "1" => '<div class="pro-type sell"><span>New</span></div>');
+													echo $status[$value['status']]
+												?>
 												<a href="#"><img src=<?= $value['image'] ?> alt="Product Title" width="270px" height="340px"/></a>
 												<div class="actions-btn">
-													<a href="?mod=cart&act=add&id=<?= $value['productCode'] ?>"><i class="mdi mdi-cart"></i></a>
+													<?php if ($value['status'] == 1) { ?>
+														<a href="?mod=cart&act=add&id=<?= $value['productCode'] ?>"><i class="mdi mdi-cart"></i></a>
+													<?php } else { ?>
+														<a href="#" ><i class="mdi mdi-cart" onclick="return alert('This product is out of stock');"></i></a>
+													<?php } ?>
 													<a href="?mod=product&act=detail&id=<?= $value['productCode'] ?>&line=<?= $value['productLineNumber'] ?>"><i class="mdi mdi-eye"></i></a>
 													<a href="#"><i class="mdi mdi-heart"></i></a>
 												</div>

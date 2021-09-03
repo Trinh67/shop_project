@@ -80,7 +80,11 @@
 												<input type="number" size="5" max="<?= $data['quantityOfStock'] - (isset($_SESSION['cart'][$data['productCode']]['SoLuong'])?$_SESSION['cart'][$data['productCode']]['SoLuong']:0) ?>" class="input-text qty text"
 													title="Quantity" value="1" name="quantity" min="0" step="1">
 											</div>
-											<button class="add_to_cart_button" type="submit">Add to Cart</button>
+											<?php if ($data['status'] == 1) { ?>
+												<button class="add_to_cart_button" type="submit">Add to Cart</button>
+											<?php } else { ?>
+												<button class="add_to_cart_button" onclick="return alert('This product is out of stock');">Add to Cart</button>
+											<?php } ?>
 										</form>   
 										<div class="product-information">
 											<ul class="list-group">
