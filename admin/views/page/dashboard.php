@@ -9,7 +9,9 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Admin Dashboard</title>
+  <title>Admin Page</title>
+  <!-- favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="public/img/favicon.ico">
 
   <!-- Custom fonts for this template-->
   <link href="public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
