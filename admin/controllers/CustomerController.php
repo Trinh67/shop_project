@@ -87,7 +87,7 @@
 
 		    $status = $this->cus_model->delete($id);
 		   
-		    setcookie('msg',$status ,time()+1);
+		    setcookie('msg', $status ,time()+1);
 
 		    header('Location: ?mod=customer');
 		}

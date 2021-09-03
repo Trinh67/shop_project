@@ -44,7 +44,7 @@
 					<div class="col-xs-12 col-sm-3 col-md-3 wide-mobile">
 						<div class="single-text">
 							<div class="footer-title">
-								<h4>Outstanding Service</h4>
+								<h4>Our Service</h4>
 							</div>
 							<div class="footer-menu">
 								<ul>
