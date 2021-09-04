@@ -23,7 +23,7 @@
 			$name = $_POST['name']?:"null";
 			$name = str_replace(' ', '%20', $name);
 			$data_search = array();
-			$data_search = $this->page_model->Search($line, $min, $max, $name, 1, 8);
+			$data_search = $this->page_model->Search($line, $min, $max, $name, 1, 100);
 			require_once('views/page/search.php');
 		}
 

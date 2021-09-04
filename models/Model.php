@@ -13,7 +13,7 @@
 		function Search($line, $min, $max, $name, $pageNum, $pageSize){
 		    $data = array();
 		    // Call data from API
-			$response = file_get_contents('https://project-shop-324808.as.r.appspot.com/product/filter?pageNum=1&pageSize=24&name='.$name.'&line='.$line.'&min='.$min.'&max='.$max);
+			$response = file_get_contents('https://project-shop-324808.as.r.appspot.com/product/filter?pageNum='.$pageNum.'&pageSize='.$pageSize.'&name='.$name.'&line='.$line.'&min='.$min.'&max='.$max);
 			$data = json_decode($response, true);
 			
 		    return $data;
