@@ -10,7 +10,7 @@
 		public function list(){
 			$data = array();
 			$line = $_GET['line'];
-			$data = $this->cate_model->All($line, 1, 12);
+			$data = $this->cate_model->All($line, 1, 100);
 
 			require_once('views/product/product_list.php');
 		}
