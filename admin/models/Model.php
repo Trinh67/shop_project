@@ -3,7 +3,7 @@
 		
 		function All(){
 		    $data = array();
-		    // Thuc thi cau lenh truy van co so du lieu
+		    // Call data from API
 			$response = file_get_contents('https://project-shop-324808.as.r.appspot.com/'.$this->table.'/');
 			$data = json_decode($response, true);
 			
@@ -12,7 +12,7 @@
 
 		function lines(){
 		    $data = array();
-		    // Thuc thi cau lenh truy van co so du lieu
+		    // Call data from API
 			$response = file_get_contents('https://project-shop-324808.as.r.appspot.com/productLine/');
 			$data = json_decode($response, true);
 			
@@ -21,7 +21,7 @@
         
         function find($id){
         	$data = array();
-		    // Thuc thi cau lenh truy van co so du lieu
+		    // Call data from API
 			$response = file_get_contents('https://project-shop-324808.as.r.appspot.com/'.$this->table.'/'.$id);
 			$data = json_decode($response, true);
 			
@@ -29,7 +29,7 @@
         }
 
         function delete($id){
-		    // Thuc thi cau lenh truy van co so du lieu
+		    // Call data from API
 			$curl = curl_init();
 
 			curl_setopt_array($curl, array(
@@ -51,7 +51,7 @@
 		
 		function Count(){
 			$data = array();
-		    // Thuc thi cau lenh truy van co so du lieu
+		    // Call data from API
 			$data[1] = file_get_contents('https://project-shop-324808.as.r.appspot.com/customer/count');
 			$data[2] = file_get_contents('https://project-shop-324808.as.r.appspot.com/productLine/count');
 			$data[3] = file_get_contents('https://project-shop-324808.as.r.appspot.com/order/count');

@@ -5,7 +5,7 @@
 		
 		function maxIdCus(){
         	$data = array();
-		    // Thuc thi cau lenh truy van co so du lieu
+		    // Call data from API
 			$data["customerNumber"] = file_get_contents('https://project-shop-324808.as.r.appspot.com/customer/maxId') + 1;
 			$data["customerName"] = null;
 			$data["fullName"] = null;
@@ -20,6 +20,7 @@
         }
 
 		function store($data){
+			// Call data from API
 			$curl = curl_init();
 			$data_array = array(
 				"customerNumber" => $data['customerNumber'],
@@ -54,6 +55,7 @@
 		}
 		
 		function edit($data){
+			// Call data from API
 			$curl = curl_init();
 			$data_array = array(
 				"customerNumber" => $data['customerNumber'],

@@ -77,7 +77,7 @@
 										
 										<form action="?mod=cart&act=add&id=<?= $data['productCode'] ?>" class="cart" method="post">
 											<div class="quantity">
-												<input type="number" size="5" max="<?= $data['quantityOfStock'] - (isset($_SESSION['cart'][$data['productCode']]['SoLuong'])?$_SESSION['cart'][$data['productCode']]['SoLuong']:0) ?>" class="input-text qty text"
+												<input type="number" size="5" max="<?= $data['quantityOfStock'] - (isset($_SESSION['cart'][$data['productCode']]['quantity'])?$_SESSION['cart'][$data['productCode']]['quantity']:0) ?>" class="input-text qty text"
 													title="Quantity" value="1" name="quantity" min="0" step="1">
 											</div>
 											<?php if ($data['status'] == 1) { ?>

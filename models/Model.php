@@ -3,7 +3,7 @@
 
 		function All($line, $pageNum, $pageSize){
 		    $data = array();
-		    // Thuc thi cau lenh truy van co so du lieu
+		    // Call data from API
 			$response = file_get_contents('https://project-shop-324808.as.r.appspot.com/product/filter?pageNum='.$pageNum.'&pageSize='.$pageSize.'&name=null&line='.$line.'&min=0&max=1000000000');
 			$data = json_decode($response, true);
 			
@@ -12,7 +12,7 @@
 
 		function Search($line, $min, $max, $name, $pageNum, $pageSize){
 		    $data = array();
-		    // Thuc thi cau lenh truy van co so du lieu
+		    // Call data from API
 			$response = file_get_contents('https://project-shop-324808.as.r.appspot.com/product/filter?pageNum=1&pageSize=24&name='.$name.'&line='.$line.'&min='.$min.'&max='.$max);
 			$data = json_decode($response, true);
 			
@@ -20,7 +20,7 @@
 		}
 		
 		function Hot($pageNum, $pageSize){
-		    // Thuc thi cau lenh truy van co so du lieu
+		    // Call data from API
 			$response = file_get_contents('https://project-shop-324808.as.r.appspot.com/product/filter?pageNum='.$pageNum.'&pageSize='.$pageSize.'&name=null&line=0&min=0&max=1000000000');
 			$data = json_decode($response, true);
 			
@@ -28,21 +28,21 @@
 		}
 		
 		function Count($name, $line, $min, $max){
-		    // Thuc thi cau lenh truy van co so du lieu
+		    // Call data from API
 			$data = file_get_contents('https://project-shop-324808.as.r.appspot.com/product/count-filter?name='.$name.'&line='.$line.'&min='.$min.'&max='.$max);
 			
 		    return $data;
 		}
 		
         function find($id){
-		    // Thuc thi cau lenh truy van co so du lieu
+		    // Call data from API
 			$response = file_get_contents('https://project-shop-324808.as.r.appspot.com/product/'.$id);
 			$data = json_decode($response, true);
 		    return $data;
         }
 
 		function GetOrderDetail($id){
-			// Thuc thi cau lenh truy van co so du lieu
+			// Call data from API
 			$curl = curl_init();
 			$data_array = array(
 				"orderNum" => $id,

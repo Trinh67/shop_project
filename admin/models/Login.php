@@ -2,6 +2,7 @@
 	class Login{
 
         function find($username, $password){
+			// Call data from API
 			$curl = curl_init();
 			$data_array = array(
 				'username' => $username,

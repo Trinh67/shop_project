@@ -19,12 +19,12 @@
 
 			if (isset($_SESSION['cart'][$id])) {
 				// Tăng Quantity
-				$_SESSION['cart'][$id]['SoLuong'] += $quantity;
+				$_SESSION['cart'][$id]['quantity'] += $quantity;
 			}else{
 				// Chưa có trong Cart
 				// B2: Lấy thông tin Product
 				$product = $products[$id];
-				$product['SoLuong'] = $quantity;
+				$product['quantity'] = $quantity;
 
 				// B3: Add vào Cart
 				$_SESSION['cart'][$id]  = $product;
@@ -51,9 +51,9 @@
 			    }
 				// Kiểm tra Quantity
 				else
-					if($_SESSION['cart'][$id]['SoLuong'] > 1){
+					if($_SESSION['cart'][$id]['quantity'] > 1){
 						// Giảm Quantity
-						$_SESSION['cart'][$id]['SoLuong']--;
+						$_SESSION['cart'][$id]['quantity']--;
 						header("Location: ?mod=cart&act=list");
 					}else{
 						// Bước 2: Delete Product khỏi Cart

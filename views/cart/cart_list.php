@@ -54,7 +54,7 @@
 										if($products != null)
 									    foreach ($_SESSION['cart'] as $products) { 
 											$product = $products[0];
-											$sum_amount += $product['price']*$products['SoLuong'];
+											$sum_amount += $product['price']*$products['quantity'];
 									?>
 									<tr>
 										<td class="td-img text-left">
@@ -67,14 +67,14 @@
 										<td>
 											<form action="#" method="POST">
 												<div class="plus-minus">
-													<?php if ($products['SoLuong'] > 1) { ?><a href="?mod=cart&act=delete&id=<?= $product['productCode'] ?>" class="dec qtybutton">-</a><?php } ?>
-													<input type="text" value="<?= $products['SoLuong'] ?>" name="qtybutton" class="plus-minus-box">
-													<?php if ($products['SoLuong'] < $product['quantityOfStock']) { ?><a href="?mod=cart&act=add&id=<?= $product['productCode'] ?>" class="inc qtybutton">+</a><?php } ?>
+													<?php if ($products['quantity'] > 1) { ?><a href="?mod=cart&act=delete&id=<?= $product['productCode'] ?>" class="dec qtybutton">-</a><?php } ?>
+													<input type="text" value="<?= $products['quantity'] ?>" name="qtybutton" class="plus-minus-box">
+													<?php if ($products['quantity'] < $product['quantityOfStock']) { ?><a href="?mod=cart&act=add&id=<?= $product['productCode'] ?>" class="inc qtybutton">+</a><?php } ?>
 												</div>
 											</form>
 										</td>
 										<td>
-											<strong><?= number_format($product['price']*$products['SoLuong']) ?> VND</strong>
+											<strong><?= number_format($product['price']*$products['quantity']) ?> VND</strong>
 										</td>
 										<td><a href="?mod=cart&act=delete&del=2&id=<?= $product['productCode'] ?>" onclick="return confirm('You definitely want to delete this item?');"><i class="mdi mdi-close" title="Remove this product"></i></td>
 									</tr>

@@ -3,7 +3,7 @@
 	class Cart extends Model{
 		
 		function insert_order($data){
-			// Thuc thi cau lenh truy van co so du lieu
+			// Call data from API
 			$curl = curl_init();
 			$data_array = array(
 				"orderNumber" => $data['orderNumber'],
@@ -37,13 +37,13 @@
 		}
 
 		function insert_orderDetail($datas, $orderNumber){
-			// Thuc thi cau lenh truy van co so du lieu
+			// Call data from API
 			$curl = curl_init();
 			foreach ($datas as $data){
 				$data_array = array(
 					"orderNumber" => $orderNumber,
 					"productCode" => $data[0]["productCode"],
-					"quantityOrdered" => $data["SoLuong"],
+					"quantityOrdered" => $data["quantity"],
 				);
 
 				curl_setopt_array($curl, array(
@@ -69,7 +69,7 @@
         }		
 
 		function maxId() {
-		    // Thuc thi cau lenh truy van co so du lieu
+		    // Call data from API
 			$response = file_get_contents('https://project-shop-324808.as.r.appspot.com/order/maxId');
 			
 		    return $response + 1;

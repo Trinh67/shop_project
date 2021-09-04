@@ -5,7 +5,7 @@
 
 		function maxIdPro(){
         	$data = array();
-		    // Thuc thi cau lenh truy van co so du lieu
+		    // Call data from API
 			$data["productCode"] = file_get_contents('https://project-shop-324808.as.r.appspot.com/product/maxId') + 1;
 			$data["productName"] = null;
 			$data["productLineNumber"] = null;
@@ -21,6 +21,7 @@
         }
 
 		function store($data){
+			// Call data from API
 			$curl = curl_init();
 			$data_array = array(
 				"productCode" => $data['productCode'],
@@ -56,6 +57,7 @@
 		}
 		
 		function edit($data){
+			// Call data from API
 			$curl = curl_init();
 			$data_array = array(
 				"productCode" => $data['productCode'],

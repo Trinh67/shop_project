@@ -4,6 +4,7 @@
 		var $table = 'order';
 
 		function update($data){
+			// Call data from API
         	$curl = curl_init();
 			$data_array = array(
 				"ordNum" => $data['ordNum'],
