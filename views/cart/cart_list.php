@@ -58,7 +58,7 @@
 									?>
 									<tr>
 										<td class="td-img text-left">
-											<a href="?mod=product&act=detail&id=<?= $product['productCode'] ?>&line=<?= $product['productLineNumber'] ?>" ><img src=<?= $product['image'] ?> alt="Add Product" /></a>
+											<a href="?mod=product&act=detail&id=<?= $product['productCode'] ?>&line=<?= $product['productLineNumber'] ?>" ><img src=<?= $product['image'] ?> alt="Product Image" /></a>
 											<div class="items-dsc">
 												<h5><a href="?mod=product&act=detail&id=<?= $product['productCode'] ?>&line=<?= $product['productLineNumber'] ?>"><?= $product['productName'] ?></a></h5>
 											</div>

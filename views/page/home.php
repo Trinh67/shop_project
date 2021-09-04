@@ -66,7 +66,7 @@
 												<?php $status = array("0" => '<div class="pro-type"><span>Out of stock</span></div>', "1" => '<div class="pro-type sell"><span>New</span></div>');
 													echo $status[$value['status']]
 												?>
-												<a href="#"><img src=<?= $value['image'] ?> alt="Product Title" width="270px" height="340px"/></a>
+												<a href="#"><img src=<?= $value['image'] ?> alt="Product Image" width="270px" height="340px"/></a>
 												<div class="actions-btn">
 													<?php if ($value['status'] == 1) { ?>
 														<a href="?mod=cart&act=add&id=<?= $value['productCode'] ?>"><i class="mdi mdi-cart"></i></a>
