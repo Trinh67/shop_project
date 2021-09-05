@@ -28,11 +28,7 @@
 			$id = isset($_GET['id'])?$_GET['id']:0;
 
 		    $status = $this->order_model->delete($id);
-		    if($status == true){
-		    	setcookie('msg','Delete successful',time()+1);
-		    }
-		    else 
-		    	setcookie('msg','Delete failed',time()+1);
+		    setcookie('msg', $status,time()+1);
 		    header('Location: ?mod=order');
 		}
 	}

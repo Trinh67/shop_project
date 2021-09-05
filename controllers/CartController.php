@@ -18,15 +18,15 @@
 			$products[$id] = $this->cate_model->find($id);
 
 			if (isset($_SESSION['cart'][$id])) {
-				// Tăng Quantity
+				// Increase Quantity
 				$_SESSION['cart'][$id]['quantity'] += $quantity;
 			}else{
-				// Chưa có trong Cart
-				// B2: Lấy thông tin Product
+				// Don't have in Cart
+				// B2: Get info Product
 				$product = $products[$id];
 				$product['quantity'] = $quantity;
 
-				// B3: Add vào Cart
+				// B3: Add to Cart
 				$_SESSION['cart'][$id]  = $product;
 			}
 			
@@ -34,12 +34,9 @@
 		}
 
 		public function delete(){
-			
-			// B1: Lấy mã Product được chọn
 			$id = isset($_GET['id'])?$_GET['id']:0;
 			$del = $_GET['del'];
 
-			// Bước 2: Kiểm tra id và Delete Product khỏi Cart
 			if($del==1){
 				unset($_SESSION['cart']);
 				header("Location: ?mod=page&act=home");
@@ -49,14 +46,14 @@
 				    unset($_SESSION['cart'][$id]);
 				    header("Location: ?mod=cart&act=list");
 			    }
-				// Kiểm tra Quantity
+				// Check Quantity
 				else
 					if($_SESSION['cart'][$id]['quantity'] > 1){
-						// Giảm Quantity
+						// Decrease Quantity
 						$_SESSION['cart'][$id]['quantity']--;
 						header("Location: ?mod=cart&act=list");
 					}else{
-						// Bước 2: Delete Product khỏi Cart
+						// Delete Product
 						unset($_SESSION['cart'][$id]);
 						header("Location: ?mod=cart&act=list");
 					}
@@ -80,14 +77,14 @@
 			$status_order = $this->cate_model->insert_order($data);
 			$status_orderDetail = $this->cate_model->insert_orderDetail($products, $data['orderNumber']);
 
-			if($status_order == true && $status_orderDetail == true){
+			if($status_order == 200 && $status_orderDetail == true){
 		    	setcookie('msg','Order successful!!!',time()+2);
 				unset($_SESSION['cart']);
 				unset($_SESSION['sum']);
 		    	header('Location: ?mod=page&act=home');
 		    }
 		    else {
-		    	setcookie('msg','Order failed!!!',time()+2);
+		    	setcookie('msg', $status_order,time()+2);
 		    	header('Location: ?mod=cart&act=list');
 		    }
 		}

@@ -37,14 +37,8 @@
 
 		    $status = $this->prod_model->store($data);
 
-		    if($status == true){
-		    	setcookie('msg', $status, time()+1);
-		    	header('Location: ?mod=product');
-		    }
-		    else {
-		    	setcookie('msg','Add failed',time()+1);
-		    	header('Location: ?mod=product&act=add');
-		    }
+		    setcookie('msg', $status,time()+1);
+		    header('Location: ?mod=product&act=add');
 		}
 
 		public function update(){
@@ -71,25 +65,21 @@
 
 		    $status = $this->prod_model->edit($data);
 
-		    if($status == true){
+			if($status == true){
 		    	setcookie('msg','Update successful',time()+1);
-		    	header('Location: ?mod=product');
 		    }
 		    else {
 		    	setcookie('msg','Update failed',time()+1);
-		    	header('Location: ?mod=product&act=update&id='.$data['productCode']);
-		    }
+			}
+		    header('Location: ?mod=product&act=update&id='.$data['productCode']);
 		}
 
 		public function delete(){
 			$id = isset($_GET['id'])?$_GET['id']:0;
 
 		    $status = $this->prod_model->delete($id);
-		    if($status == true){
-		    	setcookie('msg','Delete successful',time()+1);
-		    }
-		    else 
-		    	setcookie('msg','Delete failed',time()+1);
+
+		    setcookie('msg', $status,time()+1);
 		    header('Location: ?mod=product');
 		}
 	}

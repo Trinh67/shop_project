@@ -42,10 +42,10 @@
             <thead>
               <tr>
                     <th>ID</th>
-                    <th>Customer Name</th>
+                    <th>Name</th>
                     <th>Address</th>
                     <th>Email</th>
-                    <th>Phone Number</th>
+                    <th>Phone</th>
                     <th>Total</th>
                     <th>Status</th>
                     <th>Action</th>
@@ -82,7 +82,9 @@
                           </div>
                         </div>
 										  <?php } ?>
-                      <a href="?mod=order&act=delete&id=<?= $order['orderNumber'] ?>" onclick="return confirm('Are you sure you want to Delete?');" class="btn btn-danger">Delete</a></td>
+                      <?php if($order['status'] < 1 || $order['status'] == 4) { ?>
+                        <a href="?mod=order&act=delete&id=<?= $order['orderNumber'] ?>" onclick="return confirm('Are you sure you want to Delete?');" class="btn btn-danger">Delete</a></td>
+                      <?php } ?>
                     </td>
                   </tr>
             <?php } ?>

@@ -40,14 +40,8 @@
 
 		    $status = $this->cus_model->store($data);
 
-		    if($status == true){
-				setcookie('msg','Add Customer successful',time()+1);
-		    	header('Location: ?mod=customer&act=list');
-		    }
-		    else {
-		    	setcookie('msg','Update failed',time()+1);
-		    	header('Location: ?mod=customer&act=add');
-		    }
+			setcookie('msg', $status ,time()+1);
+			header('Location: ?mod=customer&act=add');
 		}
 
 		public function update(){
@@ -72,14 +66,13 @@
 
 		    $status = $this->cus_model->edit($data);
 
-		    if($status == true){
-				setcookie('msg','Update successful',time()+1);
-		    	header('Location: ?mod=customer&act=list');
-		    }
-		    else {
-		    	setcookie('msg','Update failed',time()+1);
-		    	header('Location: ?mod=customer&act=update&id='.$_POST['customerNumber']);
-		    }
+			if($status == 200){
+				setcookie('msg', "Update Successful" ,time()+1);
+				header('Location: ?mod=customer');
+			} else {
+				setcookie('msg', $status,time()+1);
+				header('Location: ?mod=customer&act=update&id='.$data['customerNumber']);
+			}
 		}
 
 		public function delete(){

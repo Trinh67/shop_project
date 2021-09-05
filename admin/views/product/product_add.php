@@ -30,7 +30,7 @@
         <hr>
         <?php if(isset($_COOKIE['msg'])){ ?>
         <div class="alert alert-warning">
-          <strong><?= $_COOKIE['msg'] ?></strong>
+          <strong>Msg: </strong><?= $_COOKIE['msg'] ?>
         </div>
     <?php }?>
         <form action="?mod=product&act=store" method="POST" role="form" enctype="multipart/form-data">
