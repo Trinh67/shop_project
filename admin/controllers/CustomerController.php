@@ -40,6 +40,7 @@
 
 		    $status = $this->cus_model->store($data);
 
+			if ($status == 200) $status = "Add successful";
 			setcookie('msg', $status ,time()+1);
 			header('Location: ?mod=customer&act=add');
 		}
@@ -68,7 +69,7 @@
 
 			if($status == 200){
 				setcookie('msg', "Update Successful" ,time()+1);
-				header('Location: ?mod=customer');
+				header('Location: ?mod=customer&act=update&id='.$data['customerNumber']);
 			} else {
 				setcookie('msg', $status,time()+1);
 				header('Location: ?mod=customer&act=update&id='.$data['customerNumber']);

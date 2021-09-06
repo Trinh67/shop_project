@@ -68,7 +68,7 @@
                 <input type="text" class="form-control" required id="" placeholder="" name="password" value="">
             </div>
             <a href="?mod=customer" type="button" class="btn btn-danger">Cancel</a>
-            <button type="submit" class="btn btn-success">Update</button>
+            <button type="submit" class="btn btn-success">Add</button>
         </form>
         <br/><br/>
     </div>
